@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="utf-8">
+
+<link rel="stylesheet" type="text/css" href="/css/stylesheet-mobile-minified.css" >
+
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="/javascript/resize-fit-minified.js"></script>
+
+<link rel="alternate"  type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/jenkov-com?format=xml" />
+
+
+<meta name="viewport" content="width=device-width" />
+
+<title>Java's NavigableMap Interface</title>
+
+<META NAME="Title" CONTENT="Java's NavigableMap Interface">
+
+
+
+<LINK REL="schema.dc" HREF="http://purl.org/metadata/dublin_core_elements">
+<META NAME="DC.Title" CONTENT="Java's NavigableMap Interface">
+
+<META NAME="DC.Subject" CONTENT="Java's NavigableMap Interface">
+
+<META NAME="Robots" CONTENT="ALL">
+
+
+
+
+<link href="https://plus.google.com/108227213807945109821" rel="publisher" />
+
+
+<meta name="google-site-verification" content="i_TwzdElg-by5uXLvyAjuIaCjxo0yjtW8LdRPUDEEcw" />
+
+
+<style>
+
+
+#body-div {
+    width             : 870px; /* default with 900px wide page */
+
+    padding-left      : 10px;
+    padding-right     : 20px;
+    padding-top       : 10px;
+
+    background-color  : #ffffff;
+
+}
+
+#left-bar {
+    width             : 240px;
+    background-color  : #ffffff;
+    padding           : 10px;
+    float             : left;
+}
+#left-bar-menu a {
+    font-size         : 0.9em;
+}
+
+#article-div {
+    width             : 606px;    /* default size with 900px wide page */
+    display           : block;
+    float             : left;
+    background-color  : #ffffff;
+    border-x          : 1px solid black;
+}
+
+#side-ads {
+    padding-left: 10px; /* +10 from left-bar, so 20 in total */
+}
+
+#top-ads {
+    padding-left : 20px;
+}
+#bottom-ads {
+    padding-left : 36px;
+}
+
+
+.book-link {
+    height            : 100px;
+    background-repeat : no-repeat;
+    border            : 1px solid #eeeeee;
+    margin-top        : 30px;
+    padding-left      : 102px;
+    color             : #333333;
+    font-weight       : normal;
+    cursor            : pointer;
+}
+.book-link p{
+    margin-top        : 0px;
+    padding-top       : 5px;
+    padding-right     : 20px;
+    font-size         : 0.8em;
+}
+.book-link-title {
+    margin-top        :  5px;
+    margin-bottom     :  5px;
+    font-size         : 0.9em;
+    font-weight       : bold;
+}
+
+
+.signupframe {
+    border: 1px solid #cccccc;
+    background: #ffffff;
+    color: #002d62;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.articleTopMiniHeader {
+    Font-size: 13px; Font-weight: bold;
+}
+.articleTopMiniHeaderCell {
+    border-bottomx: 1px solid #cccccc;
+}
+</style>
+
+</head>
+
+<body>
+
+<div id="page-div">
+
+    <div id="header">
+        <div id="header-div">
+            <div id="link-bar" style="float: left;">
+
+                <a href="http://tutorials.jenkov.com">TUTORIALS</a> &nbsp;&nbsp;|&nbsp;&nbsp;
+                <a href="http://jenkov.com/books/index.html">BOOKS</a> &nbsp;&nbsp;|&nbsp;&nbsp;
+                <a href="http://butterfly.jenkov.com">BUTTERFLY COMPONENTS</a> &nbsp;|&nbsp;&nbsp;
+                <a href="http://jenkov.com/about/index.html">ABOUT</a> &nbsp;&nbsp;|&nbsp;&nbsp;
+                <a href="http://feeds2.feedburner.com/jenkov-com">RSS</a>
+            </div>
+            <div id="logo-bar">
+                <br/><br/><br/>
+                &nbsp;&nbsp;&nbsp;A Voice in the Buzz on Software
+            </div>
+            &nbsp;
+        </div>
+        <div id="header-divider"></div>
+    </div>
+
+    <div id="body-div">
+
+        <div id="top-ads">
+            <script type="text/javascript"><!--
+            google_ad_client = "ca-pub-5569543489255665";
+            /* Tutorials - Top Banner */
+            google_ad_slot = "7630855405";
+            google_ad_width = 728;
+            google_ad_height = 90;
+            //-->
+            </script>
+            <script type="text/javascript"
+                    src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+            </script>
+        </div>
+
+        <div id="left-bar" >
+            <div id="left-bar-menu"><table cellspacing="2" border="0" width="100%" style="padding-right: 10px;" bgcolor="#ffffff" style="border-bottom: 1px solid #dddddd">
+    <tr>
+        <!--<td colspan="2"><img src="/images/toc.png" alt="Table of Contents"/></td>-->
+        <td colspan="3" style="padding-top:10px;"><span class="trailhead">&nbsp;&nbsp;Java Collections</span></td>
+    </tr>
+    <tr><td height="5"></td></tr>
+    <tr>
+        <td width="10"></td>
+        <td style="padding-right: 4px;" valign="top"><img src="/images/arrow-right-light-medium.png" alt=""></td>
+        <td style="padding-top: 2px;"><a href="index.html">Java Collections Introduction</a></td>
+    </tr>
+    <tr>
+        <td width="10"></td>
+        <td style="padding-right: 4px;" valign="top"><img src="/images/arrow-right-light-medium.png" alt=""></td>
+        <td style="padding-top: 2px;"><a href="overview.html">Overview of Interfaces</a></td>
+    </tr>
+    <tr>
+        <td width="10"></td>
+        <td style="padding-right: 4px;" valign="top"><img src="/images/arrow-right-light-medium.png" alt=""></td>
+        <td style="padding-top: 2px;"><a href="iterable.html">Iterable</a></td>
+    </tr>
+    <tr>
+        <td width="10"></td>
+        <td style="padding-right: 4px;" valign="top"><img src="/images/arrow-right-light-medium.png" alt=""></td>
+        <td style="padding-top: 2px;"><a href="collection.html">Collection</a></td>
+    </tr>
+    <tr>
+        <td width="10"></td>
+        <td style="padding-right: 4px;" valign="top"><img src="/images/arrow-right-light-medium.png" alt=""></td>
+        <td style="padding-top: 2px;"><a href="generic-collections.html">Generic Collections</a></td>
+    </tr>
+    <tr>
+        <td width="10"></td>
+        <td style="padding-right: 4px;" valign="top"><img src="/images/arrow-right-light-medium.png" alt=""></td>
+        <td style="padding-top: 2px;"><a href="list.html">List</a></td>
+    </tr>
+    <tr>
+        <td width="10"></td>
+        <td style="padding-right: 4px;" valign="top"><img src="/images/arrow-right-light-medium.png" alt=""></td>
+        <td style="padding-top: 2px;"><a href="set.html">Set</a></td>
+    </tr>
+    <tr>
+        <td width="10"></td>
+        <td style="padding-right: 4px;" valign="top"><img src="/images/arrow-right-light-medium.png" alt=""></td>
+        <td style="padding-top: 2px;"><a href="sortedset.html">SortedSet</a></td>
+    </tr>
+    <tr>
+        <td width="10"></td>
+        <td style="padding-right: 4px;" valign="top"><img src="/images/arrow-right-light-medium.png" alt=""></td>
+        <td style="padding-top: 2px;"><a href="navigableset.html">NavigableSet</a></td>
+    </tr>
+    <tr>
+        <td width="10"></td>
+        <td style="padding-right: 4px;" valign="top"><img src="/images/arrow-right-light-medium.png" alt=""></td>
+        <td style="padding-top: 2px;"><a href="map.html">Map</a></td>
+    </tr>
+    <tr>
+        <td width="10"></td>
+        <td style="padding-right: 4px;" valign="top"><img src="/images/arrow-right-light-medium.png" alt=""></td>
+        <td style="padding-top: 2px;"><a href="sortedmap.html">SortedMap</a></td>
+    </tr>
+    <tr>
+        <td width="10"></td>
+        <td style="padding-right: 4px;" valign="top"><img src="/images/arrow-right-light-medium.png" alt=""></td>
+        <td style="padding-top: 2px;"><a href="navigablemap.html">NavigableMap</a></td>
+    </tr>
+    <tr>
+        <td width="10"></td>
+        <td style="padding-right: 4px;" valign="top"><img src="/images/arrow-right-light-medium.png" alt=""></td>
+        <td style="padding-top: 2px;"><a href="queue.html">Queue</a></td>
+    </tr>
+    <tr>
+        <td width="10"></td>
+        <td style="padding-right: 4px;" valign="top"><img src="/images/arrow-right-light-medium.png" alt=""></td>
+        <td style="padding-top: 2px;"><a href="deque.html">Deque</a></td>
+    </tr>
+    <tr>
+        <td width="10"></td>
+        <td style="padding-right: 4px;" valign="top"><img src="/images/arrow-right-light-medium.png" alt=""></td>
+        <td style="padding-top: 2px;"><a href="stack.html">Stack</a></td>
+    </tr>
+    <tr>
+        <td width="10"></td>
+        <td style="padding-right: 4px;" valign="top"><img src="/images/arrow-right-light-medium.png" alt=""></td>
+        <td style="padding-top: 2px;"><a href="hashcode-equals.html">hashCode() and equals()</a></td>
+    </tr>
+    <tr>
+        <td width="10"></td>
+        <td style="padding-right: 4px;" valign="top"><img src="/images/arrow-right-light-medium.png" alt=""></td>
+        <td style="padding-top: 2px;"><a href="sorting.html">Sorting</a></td>
+    </tr>
+
+    <tr><td>&nbsp;</td></tr>
+    
+</table>
+</div>
+            <br/><br/>
+
+            
+
+<div id="SignUp">
+    <form action="http://jenkov.us4.list-manage.com/subscribe/post?u=39844b57926863757a8be6553&amp;id=74bcc45775" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+        <table width="100%" class="signupframe" border="0" cellspacing="0" cellpadding="5">
+            <tr><td colspan="2"><font color="red"><b>Jakob Jenkov's Free Tips & Tutorials!</b></font></td></tr>
+            <tr><td colspan="2" valign="top"><img src="/images/layout/small-portrait_mini.jpg" align="right" width="111" height="127">
+                Sign up for my news letter or <a href="http://feeds2.feedburner.com/jenkov-com" target="_blank">RSS feed</a>, and
+                never miss any of my tips about Java and web development.
+
+            </td></tr>
+            <tr>
+                <td valign=top align=right>
+                    <font size="1" face="Arial,Helvetica, sans-serif">*</font> <font size="2">First Name</font>
+                </td>
+                <td align=left>
+                    <input type="text" value="" name="FNAME" class="" id="mce-FNAME">
+                </td>
+            </tr>
+            <tr>
+                <td valign=top align=right>
+                    <font size="1" face="Arial,Helvetica, sans-serif">*</font> <font size="2">Last Name</font>
+                </td>
+                <td align=left>
+                    <input type="text" value="" name="LNAME" class="" id="mce-LNAME">
+                </td>
+            </tr>
+            <tr>
+                <td valign=top align=right>
+                    <font size="1" face="Arial,Helvetica, sans-serif">*</font> <font size="2">Email</font>
+                </td>
+                <td align=left>
+                    <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+                </td>
+            </tr>
+            <input type=hidden name="listid" value="9579">
+            <input type=hidden name="specialid:9579" value="SW15">
+
+            <input type=hidden name=clientid value="435086">
+            <input type=hidden name=formid value="587">
+            <input type=hidden name=reallistid value="1">
+            <input type=hidden name=doubleopt value="1">
+            <tr>
+                <td> </td>
+                <td><input type="submit" value="Yes, give me tips!" name="subscribe" id="mc-embedded-subscribe" class="button"></td>
+            </tr>
+            <tr><td colspan="2" align="center"><a href="http://feeds2.feedburner.com/jenkov-com"><img src="http://feeds2.feedburner.com/~fc/jenkov-com?bg=FF9900&amp;fg=000000&amp;anim=0" height="26" width="88" style="border:0" alt="" /></a></td></tr>
+            <tr><td colspan="2" align="center"><a href='http://www.twitter.com/jjenkov' style="font-size: 0.8em;"><img src="/images/social-site-icons/twitter_32.png" border="0" width="32" alt="Follow me on Twitter"> Follow me on Twitter</a></td></tr>
+        </table>
+    </form>
+</div>
+<br/>
+
+            <div id="side-ads">
+                <script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <ins class="adsbygoogle"
+                     style="display:inline-block;width:160px;height:600px"
+                     data-ad-client="ca-pub-5569543489255665"
+                     data-ad-slot="3389666608"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+            <br/><br/>
+        </div>
+
+        <div id="article-div">
+            
+
+<div class="subsection">
+<h1>Java's NavigableMap Interface</h1>
+
+<p>
+    The <code>java.util.NavigableMap</code> interface is a subtype of the <a href="sortedmap.html"><code>java.util.SortedMap</code></a>
+    interface. It has a few extensions to the <code>SortedSet</code> which makes it possible to navigate the map.
+    I will take a closer look at these navigation methods in this text.
+</p>
+
+<p> The <code>java.util</code> package only has one implementation of the <code>NavigableMap</code> interface:
+    <code>java.util.TreeMap</code>. There is an implementation in the <code>java.util.concurrent</code> package
+    but that is outside the scope of this trail.
+</p>
+
+<p>
+    Here is a list of the topics covered in this text:
+</p>
+
+<ol>
+    <li><a href="#iterator">descendingKeySet() and descendingMap()</a></li>
+    <li><a href="#headmap">headMap(), tailMap() and subMap()</a></li>
+    <li><a href="#ceilingKey">ceilingKey(), floorKey(), higherKey() and lowerKey()</a></li>
+    <li><a href="#ceilingEntry">ceilingEntry(), floorEntry(), higherEntry() and lowerEntry()</a></li>
+    <li><a href="#pollFirst">pollFirstEntry() and pollLastEntry()</a></li>
+    <li><a href="#javaDoc">More detail in the JavaDoc</a></li>
+</ol>
+
+
+<a name="iterator"></a>
+<br/>
+</div>
+<div class="subsection">
+<h2>descendingKeySet() and descendingMap()</h2>
+<p>
+    The first interesting navigation methods are the <code>descendingKeySet()</code> and <code>descendingMap()</code>
+    methods. 
+</p>
+
+<p>
+    The <code>descendingKeySet()</code> method returns a <code>NavigableSet</code> in which the order of the
+    elements is reversed compared to the original key set. The returned "view" is backed by the original <code>NavigableSet</code> ket set,
+    so changes to the descending set are also reflected in the original set. However, you should not remove
+    elements directly from the key set. Use the <code>Map.remove()</code> method instead.
+</p>
+
+<p>
+    Here is a simple example:
+</p>
+
+<pre class="codeBox">
+NavigableSet reverse = map.descendingKeySet();
+</pre>
+
+<p>
+    The <code>descendingMap()</code> method returns a <code>NavigableMap</code> which is a view of the original
+    <code>Map</code>. The order of the elements in this view map is reverse of the order of the original map.
+    Being a view of the original map, any changes to this view is also reflected in the original map.
+</p>
+
+<p>
+    Here is a simple example:
+</p>
+
+<pre class="codeBox">
+NavigableMap descending = map.descendingMap();
+</pre>
+
+
+<a name="headmap"></a>
+<br/>
+</div>
+<div class="subsection">
+<h2>headMap(), tailMap() and subMap()</h2>
+<p>
+    The <code>headMap()</code> method returns a view of the original <code>NavigableMap</code> which
+    only contains elements that are "less than" the given element. Here is an example:
+</p>
+
+<pre class="codeBox">
+NavigableMap original = new TreeMap();
+original.put("1", "1");
+original.put("2", "2");
+original.put("3", "3");
+
+//this headmap1 will contain "1" and "2"
+SortedMap headmap1 = original.headMap("3");
+
+//this headmap2 will contain "1", "2", and "3" because "inclusive"=true
+NavigableMap headmap2 = original.headMap("3", true);
+</pre>
+
+<p>
+    The <code>tailMap()</code> method works the same way, except it returns all elements that are
+    <b>higher</b> than the given parameter element.
+</p>
+
+<p>
+    The <code>subMap()</code> allows you to pass two parameters demarcating the boundaries of the
+    view map to return. Here is an example:
+</p>
+
+<pre class="codeBox">
+NavigableMap original = new TreeMap();
+original.put("1", "1");
+original.add("2", "2");
+original.add("3", "3");
+original.add("4", "4");
+original.add("5", "5");
+
+//this submap1 will contain "3", "3"
+SortedMap    submap1  = original.subMap("2", "4");
+
+//this submap2 will contain ("2", "2") ("3", "3") and ("4", "4") because
+//    fromInclusive=true, and toInclusive=true
+NavigableMap submap2 = original.subMap("2", true, "4", true);
+</pre>
+
+
+
+<a name="ceilingKey"></a>
+<br/>
+</div>
+<div class="subsection">
+<h2>ceilingKey(), floorKey(), higherKey() and lowerKey()</h2>
+<p>
+    The <code>ceilingKey()</code> method returns the least (smallest) key in this
+    map that is greater than or equal to the element passed as parameter to the
+    <code>ceilingKey()</code> method. Here is an example:
+</p>
+
+<pre class="codeBox">
+NavigableMap original = new TreeMap();
+original.put("1", "1");
+original.put("2", "2");
+original.put("3", "3");
+
+
+//ceilingKey will be "2".
+Object ceilingKey = original.ceilingKey("2");
+
+//floorKey will be "2".
+Object floorKey = original.floorKey("2");
+</pre>
+
+<p>
+    The <code>floorKey()</code> method does the opposite of <code>ceilingKey()</code>
+</p>
+
+<p>
+    The <code>higherKey()</code> method returns the least (smallest) element in this
+    map that is greater than (not equal too) the element passed as parameter to
+    the <code>higherKey()</code> method. Here is an example:
+</p>
+
+<pre class="codeBox">
+NavigableMap original = new TreeMap();
+original.put("1", "1");
+original.put("2", "2");
+original.put("3", "3");
+
+
+//higherKey will be "3".
+Object higherKey = original.higherKey("2");
+
+//lowerKey will be "1"
+Object lowerKey = original.lowerKey("2");
+</pre>
+
+<p>
+    The <code>lowerKey()</code> method does the opposite of the <code>higherKey()</code> method.
+</p>
+
+<a name="ceilingEntry"></a>
+<br/>
+</div>
+<div class="subsection">
+<h2>celingEntry(), floorEntry(), higherEntry(), lowerEntry()</h2>
+<p>
+    The <code>NavigableMap</code> also has methods to get the entry for a given key,
+    rather than the key itself. These methods behave like the <code>ceilingKey()</code>
+    etc. methods, except they return an <code>Map.Entry</code> instead of the key
+    object itself.
+</p>
+
+<p>
+    A <code>Map.Entry</code> maps a single key to a single value.
+</p>
+
+<p>
+    Here is a simple example. For more details, check out the JavaDoc.
+</p>
+
+
+<pre class="codeBox">
+NavigableMap original = new TreeMap();
+original.put("1", "1");
+original.put("2", "2");
+original.put("3", "3");
+
+
+//higherEntry will be ("3", "3").
+Map.Entry higherEntry = original.higherEntry("2");
+
+//lowerEntry will be ("1", "1")
+Map.Entry lowerEntry = original.lowerEntry("2");
+</pre>
+
+
+<a name="pollFirst"></a>
+<br/>
+</div>
+<div class="subsection">
+<h2>pollFirstEntry() and pollLastEntry()</h2>
+
+<p>
+   The <code>pollFirstEntry()</code> method returns and removes the "first" entry (key + value) in the <code>NavigableMap</code>
+   or null if the map is empty. The <code>pollLastEntry()</code> returns and removes the "last" element in the map
+   or null if the map is empty. "First" means smallest element according to the sort order of the keys.
+   "Last" means largest key according to the element sorting order of the map.
+</p>
+
+<p>
+    Here are two examples:
+</p>
+
+<pre class="codeBox">
+NavigableMap original = new TreeMap();
+original.put("1", "1");
+original.put("2", "2");
+original.put("3", "3");
+
+
+//first is ("1", "1")
+Map.Entry first = original.pollFirstEntry();
+
+//last is ("3", "3")
+Map.Entry last = original.pollLastEntry();
+</pre>
+
+
+<a name="javaDoc"></a>
+<br/>
+</div>
+<div class="subsection">
+<h2>More Detail in the JavaDoc</h2>
+
+<p>
+    There are still a few interesting methods left in the <code>NavigableMap</code> interface that I have
+    not covered here. For instance, the <code>firstEntry()</code> and <code>lastEntry()</code> methods.
+    You can check out these last methods in the official JavaDoc.
+</p>
+
+            <br/>
+        </div>
+
+
+    </div>
+
+
+<div id="bottom-ads">
+<script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-5569543489255665"
+     data-ad-slot="7776167002"></ins>
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<br/><br/><br/>
+</div>
+
+    <div id="footer-divider"></div>
+    <div id="footer"></div>
+
+</div>
+
+
+<script>
+    $(document).ready(function() {
+
+        //alert($("body").width());
+
+        $(window).resize(function(event) {
+            doResize(false);
+        });
+
+        // resize window depending on browser size.
+        doResize(false);
+
+        // activate book link, if any present.
+        $(".book-link").click(function() {
+            window.open( $(this).attr("book-link-url"));
+        });
+
+        
+    });
+
+</script>
+
+
+<script type="text/javascript">
+
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-4036229-3']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+
+</script>
+
+
+
+
+
+</div>
+</body>
+
+
+</html>

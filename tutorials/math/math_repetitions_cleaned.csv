@@ -1,0 +1,36 @@
+"id";"content";"sentence";"id";"simple_name";"fqn";"id";"code_reference_id";"code_element_id";"index";"rationale";"linker_name";"release_link_set_id";"first_link_id"
+59;"parse";"To parse a fraction from a string,";12337;"parse";"org.apache.commons.math3.fraction.FractionFormat.parse";409;59;12337;1;;"javageneric";375;
+77;"reSeed()";"call to a data generation method, or to a  reSeed() method";20361;"reSeed";"org.apache.commons.math3.random.RandomDataImpl.reSeed";321;77;20361;0;;"javamethod";298;298
+166;"fit";"For all provided curve fitters, the operating principle is the same.";12107;"fit";"org.apache.commons.math3.fitting.CurveFitter.fit";417;166;12107;0;;"javageneric";383;383
+192;"computeDistribution()";"computeDistribution() opens and closes the input file";19943;"computeDistribution";"org.apache.commons.math3.random.ValueServer.computeDistribution";359;192;19943;1;;"javamethod";331;
+202;"nextDouble()";"methods based on the primitive,  nextDouble().";19749;"nextDouble";"org.apache.commons.math3.random.AbstractRandomGenerator.nextDouble";361;202;19749;1;;"javamethod";332;
+363;"cumulativeProbability";"using the cumulativeProbability methods.";11315;"cumulativeProbability";"org.apache.commons.math3.distribution.AbstractIntegerDistribution.cumulativeProbability";427;363;11315;2;;"javageneric";388;
+365;"cumulativeProbability";"cumulativeProbability computes P(X <= x)";11315;"cumulativeProbability";"org.apache.commons.math3.distribution.AbstractIntegerDistribution.cumulativeProbability";430;365;11315;2;;"javageneric";389;
+368;"addElementRolling(double)";"addElementRolling(double) to basic list accessors.";22858;"addElementRolling";"org.apache.commons.math3.util.DoubleArray.addElementRolling";296;368;22858;0;;"javamethod";284;284
+369;"inverseCumulativeProbability";"inverseCumulativeProbability methods.";11318;"inverseCumulativeProbability";"org.apache.commons.math3.distribution.AbstractIntegerDistribution.inverseCumulativeProbability";432;369;11318;1;;"javageneric";390;
+370;"addElementRolling";"The addElementRolling method adds an element";22858;"addElementRolling";"org.apache.commons.math3.util.DoubleArray.addElementRolling";433;370;22858;0;;"javageneric";391;391
+371;"inverseCumulativeProbability";"and a probability, p, inverseCumulativeProbability";11318;"inverseCumulativeProbability";"org.apache.commons.math3.distribution.AbstractIntegerDistribution.inverseCumulativeProbability";436;371;11318;1;;"javageneric";392;
+377;"addElementRolling";"When addElementRolling is invoked, the underlying";23039;"addElementRolling";"org.apache.commons.math3.util.ResizableDoubleArray.addElementRolling";438;377;23039;1;;"javageneric";393;
+476;"evaluate()";"evaluate() methods that take double[] arrays as arguments";20770;"evaluate";"org.apache.commons.math3.stat.descriptive.UnivariateStatistic.evaluate";300;476;20770;0;;"javamethod";286;286
+482;"increment()";"StorelessUnivariateStatistic, which adds increment(),";20824;"increment";"org.apache.commons.math3.stat.descriptive.StorelessUnivariateStatistic.increment";308;482;20824;0;;"javamethod";288;288
+487;"getResult()";"getResult() and associated methods to support";20821;"getResult";"org.apache.commons.math3.stat.descriptive.StorelessUnivariateStatistic.getResult";311;487;20821;0;;"javamethod";290;290
+490;"increment()";"state information as values are added using the increment()";20824;"increment";"org.apache.commons.math3.stat.descriptive.StorelessUnivariateStatistic.increment";314;490;20824;0;;"javamethod";292;292
+537;"parse";"simply call the parse method:";10642;"parse";"org.apache.commons.math3.complex.ComplexFormat.parse";444;537;10642;0;;"javageneric";399;399
+548;"addValue";"addValue(3);";20766;"addValue";"org.apache.commons.math3.stat.descriptive.SummaryStatistics.addValue";446;548;20766;0;;"javageneric";400;400
+588;"newSampleData";"AbstractMultipleLinearRegression#newSampleData(double[],int,int),";22160;"newSampleData";"org.apache.commons.math3.stat.regression.AbstractMultipleLinearRegression.newSampleData";454;588;22160;0;;"javageneric";403;403
+594;"newSampleData";"OLSMultipleLinearRegression#newSampleData(double[], double[][]) and";22065;"newSampleData";"org.apache.commons.math3.stat.regression.OLSMultipleLinearRegression.newSampleData";461;594;22065;3;;"javageneric";404;
+600;"newSampleData";"GLSMultipleLinearRegression#newSampleData(double[],double[][],double[][]) for details.";22079;"newSampleData";"org.apache.commons.math3.stat.regression.GLSMultipleLinearRegression.newSampleData";463;600;22079;1;;"javageneric";405;
+645;"applyTo(Vector3D)";"generic methods: applyTo(Vector3D) and";13243;"applyTo";"org.apache.commons.math3.geometry.euclidean.threed.Rotation.applyTo";466;645;13243;0;;"javageneric";406;406
+646;"org.apache.commons.math3.stat.correlation";"org.apache.commons.math3.stat.correlation package computes covariances";20618;"correlation";"org.apache.commons.math3.stat.correlation.SpearmansCorrelation.correlation";470;646;20618;1;;"javageneric";407;
+661;"applyTo(Rotation)";"provides the methods: applyTo(Rotation) and";13243;"applyTo";"org.apache.commons.math3.geometry.euclidean.threed.Rotation.applyTo";471;661;13243;0;;"javageneric";408;408
+719;"gTest(expected, observed)";"gTest(expected, observed), which is the tail probability beyond";21727;"gTest";"org.apache.commons.math3.stat.inference.TestUtils.gTest";365;719;21727;0;;"javamethod";335;335
+720;"g(expected, observed)";"g(expected, observed) in the ChiSquare distribution with degrees";21712;"g";"org.apache.commons.math3.stat.inference.TestUtils.g";368;720;21712;1;;"javamethod";336;
+721;"gTestIntrinsic(expected, observed)";"gTestIntrinsic(expected, observed) which is the same tail";21770;"gTestIntrinsic";"org.apache.commons.math3.stat.inference.TestUtils.gTestIntrinsic";369;721;21770;0;;"javamethod";337;337
+749;"sum((expected[i] - observed[i])^2 / expected[i])";"sum((expected[i] - observed[i])^2 / expected[i])";20564;"sum";"org.apache.commons.math3.stat.StatUtils.sum";476;749;20564;1;;"javageneric";410;
+762;"sum((counts[i][j] - expected[i][j])^2/expected[i][j])";"sum((counts[i][j] - expected[i][j])^2/expected[i][j])";20558;"sum";"org.apache.commons.math3.stat.StatUtils.sum";477;762;20558;0;;"javageneric";411;411
+782;"gDataSetsComparison";"gDataSetsComparison for the test statistic";21720;"gDataSetsComparison";"org.apache.commons.math3.stat.inference.TestUtils.gDataSetsComparison";480;782;21720;1;;"javageneric";412;
+831;"solve";"In order to use the root-finding features, first a solver object must";10510;"solve";"org.apache.commons.math3.analysis.solvers.BracketingNthOrderBrentSolver.solve";481;831;10510;0;;"javageneric";413;413
+948;"solve()";"The solve() methods of the DecompositionSolver";16363;"solve";"org.apache.commons.math3.linear.DecompositionSolver.solve";298;948;16363;0;;"javamethod";285;285
+970;"getV()";"getV(), getD() and getVT() methods of the";16587;"getV";"org.apache.commons.math3.linear.EigenDecomposition.getV";328;970;16587;1;;"javamethod";303;
+972;"getVT()";"getV(), getD() and getVT() methods of the";16591;"getVT";"org.apache.commons.math3.linear.EigenDecomposition.getVT";334;972;16591;1;;"javamethod";308;
+977;"getV()";"getV() methods of the SingularValueDecomposition interface";15762;"getV";"org.apache.commons.math3.linear.SingularValueDecomposition.getV";344;977;15762;0;;"javamethod";318;318

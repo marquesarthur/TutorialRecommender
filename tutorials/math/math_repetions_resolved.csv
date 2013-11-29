@@ -1,0 +1,400 @@
+id;code_reference_id;code_element_id;index;rationale;linker_name;release_link_set_id;first_link_id;id;url;file_path;xpath;index_from;index_to;project_id;project_release_id;content;source;original_kind_hint_id;kind_hint_id;snippet_id;declaration;index;sentence;paragraph;parent_reference_id;child_index;title_content_type_id;title_object_id;local_content_type_id;local_object_id;mid_content_type_id;mid_object_id;global_content_type_id;global_object_id;resource_content_type_id;resource_object_id;id;codebase_id;simple_name;fqn;kind_id;deprecated;abstract;eclipse_handle;attcontainer_id;index;parser;id;kind;is_type;is_file;is_attribute;is_value
+409;59;12337;1;"";javageneric;375;;59;;math/doc/manual3.1/math/userguide/fraction.html;/html/body/div[4]/div/div/div[3]/p[3]/tt[2];0;0;8;2;parse;d;30;30;;f;68;To parse a fraction from a string,;"Formatting's inverse operation, parsing, can also be performed by
+          FractionFormat.  To parse a fraction from a string,
+          simply call the parse method:";;0;;;27;13;27;1;26;2;25;7;12337;2;parse;org.apache.commons.math3.fraction.FractionFormat.parse;5;f;f;"=mathmain3.1/src<org.apache.commons.math3.fraction{FractionFormat.java[FractionFormat~parse~QString;~QParsePosition;";;0;java;30;unknown;f;f;f;f
+321;77;20361;0;"";javamethod;298;298;77;;math/doc/manual3.1/math/userguide/random.html;/html/body/div[4]/div/div/div[2]/dl/dd[3]/tt[3];0;0;8;2;reSeed();d;5;5;;f;72;call to a data generation method, or to a  reSeed() method;"By default, the implementation provided in RandomDataImpl
+    uses the JDK-provided PRNG.  Like most other PRNGs, the JDK generator
+    generates sequences of random numbers based on an initial ""seed value"".
+    For the non-secure methods, starting with the same seed always produces the
+    same sequence of values.  Secure sequences started with the same seeds will
+    diverge. When a new RandomDataImpl is created, the underlying
+    random number generators are not initialized.  The first
+    call to a data generation method, or to a  reSeed() method
+    initializes the appropriate generator.  If you do not explicitly seed the
+    generator, it is by default seeded with the current time in milliseconds.
+    Therefore, to generate sequences of random data values, you should always
+    instantiate one  RandomDataImpl and use it
+    repeatedly instead of creating new instances for subsequent values in the
+    sequence.  For example, the following will generate a random sequence of 50
+    long integers between 1 and 1,000,000, using the current time in
+    milliseconds as the seed for the JDK PRNG:
+    
+RandomData randomData = new RandomDataImpl(); 
+for (int i = 0; i < 1000; i++) {
+    value = randomData.nextLong(1, 1000000);
+}
+    
+    The following will not in general produce a good random sequence, since the
+    PRNG is reseeded each time through the loop with the current time in
+    milliseconds:
+    
+for (int i = 0; i < 1000; i++) {
+    RandomDataImpl randomData = new RandomDataImpl(); 
+    value = randomData.nextLong(1, 1000000);
+}
+    
+    The following will produce the same random sequence each time it is
+    executed:
+    
+RandomData randomData = new RandomDataImpl(); 
+randomData.reSeed(1000);
+for (int i = 0; i = 1000; i++) {
+    value = randomData.nextLong(1, 1000000);
+}
+    
+    The following will produce a different random sequence each time it is
+     executed. 
+    
+RandomData randomData = new RandomDataImpl(); 
+randomData.reSeedSecure(1000);
+for (int i = 0; i < 1000; i++) {
+    value = randomData.nextSecureLong(1, 1000000);
+}";;0;;;27;15;27;2;26;4;25;7;20361;2;reSeed;org.apache.commons.math3.random.RandomDataImpl.reSeed;5;f;f;=mathmain3.1/src<org.apache.commons.math3.random{RandomDataImpl.java[RandomDataImpl~reSeed;;0;java;5;method;f;f;f;f
+417;166;12107;0;"";javageneric;383;383;166;;math/doc/manual3.1/math/userguide/optimization.html;/html/body/div[4]/div/div/div[6]/p[2]/tt;0;0;8;2;fit;d;30;30;;f;108;For all provided curve fitters, the operating principle is the same.;"For all provided curve fitters, the operating principle is the same. Users must first
+          create an instance of the fitter, then add the observed points and once the complete
+          sample of observed points has been added they must call the fit method
+          which will compute the parameters that best fit the sample. A weight is associated
+          with each observed point, this allows to take into account uncertainty on some points
+          when they come from loosy measurements for example. If no such information exist and
+          all points should be treated the same, it is safe to put 1.0 as the weight for all points.";;0;;;27;25;27;3;26;1;25;7;12107;2;fit;org.apache.commons.math3.fitting.CurveFitter.fit;5;f;f;"=mathmain3.1/src<org.apache.commons.math3.fitting{CurveFitter.java[CurveFitter~fit~QT;~\[D";;0;java;30;unknown;f;f;f;f
+359;192;19943;1;"";javamethod;331;;192;;math/doc/manual3.1/math/userguide/random.html;/html/body/div[4]/div/div/div[6]/dl/dd[2]/tt[4];0;0;8;2;computeDistribution();d;5;5;;f;125;computeDistribution() opens and closes the input file;"When used in Digest Mode, the ValueServer reads the entire input file
+      and estimates a probability density function based on data from the file.
+      The estimation method is essentially the 
+      
+      Variable Kernel Method with Gaussian smoothing.  Once the density
+      has been estimated, getNext() returns random values whose
+      probability distribution matches the empirical distribution -- i.e., if
+      you generate a large number of such values, their distribution should
+      ""look like"" the distribution of the values in the input file.  The values
+      are not stored in memory in this case either, so there is no limit to the
+      size of the input file.  Here is an example:
+      
+      ValueServer vs = new ValueServer();
+      vs.setValuesFileURL(url); 
+      vs.setMode(ValueServer.DIGEST_MODE);
+      vs.computeDistribution(500); //Read file and estimate distribution using 500 bins
+      double value = vs.getNext();
+      // ...Generate and use more values...
+      
+      See the javadoc for ValueServer and 
+      EmpiricalDistribution for more details.  Note that 
+      computeDistribution() opens and closes the input file
+       by itself.";;0;;;27;26;27;2;26;4;25;7;19943;2;computeDistribution;org.apache.commons.math3.random.ValueServer.computeDistribution;5;f;f;=mathmain3.1/src<org.apache.commons.math3.random{ValueServer.java[ValueServer~computeDistribution~I;;0;java;5;method;f;f;f;f
+361;202;19749;1;"";javamethod;332;;202;;math/doc/manual3.1/math/userguide/random.html;/html/body/div[4]/div/div/div[7]/p[1]/tt[3];0;0;8;2;nextDouble();d;5;5;;f;131;methods based on the primitive,  nextDouble().;"To enable alternative PRNGs to be ""plugged in"" to the commons-math data
+      generation utilities and to provide a generic means to replace 
+      java.util.Random in applications, a random generator 
+      adaptor framework has been added to commons-math.  The
+      
+      RandomGenerator interface abstracts the public interface of
+      java.util.Random and any implementation of this
+      interface can be used as the source of random data for the commons-math 
+      data generation classes.  An abstract base class, 
+      
+      AbstractRandomGenerator is provided to make implementation easier.
+      This class provides default implementations of ""derived"" data generation
+      methods based on the primitive,  nextDouble().
+      To support generic replacement of java.util.Random, the 
+      
+      RandomAdaptor class is provided, which extends
+      java.util.Random and wraps and delegates calls to
+      a RandomGenerator instance.";;0;;;27;28;27;2;26;4;25;7;19749;2;nextDouble;org.apache.commons.math3.random.AbstractRandomGenerator.nextDouble;5;f;t;=mathmain3.1/src<org.apache.commons.math3.random{AbstractRandomGenerator.java[AbstractRandomGenerator~nextDouble;;0;java;5;method;f;f;f;f
+427;363;11315;2;"";javageneric;388;;363;;math/doc/manual3.1/math/userguide/distribution.html;/html/body/div[4]/div/div/div[2]/p[2]/tt[1];0;0;8;2;cumulativeProbability;d;2;30;;f;55;using the cumulativeProbability methods.;"Using a distribution object, PDF and CDF probabilities are easily computed
+          using the cumulativeProbability methods.  For a distribution
+          X, and a domain value, x,
+          cumulativeProbability computes P(X <= x)
+          (i.e. the lower tail probability of X).";;0;;;27;61;27;59;26;12;25;7;11315;2;cumulativeProbability;org.apache.commons.math3.distribution.AbstractIntegerDistribution.cumulativeProbability;5;f;f;=mathmain3.1/src<org.apache.commons.math3.distribution{AbstractIntegerDistribution.java[AbstractIntegerDistribution~cumulativeProbability~I~I;;0;java;2;class;t;f;f;f
+430;365;11315;2;"";javageneric;389;;365;;math/doc/manual3.1/math/userguide/distribution.html;/html/body/div[4]/div/div/div[2]/p[2]/tt[4];0;0;8;2;cumulativeProbability;d;2;30;;f;58;cumulativeProbability computes P(X <= x);"Using a distribution object, PDF and CDF probabilities are easily computed
+          using the cumulativeProbability methods.  For a distribution
+          X, and a domain value, x,
+          cumulativeProbability computes P(X <= x)
+          (i.e. the lower tail probability of X).";;0;;;27;61;27;59;26;12;25;7;11315;2;cumulativeProbability;org.apache.commons.math3.distribution.AbstractIntegerDistribution.cumulativeProbability;5;f;f;=mathmain3.1/src<org.apache.commons.math3.distribution{AbstractIntegerDistribution.java[AbstractIntegerDistribution~cumulativeProbability~I~I;;0;java;2;class;t;f;f;f
+296;368;22858;0;"";javamethod;284;284;368;;math/doc/manual3.1/math/userguide/utilities.html;/html/body/div[4]/div/div/div[2]/p[1]/tt[2];0;0;8;2;addElementRolling(double);d;5;5;;f;58;addElementRolling(double) to basic list accessors.;"To maintain statistics based on a ""rolling"" window of values, a resizable 
+    array implementation was developed and is provided for reuse in the 
+    util package.  The core functionality provided is described in
+    the documentation for the interface, 
+    
+    DoubleArray.  This interface adds one method,
+    addElementRolling(double) to basic list accessors. 
+    The addElementRolling method adds an element 
+    (the actual parameter) to the end of the list and removes the first element
+     in the list.";;0;;;27;53;27;51;26;11;25;7;22858;2;addElementRolling;org.apache.commons.math3.util.DoubleArray.addElementRolling;5;f;t;=mathmain3.1/src<org.apache.commons.math3.util{DoubleArray.java[DoubleArray~addElementRolling~D;;0;java;5;method;f;f;f;f
+432;369;11318;1;"";javageneric;390;;369;;math/doc/manual3.1/math/userguide/distribution.html;/html/body/div[4]/div/div/div[2]/p[3]/tt[1];0;0;8;2;inverseCumulativeProbability;d;2;30;;f;61;inverseCumulativeProbability methods.;"The inverse PDF and CDF values are just as easily computed using the
+          inverseCumulativeProbability methods.  For a distribution X,
+          and a probability, p, inverseCumulativeProbability
+          computes the domain value x, such that:";;0;;;27;61;27;59;26;12;25;7;11318;2;inverseCumulativeProbability;org.apache.commons.math3.distribution.AbstractIntegerDistribution.inverseCumulativeProbability;5;f;f;=mathmain3.1/src<org.apache.commons.math3.distribution{AbstractIntegerDistribution.java[AbstractIntegerDistribution~inverseCumulativeProbability~D;;0;java;2;class;t;f;f;f
+433;370;22858;0;"";javageneric;391;391;370;;math/doc/manual3.1/math/userguide/utilities.html;/html/body/div[4]/div/div/div[2]/p[1]/tt[3];0;0;8;2;addElementRolling;d;2;30;;f;59;The addElementRolling method adds an element;"To maintain statistics based on a ""rolling"" window of values, a resizable 
+    array implementation was developed and is provided for reuse in the 
+    util package.  The core functionality provided is described in
+    the documentation for the interface, 
+    
+    DoubleArray.  This interface adds one method,
+    addElementRolling(double) to basic list accessors. 
+    The addElementRolling method adds an element 
+    (the actual parameter) to the end of the list and removes the first element
+     in the list.";;0;;;27;53;27;51;26;11;25;7;22858;2;addElementRolling;org.apache.commons.math3.util.DoubleArray.addElementRolling;5;f;t;=mathmain3.1/src<org.apache.commons.math3.util{DoubleArray.java[DoubleArray~addElementRolling~D;;0;java;2;class;t;f;f;f
+436;371;11318;1;"";javageneric;392;;371;;math/doc/manual3.1/math/userguide/distribution.html;/html/body/div[4]/div/div/div[2]/p[3]/tt[4];0;0;8;2;inverseCumulativeProbability;d;2;30;;f;64;and a probability, p, inverseCumulativeProbability;"The inverse PDF and CDF values are just as easily computed using the
+          inverseCumulativeProbability methods.  For a distribution X,
+          and a probability, p, inverseCumulativeProbability
+          computes the domain value x, such that:";;0;;;27;61;27;59;26;12;25;7;11318;2;inverseCumulativeProbability;org.apache.commons.math3.distribution.AbstractIntegerDistribution.inverseCumulativeProbability;5;f;f;=mathmain3.1/src<org.apache.commons.math3.distribution{AbstractIntegerDistribution.java[AbstractIntegerDistribution~inverseCumulativeProbability~D;;0;java;2;class;t;f;f;f
+438;377;23039;1;"";javageneric;393;;377;;math/doc/manual3.1/math/userguide/utilities.html;/html/body/div[4]/div/div/div[2]/p[2]/tt[2];0;0;8;2;addElementRolling;d;2;30;;f;62;When addElementRolling is invoked, the underlying;"The 
+    ResizableDoubleArray class provides a configurable, array-backed
+    implementation of the DoubleArray interface.
+    When addElementRolling is invoked, the underlying
+    array is expanded if necessary, the new element is added to the end of the
+    array and the ""usable window"" of the array is moved forward, so that
+    the first element is effectively discarded, what was the second becomes the
+    first, and so on.  To efficiently manage storage, two maintenance
+    operations need to be periodically performed -- orphaned elements at the
+    beginning of the array need to be reclaimed and space for new elements at
+    the end needs to be created.  Both of these operations are handled
+    automatically, with frequency / effect driven by the configuration
+    properties expansionMode, expansionFactor and
+    contractionCriteria.  See 
+    
+    ResizableDoubleArray
+    for details.";;0;;;27;53;27;51;26;11;25;7;23039;2;addElementRolling;org.apache.commons.math3.util.ResizableDoubleArray.addElementRolling;5;f;f;=mathmain3.1/src<org.apache.commons.math3.util{ResizableDoubleArray.java[ResizableDoubleArray~addElementRolling~D;;0;java;2;class;t;f;f;f
+300;476;20770;0;"";javamethod;286;286;476;;math/doc/manual3.1/math/userguide/stat.html;/html/body/div[4]/div/div/div[2]/p[3]/tt[1];0;0;8;2;evaluate();d;5;5;;f;63;evaluate() methods that take double[] arrays as arguments;"The top level interface is
+          
+          UnivariateStatistic.
+          This interface, implemented by all statistics, consists of
+          evaluate() methods that take double[] arrays as arguments
+          and return the value of the statistic.   This interface is extended by
+          
+          StorelessUnivariateStatistic, which adds increment(),
+          getResult() and associated methods to support
+          ""storageless"" implementations that maintain counters, sums or other
+          state information as values are added using the increment()
+          method.";;0;;;27;71;27;69;26;14;25;7;20770;2;evaluate;org.apache.commons.math3.stat.descriptive.UnivariateStatistic.evaluate;5;f;t;=mathmain3.1/src<org.apache.commons.math3.stat.descriptive{UnivariateStatistic.java[UnivariateStatistic~evaluate~\[D;;0;java;5;method;f;f;f;f
+308;482;20824;0;"";javamethod;288;288;482;;math/doc/manual3.1/math/userguide/stat.html;/html/body/div[4]/div/div/div[2]/p[3]/tt[2];0;0;8;2;increment();d;5;5;;f;65;StorelessUnivariateStatistic, which adds increment(),;"The top level interface is
+          
+          UnivariateStatistic.
+          This interface, implemented by all statistics, consists of
+          evaluate() methods that take double[] arrays as arguments
+          and return the value of the statistic.   This interface is extended by
+          
+          StorelessUnivariateStatistic, which adds increment(),
+          getResult() and associated methods to support
+          ""storageless"" implementations that maintain counters, sums or other
+          state information as values are added using the increment()
+          method.";;0;;;27;71;27;69;26;14;25;7;20824;2;increment;org.apache.commons.math3.stat.descriptive.StorelessUnivariateStatistic.increment;5;f;t;=mathmain3.1/src<org.apache.commons.math3.stat.descriptive{StorelessUnivariateStatistic.java[StorelessUnivariateStatistic~increment~D;;0;java;5;method;f;f;f;f
+311;487;20821;0;"";javamethod;290;290;487;;math/doc/manual3.1/math/userguide/stat.html;/html/body/div[4]/div/div/div[2]/p[3]/tt[3];0;0;8;2;getResult();d;5;5;;f;66;getResult() and associated methods to support;"The top level interface is
+          
+          UnivariateStatistic.
+          This interface, implemented by all statistics, consists of
+          evaluate() methods that take double[] arrays as arguments
+          and return the value of the statistic.   This interface is extended by
+          
+          StorelessUnivariateStatistic, which adds increment(),
+          getResult() and associated methods to support
+          ""storageless"" implementations that maintain counters, sums or other
+          state information as values are added using the increment()
+          method.";;0;;;27;71;27;69;26;14;25;7;20821;2;getResult;org.apache.commons.math3.stat.descriptive.StorelessUnivariateStatistic.getResult;5;f;t;=mathmain3.1/src<org.apache.commons.math3.stat.descriptive{StorelessUnivariateStatistic.java[StorelessUnivariateStatistic~getResult;;0;java;5;method;f;f;f;f
+314;490;20824;0;"";javamethod;292;292;490;;math/doc/manual3.1/math/userguide/stat.html;/html/body/div[4]/div/div/div[2]/p[3]/tt[4];0;0;8;2;increment();d;5;5;;f;67;state information as values are added using the increment();"The top level interface is
+          
+          UnivariateStatistic.
+          This interface, implemented by all statistics, consists of
+          evaluate() methods that take double[] arrays as arguments
+          and return the value of the statistic.   This interface is extended by
+          
+          StorelessUnivariateStatistic, which adds increment(),
+          getResult() and associated methods to support
+          ""storageless"" implementations that maintain counters, sums or other
+          state information as values are added using the increment()
+          method.";;0;;;27;71;27;69;26;14;25;7;20824;2;increment;org.apache.commons.math3.stat.descriptive.StorelessUnivariateStatistic.increment;5;f;t;=mathmain3.1/src<org.apache.commons.math3.stat.descriptive{StorelessUnivariateStatistic.java[StorelessUnivariateStatistic~increment~D;;0;java;5;method;f;f;f;f
+444;537;10642;0;"";javageneric;399;399;537;;math/doc/manual3.1/math/userguide/complex.html;/html/body/div[4]/div/div/div[4]/p[4]/tt[2];0;0;8;2;parse;d;30;30;;f;79;simply call the parse method:;"Formatting inverse operation, parsing, can also be performed by
+          ComplexFormat.  Parse a complex number from a string,
+          simply call the parse method:";;0;;;27;82;27;78;26;15;25;7;10642;2;parse;org.apache.commons.math3.complex.ComplexFormat.parse;5;f;f;"=mathmain3.1/src<org.apache.commons.math3.complex{ComplexFormat.java[ComplexFormat~parse~QString;";;0;java;30;unknown;f;f;f;f
+446;548;20766;0;"";javageneric;400;400;548;;math/doc/manual3.1/math/userguide/stat.html;/html/body/div[4]/div/div/div[2]/dl/dd[6]/tt[4];0;0;8;2;addValue;d;2;30;;f;96;"addValue(3);";"There are two ways to do this using AggregateSummaryStatistics. 
+        The first is to use an AggregateSummaryStatistics instance
+        to accumulate overall statistics contributed by SummaryStatistics
+        instances created using
+        
+        AggregateSummaryStatistics.createContributingStatistics():
+        
+// Create a AggregateSummaryStatistics instance to accumulate the overall statistics 
+// and AggregatingSummaryStatistics for the subsamples
+AggregateSummaryStatistics aggregate = new AggregateSummaryStatistics();
+SummaryStatistics setOneStats = aggregate.createContributingStatistics();
+SummaryStatistics setTwoStats = aggregate.createContributingStatistics();
+// Add values to the subsample aggregates
+setOneStats.addValue(2);
+setOneStats.addValue(3);
+setTwoStats.addValue(2);
+setTwoStats.addValue(4);
+...
+// Full sample data is reported by the aggregate
+double totalSampleSum = aggregate.getSum();
+        
+        The above approach has the disadvantages that the addValue calls must be synchronized on the
+        SummaryStatistics instance maintained by the aggregate and each value addition updates the
+        aggregate as well as the subsample. For applications that can wait to do the aggregation until all values
+        have been added, a static
+        
+          aggregate method is available, as shown in the following example.
+        This method should be used when aggregation needs to be done across threads.
+        
+// Create SummaryStatistics instances for the subsample data
+SummaryStatistics setOneStats = new SummaryStatistics();
+SummaryStatistics setTwoStats = new SummaryStatistics();
+// Add values to the subsample SummaryStatistics instances
+setOneStats.addValue(2);
+setOneStats.addValue(3);
+setTwoStats.addValue(2);
+setTwoStats.addValue(4);
+...
+// Aggregate the subsample statistics
+Collection<SummaryStatistics> aggregate = new ArrayList<SummaryStatistics>();
+aggregate.add(setOneStats);
+aggregate.add(setTwoStats);
+StatisticalSummary aggregatedStats = AggregateSummaryStatistics.aggregate(aggregate);
+
+// Full sample data is reported by aggregatedStats
+double totalSampleSum = aggregatedStats.getSum();";;0;;;27;71;27;69;26;14;25;7;20766;2;addValue;org.apache.commons.math3.stat.descriptive.SummaryStatistics.addValue;5;f;f;=mathmain3.1/src<org.apache.commons.math3.stat.descriptive{SummaryStatistics.java[SummaryStatistics~addValue~D;;0;java;2;class;t;f;f;f
+454;588;22160;0;"";javageneric;403;403;588;;math/doc/manual3.1/math/userguide/stat.html;/html/body/div[4]/div/div/div[5]/p[5]/a[1];0;0;8;2;newSampleData;d;2;30;;f;123;AbstractMultipleLinearRegression#newSampleData(double[],int,int),;"Data for OLS models can be loaded in a single double[] array, consisting of concatenated rows of data, each containing
+           the regressand (Y) value, followed by regressor values; or using a double[][] array with rows corresponding to
+           observations. GLS models also require a double[][] array representing the covariance matrix of the error terms.  See
+           
+           AbstractMultipleLinearRegression#newSampleData(double[],int,int),  
+           
+           OLSMultipleLinearRegression#newSampleData(double[], double[][]) and 
+           
+           GLSMultipleLinearRegression#newSampleData(double[],double[][],double[][]) for details.";;0;;;27;74;27;69;26;14;25;7;22160;2;newSampleData;org.apache.commons.math3.stat.regression.AbstractMultipleLinearRegression.newSampleData;5;f;f;=mathmain3.1/src<org.apache.commons.math3.stat.regression{AbstractMultipleLinearRegression.java[AbstractMultipleLinearRegression~newSampleData~\[D~I~I;;0;java;2;class;t;f;f;f
+461;594;22065;3;"";javageneric;404;;594;;math/doc/manual3.1/math/userguide/stat.html;/html/body/div[4]/div/div/div[5]/p[5]/a[2];0;0;8;2;newSampleData;d;2;30;;f;124;OLSMultipleLinearRegression#newSampleData(double[], double[][]) and;"Data for OLS models can be loaded in a single double[] array, consisting of concatenated rows of data, each containing
+           the regressand (Y) value, followed by regressor values; or using a double[][] array with rows corresponding to
+           observations. GLS models also require a double[][] array representing the covariance matrix of the error terms.  See
+           
+           AbstractMultipleLinearRegression#newSampleData(double[],int,int),  
+           
+           OLSMultipleLinearRegression#newSampleData(double[], double[][]) and 
+           
+           GLSMultipleLinearRegression#newSampleData(double[],double[][],double[][]) for details.";;0;;;27;74;27;69;26;14;25;7;22065;2;newSampleData;org.apache.commons.math3.stat.regression.OLSMultipleLinearRegression.newSampleData;5;f;f;=mathmain3.1/src<org.apache.commons.math3.stat.regression{OLSMultipleLinearRegression.java[OLSMultipleLinearRegression~newSampleData~\[D~I~I;;0;java;2;class;t;f;f;f
+463;600;22079;1;"";javageneric;405;;600;;math/doc/manual3.1/math/userguide/stat.html;/html/body/div[4]/div/div/div[5]/p[5]/a[3];0;0;8;2;newSampleData;d;2;30;;f;125;GLSMultipleLinearRegression#newSampleData(double[],double[][],double[][]) for details.;"Data for OLS models can be loaded in a single double[] array, consisting of concatenated rows of data, each containing
+           the regressand (Y) value, followed by regressor values; or using a double[][] array with rows corresponding to
+           observations. GLS models also require a double[][] array representing the covariance matrix of the error terms.  See
+           
+           AbstractMultipleLinearRegression#newSampleData(double[],int,int),  
+           
+           OLSMultipleLinearRegression#newSampleData(double[], double[][]) and 
+           
+           GLSMultipleLinearRegression#newSampleData(double[],double[][],double[][]) for details.";;0;;;27;74;27;69;26;14;25;7;22079;2;newSampleData;org.apache.commons.math3.stat.regression.GLSMultipleLinearRegression.newSampleData;5;f;f;=mathmain3.1/src<org.apache.commons.math3.stat.regression{GLSMultipleLinearRegression.java[GLSMultipleLinearRegression~newSampleData~\[D~\[\[D~\[\[D;;0;java;2;class;t;f;f;f
+466;645;13243;0;"";javageneric;406;406;645;;math/doc/manual3.1/math/userguide/geometry.html;/html/body/div[4]/div/div/div[2]/p[13]/tt[3];0;0;8;2;applyTo(Vector3D);d;5;30;;f;65;generic methods: applyTo(Vector3D) and;"These examples show that a rotation means what the user wants it to
+          mean, so this class does not push the user towards one specific
+          definition and hence does not provide methods like
+          projectVectorIntoDestinationFrame or
+          computeTransformedDirection. It provides simpler and more
+          generic methods: applyTo(Vector3D) and
+          applyInverseTo(Vector3D).";;0;;;27;85;27;83;26;16;25;7;13243;2;applyTo;org.apache.commons.math3.geometry.euclidean.threed.Rotation.applyTo;5;f;f;"=mathmain3.1/src<org.apache.commons.math3.geometry.euclidean.threed{Rotation.java[Rotation~applyTo~QVector3D;";;0;java;5;method;f;f;f;f
+470;646;20618;1;"";javageneric;407;;646;;math/doc/manual3.1/math/userguide/stat.html;/html/body/div[4]/div/div/div[7]/p[1]/a[1];0;0;8;2;org.apache.commons.math3.stat.correlation;d;8;30;;f;147;org.apache.commons.math3.stat.correlation package computes covariances;"The 
+          org.apache.commons.math3.stat.correlation package computes covariances
+          and correlations for pairs of arrays or columns of a matrix.
+          
+          Covariance computes covariances, 
+          
+          PearsonsCorrelation provides Pearson's Product-Moment correlation coefficients and
+          
+          SpearmansCorrelation computes Spearman's rank correlation.";644;0;;;27;76;27;69;26;14;25;7;20618;2;correlation;org.apache.commons.math3.stat.correlation.SpearmansCorrelation.correlation;5;f;f;=mathmain3.1/src<org.apache.commons.math3.stat.correlation{SpearmansCorrelation.java[SpearmansCorrelation~correlation~\[D~\[D;;0;java;8;field;f;f;f;f
+471;661;13243;0;"";javageneric;408;408;661;;math/doc/manual3.1/math/userguide/geometry.html;/html/body/div[4]/div/div/div[2]/p[14]/tt[7];0;0;8;2;applyTo(Rotation);d;5;30;;f;73;provides the methods: applyTo(Rotation) and;"Since a rotation is basically a vectorial operator, several
+          rotations can be composed together and the composite operation
+          r = r1 o r2 (which means that for each
+          vector u, r(u) = r1(r2(u)))
+          is also a rotation. Hence we can consider that in addition to vectors, a
+          rotation can be applied to other rotations as well (or to itself). With our
+          previous notations, we would say we can apply r1 to
+          r2 and the result we get is r =
+          r1 o r2. For this purpose, the class
+          provides the methods: applyTo(Rotation) and
+          applyInverseTo(Rotation).";;0;;;27;85;27;83;26;16;25;7;13243;2;applyTo;org.apache.commons.math3.geometry.euclidean.threed.Rotation.applyTo;5;f;f;"=mathmain3.1/src<org.apache.commons.math3.geometry.euclidean.threed{Rotation.java[Rotation~applyTo~QVector3D;";;0;java;5;method;f;f;f;f
+365;719;21727;0;"";javamethod;335;335;719;;math/doc/manual3.1/math/userguide/stat.html;/html/body/div[4]/div/div/div[8]/ul/li[4]/tt[1];0;0;8;2;gTest(expected, observed);d;5;5;;f;219;gTest(expected, observed), which is the tail probability beyond;"The G test implementation provides two p-values:
+           gTest(expected, observed), which is the tail probability beyond
+           g(expected, observed) in the ChiSquare distribution with degrees
+           of freedom one less than the common length of input arrays and 
+           gTestIntrinsic(expected, observed) which is the same tail
+           probability computed using a ChiSquare distribution with one less degeree
+           of freedom.";;0;;;27;77;27;69;26;14;25;7;21727;2;gTest;org.apache.commons.math3.stat.inference.TestUtils.gTest;5;f;f;=mathmain3.1/src<org.apache.commons.math3.stat.inference{TestUtils.java[TestUtils~gTest~\[D~\[J;;0;java;5;method;f;f;f;f
+368;720;21712;1;"";javamethod;336;;720;;math/doc/manual3.1/math/userguide/stat.html;/html/body/div[4]/div/div/div[8]/ul/li[4]/tt[2];0;0;8;2;g(expected, observed);d;5;5;;f;220;g(expected, observed) in the ChiSquare distribution with degrees;"The G test implementation provides two p-values:
+           gTest(expected, observed), which is the tail probability beyond
+           g(expected, observed) in the ChiSquare distribution with degrees
+           of freedom one less than the common length of input arrays and 
+           gTestIntrinsic(expected, observed) which is the same tail
+           probability computed using a ChiSquare distribution with one less degeree
+           of freedom.";;0;;;27;77;27;69;26;14;25;7;21712;2;g;org.apache.commons.math3.stat.inference.TestUtils.g;5;f;f;=mathmain3.1/src<org.apache.commons.math3.stat.inference{TestUtils.java[TestUtils~g~\[D~\[J;;0;java;5;method;f;f;f;f
+369;721;21770;0;"";javamethod;337;337;721;;math/doc/manual3.1/math/userguide/stat.html;/html/body/div[4]/div/div/div[8]/ul/li[4]/tt[3];0;0;8;2;gTestIntrinsic(expected, observed);d;5;5;;f;221;gTestIntrinsic(expected, observed) which is the same tail;"The G test implementation provides two p-values:
+           gTest(expected, observed), which is the tail probability beyond
+           g(expected, observed) in the ChiSquare distribution with degrees
+           of freedom one less than the common length of input arrays and 
+           gTestIntrinsic(expected, observed) which is the same tail
+           probability computed using a ChiSquare distribution with one less degeree
+           of freedom.";;0;;;27;77;27;69;26;14;25;7;21770;2;gTestIntrinsic;org.apache.commons.math3.stat.inference.TestUtils.gTestIntrinsic;5;f;f;=mathmain3.1/src<org.apache.commons.math3.stat.inference{TestUtils.java[TestUtils~gTestIntrinsic~\[D~\[J;;0;java;5;method;f;f;f;f
+476;749;20564;1;"";javageneric;410;;749;;math/doc/manual3.1/math/userguide/stat.html;/html/body/div[4]/div/div/div[8]/dl/dd[7]/tt[3];0;0;8;2;sum((expected[i] - observed[i])^2 / expected[i]);d;30;30;;f;250;sum((expected[i] - observed[i])^2 / expected[i]);"To compute a chi-square statistic measuring the agreement between a
+          long[] array of observed counts and a double[]
+          array of expected counts, use:
+          
+long[] observed = {10, 9, 11};
+double[] expected = {10.1, 9.8, 10.3};
+System.out.println(TestUtils.chiSquare(expected, observed));
+          
+          the value displayed will be
+          sum((expected[i] - observed[i])^2 / expected[i])";;0;;;27;77;27;69;26;14;25;7;20564;2;sum;org.apache.commons.math3.stat.StatUtils.sum;5;f;f;=mathmain3.1/src<org.apache.commons.math3.stat{StatUtils.java[StatUtils~sum~\[D~I~I;;0;java;30;unknown;f;f;f;f
+477;762;20558;0;"";javageneric;411;411;762;;math/doc/manual3.1/math/userguide/stat.html;/html/body/div[4]/div/div/div[8]/dl/dd[10]/tt[3];0;0;8;2;sum((counts[i][j] - expected[i][j])^2/expected[i][j]);d;30;30;;f;263;sum((counts[i][j] - expected[i][j])^2/expected[i][j]);"To compute a chi-square statistic statistic associated with a
+          
+          chi-square test of independence based on a two-dimensional (long[][])
+          counts array viewed as a two-way table, use:
+          
+TestUtils.chiSquareTest(counts);
+          
+          The rows of the 2-way table are
+          count[0], ... , count[count.length - 1]. 
+          The chi-square statistic returned is
+          sum((counts[i][j] - expected[i][j])^2/expected[i][j])
+          where the sum is taken over all table entries and
+          expected[i][j] is the product of the row and column sums at
+          row i, column j divided by the total count.";;0;;;27;77;27;69;26;14;25;7;20558;2;sum;org.apache.commons.math3.stat.StatUtils.sum;5;f;f;=mathmain3.1/src<org.apache.commons.math3.stat{StatUtils.java[StatUtils~sum~\[D;;0;java;30;unknown;f;f;f;f
+480;782;21720;1;"";javageneric;412;;782;;math/doc/manual3.1/math/userguide/stat.html;/html/body/div[4]/div/div/div[8]/dl/dd[14]/dd[4]/tt;0;0;8;2;gDataSetsComparison;d;2;30;;f;286;gDataSetsComparison for the test statistic;"To evaluate the hypothesis that two sets of counts come from the
+          same underlying distribution, use long[] arrays for the counts and
+          gDataSetsComparison for the test statistic
+          
+long[] obs1 = new long[]{268, 199, 42};
+long[] obs2 = new long[]{807, 759, 184};
+System.out.println(TestUtils.gDataSetsComparison(obs1, obs2)); // G statistic
+System.out.println(TestUtils.gTestDataSetsComparison(obs1, obs2)); // p-value";;0;;;27;77;27;69;26;14;25;7;21720;2;gDataSetsComparison;org.apache.commons.math3.stat.inference.TestUtils.gDataSetsComparison;5;f;f;=mathmain3.1/src<org.apache.commons.math3.stat.inference{TestUtils.java[TestUtils~gDataSetsComparison~\[J~\[J;;0;java;2;class;t;f;f;f
+481;831;10510;0;"";javageneric;413;413;831;;math/doc/manual3.1/math/userguide/analysis.html;/html/body/div[4]/div/div/div[3]/p[4]/tt[1];0;0;8;2;solve;d;30;30;;f;86;In order to use the root-finding features, first a solver object must;"In order to use the root-finding features, first a solver object must
+          be created by calling its constructor, often providing relative and absolute
+          accuracy. Using a solver object, roots of functions
+          are easily found using the solve methods.  These methods takes
+          a maximum iteration count maxEval, a function f,
+          and either two domain values, min and max, or a
+          startValue as parameters. If the maximal number of iterations
+          count is exceeded, non-convergence is assumed and a ConvergenceException
+          exception is thrown.  A suggested value is 100, which should be plenty, given that a
+          bisection algorithm can't get any more accurate after 52 iterations because of the
+          number of mantissa bits in a double precision floating point number. If a number of
+          ill-conditioned problems is to be solved, this number can be decreased in order
+          to avoid wasting time.
+          Bracketed
+          solvers also take an allowed solution
+          enum parameter to specify which side of the final convergence interval should be
+          selected as the root. It can be ANY_SIDE, LEFT_SIDE, RIGHT_SIDE,
+          BELOW_SIDE or ABOVE_SIDE. Left and right are used to specify the root along
+          the function parameter axis while below and above refer to the function value axis. The solve methods
+          compute a value c such that:";;0;;;27;90;27;87;26;17;25;7;10510;2;solve;org.apache.commons.math3.analysis.solvers.BracketingNthOrderBrentSolver.solve;5;f;f;"=mathmain3.1/src<org.apache.commons.math3.analysis.solvers{BracketingNthOrderBrentSolver.java[BracketingNthOrderBrentSolver~solve~I~QUnivariateFunction;~D~D~QAllowedSolution;";;0;java;30;unknown;f;f;f;f
+298;948;16363;0;"";javamethod;285;285;948;;math/doc/manual3.1/math/userguide/linear.html;/html/body/div[4]/div/div/div[4]/p[1]/tt[1];0;0;8;2;solve();d;5;5;;f;63;The solve() methods of the DecompositionSolver;"The solve() methods of the DecompositionSolver
+          interface support solving linear systems of equations of the form AX=B, either
+          in linear sense or in least square sense. A RealMatrix instance is
+          used to represent the coefficient matrix of the system. Solving the system is a
+          two phases process: first the coefficient matrix is decomposed in some way and
+          then a solver built from the decomposition solves the system. This allows to
+          compute the decomposition and build the solver only once if several systems have
+          to be solved with the same coefficient matrix.";;0;;;27;99;27;95;26;18;25;7;16363;2;solve;org.apache.commons.math3.linear.DecompositionSolver.solve;5;f;t;"=mathmain3.1/src<org.apache.commons.math3.linear{DecompositionSolver.java[DecompositionSolver~solve~QRealVector;";;0;java;5;method;f;f;f;f
+328;970;16587;1;"";javamethod;303;;970;;math/doc/manual3.1/math/userguide/linear.html;/html/body/div[4]/div/div/div[5]/p[2]/tt[4];0;0;8;2;getV();d;5;5;;f;83;getV(), getD() and getVT() methods of the;"The getEigenvalue(), getEigenvalues(), getEigenVector(),
+          getV(), getD() and getVT() methods of the
+          EigenDecomposition interface support solving eigenproblems of the form
+          AX = lambda X where lambda is a real scalar.";;0;;;27;100;27;95;26;18;25;7;16587;2;getV;org.apache.commons.math3.linear.EigenDecomposition.getV;5;f;f;=mathmain3.1/src<org.apache.commons.math3.linear{EigenDecomposition.java[EigenDecomposition~getV;;0;java;5;method;f;f;f;f
+334;972;16591;1;"";javamethod;308;;972;;math/doc/manual3.1/math/userguide/linear.html;/html/body/div[4]/div/div/div[5]/p[2]/tt[6];0;0;8;2;getVT();d;5;5;;f;85;getV(), getD() and getVT() methods of the;"The getEigenvalue(), getEigenvalues(), getEigenVector(),
+          getV(), getD() and getVT() methods of the
+          EigenDecomposition interface support solving eigenproblems of the form
+          AX = lambda X where lambda is a real scalar.";;0;;;27;100;27;95;26;18;25;7;16591;2;getVT;org.apache.commons.math3.linear.EigenDecomposition.getVT;5;f;f;=mathmain3.1/src<org.apache.commons.math3.linear{EigenDecomposition.java[EigenDecomposition~getVT;;0;java;5;method;f;f;f;f
+344;977;15762;0;"";javamethod;318;318;977;;math/doc/manual3.1/math/userguide/linear.html;/html/body/div[4]/div/div/div[5]/p[3]/tt[4];0;0;8;2;getV();d;5;5;;f;90;getV() methods of the SingularValueDecomposition interface;"The getSingularValues(), getU(), getS() and
+        getV() methods of the SingularValueDecomposition interface
+        allow to solve singular values problems of the form AXi = lambda Yi where lambda is a
+        real scalar, and where the Xi and Yi vectors form orthogonal bases of their respective
+        vector spaces (which may have different dimensions).";;0;;;27;100;27;95;26;18;25;7;15762;2;getV;org.apache.commons.math3.linear.SingularValueDecomposition.getV;5;f;f;=mathmain3.1/src<org.apache.commons.math3.linear{SingularValueDecomposition.java[SingularValueDecomposition~getV;;0;java;5;method;f;f;f;f

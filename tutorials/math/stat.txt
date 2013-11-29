@@ -1,0 +1,126 @@
+number of Section-APIElement pairs is 98
+number of relevant pairs is 54
+number of unique API Elements is 74
+number of unique relevant API Elements is 45
+-------------------------------------------
+number of API Elements per Section in relevant/total
+-------------------------------------------
+3.3 Real vectors: 1,2
+4.7 Differentiation - part 2: 1,1
+3.2 Real matrices: 1,4
+4.7 Differentiation - part 4: 1,1
+7.2 Complex Numbers: 1,3
+8.3 User Defined Distributions: 0,2
+4.7 Differentiation - part 5: 0,1
+4.7 Differentiation - part 6: 1,4
+4.7 Differentiation - part 7: 2,2
+9.2 Fraction Numbers: 2,2
+11.3 Binary Space Partitioning: 0,1
+14.2 GA Framework: 1,6
+7.4 Complex Formatting and Parsing: 2,2
+4.4 Interpolation - part 4: 3,4
+4.4 Interpolation - part 5: 1,1
+16.3 Hierarchies: 0,4
+4.5 Integration: 0,1
+4.4 Interpolation - part 3: 2,3
+9.3 Fraction Formatting and Parsing: 2,2
+4.3 Root-finding - part 6: 5,5
+11.2 Euclidean spaces - part 3: 1,2
+4.3 Root-finding - part 5: 2,2
+3.5 Eigenvalues,eigenvectors and singular values,singular vectors: 2,2
+11.2 Euclidean spaces - part 2: 2,2
+4.3 Root-finding - part 4: 2,2
+11.2 Euclidean spaces: 3,3
+15.2 Kalman Filter: 3,3
+4.6 Polynomials: 1,2
+16.4 Features: 1,2
+3.6 Non-real fields (complex, fractions ...): 0,4
+4.7 Differentiation: 1,2
+4.4 Interpolation: 0,2
+4.3 Root-finding - part 7: 1,1
+8.2 Distribution Framework: 1,1
+3.4 Solving linear systems - part 2: 0,1
+3.4 Solving linear systems - part 3: 1,1
+14.3 Implementation: 4,6
+4.3 Root-finding: 0,3
+7.3 Complex Transcendental Functions: 1,2
+3.4 Solving linear systems: 1,3
+11.2 Euclidean spaces - part 6: 1,1
+
+-------------------------------------------
+number of unique API Elements per Section in relevant,total
+-------------------------------------------
+Fitness: 0,1
+BigFraction: 1,2
+RealVector: 1,3
+SparseRealMatrix: 0,1
+SecantSolver: 1,1
+ComplexUtils: 0,2
+SingularValueDecomposition: 1,1
+ComplexFormat: 1,1
+MathArithmeticException: 0,1
+UnivariateDifferentiableFunction: 1,2
+ExceptionContext: 1,1
+UnivariateFunction: 0,2
+UnivariateFunctionDifferentiator: 1,2
+BigReal: 0,1
+DecompositionSolver: 2,2
+TournamentSelection: 1,1
+UnivariateDifferentiableSolver: 0,1
+UnivariateSolver: 1,2
+FiniteDifferencesDifferentiator: 1,1
+TrivariateGridInterpolator: 1,1
+Space: 0,1
+PolynomialsUtils: 1,1
+NaN: 0,1
+ExceptionContextProvider: 0,1
+IntervalsSet: 1,1
+OnePointCrossover: 1,1
+BracketingNthOrderBrentSolver: 2,2
+IllinoisSolver: 1,1
+BisectionSolver: 1,1
+Vector3DFormat: 0,1
+MathIllegalArgumentException: 0,1
+StoppingCondition: 0,2
+HermiteInterpolator: 1,1
+GeneticAlgorithm: 2,2
+BicubicSplineInterpolator: 1,1
+Array2DRowRealMatrix: 0,1
+KalmanFilter: 1,1
+MeasurementModel: 1,1
+FractionFormat: 1,1
+Rotation: 2,2
+Vector3D: 1,1
+UnivariateIntegrator: 0,1
+Interval: 1,1
+ConvergenceException: 1,1
+EigenDecomposition: 1,1
+SmoothingPolynomialBicubicSplineInterpolator: 1,1
+RandomKeyMutation: 1,1
+PolynomialSolver: 0,1
+BivariateGridInterpolator: 1,1
+Complex: 3,4
+Fraction: 2,3
+RealMatrix: 1,2
+MathIllegalStateException: 0,1
+TrivariateFunction: 0,1
+BlockRealMatrix: 0,1
+CrossoverPolicy: 0,1
+PolyhedronsSet: 1,1
+PegasusSolver: 1,1
+AbstractIntegerDistribution: 1,2
+PolygonsSet: 1,1
+BivariateFunction: 0,1
+UnivariateInterpolator: 0,1
+MutationPolicy: 0,1
+MathUnsupportedOperationException: 0,1
+BrentSolver: 1,1
+IntegerDistribution: 0,1
+SelectionPolicy: 0,1
+RealVectorFormat: 0,1
+RegulaFalsiSolver: 1,1
+ProcessModel: 1,1
+PolynomialFunction: 0,1
+FixedGenerationCount: 0,1
+TricubicSplineInterpolator: 1,1
+DerivativeStructure: 3,5

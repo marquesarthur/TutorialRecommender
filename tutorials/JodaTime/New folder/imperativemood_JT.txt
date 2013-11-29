@@ -1,0 +1,79 @@
+A period can only be resolved to an exact number of milliseconds by specifying the instant (including chronology and time zone) it is relative to.
+For example, consider a period of 1 month.
+If you add this period to the 1st February (ISO) then you will get the 1st March.
+If you add the same period to the 1st March you will get the 1st April.
+As a second example, consider adding 1 day at the daylight savings boundary.
+If you use a period to do the addition then either 23 or 25 hours will be added as appropriate.
+If you had created a duration equal to 24 hours, then you would end up with the wrong result.
+This is significant when converting a duration or interval to a period, as the calculation needs to know which period fields it should populate.
+Periods can be added to an instant, or to either end of an interval to change those objects.
+In datetime maths you could say: CODEID=0.
+We have more to say on the usage of properties later in this document.
+When working with a Collections interface, such as List or Map you will normally hold your variable as a type of List or Map, only referencing the concrete class when you create the object.
+For most work, you will reference the concrete class, not the interface.
+For maximum flexibility however, you might choose to declare your method parameters using the Joda-Time interface.
+A method on the interface can obtain the concrete class for use within the method.
+To simplify the access to the formatter architecture, methods have been provided on the datetime classes such as CLT.
+Result b will output using the pattern 'dd:MM:yy' (note that patterns are cached internally).
+Result c will output using the pattern 'EEE' in French.
+Result d will output using the specified formatter, and is thus the same as fmt.
+So, for instance, the 'day-of-year' calendar field would be retrieved by calling the CLT() method.
+For a complete list of fields and their descriptions, see the field reference.
+If you need a custom formatter which can be described in terms of a format pattern, you can use the factory method provided by the RELCLT class.
+Thus to get a formatter for a 4 digit year, 2 digit month and 2 digit day of month, i.e. a format of yyyyMMdd you would do CODEID=0.
+You may need to print or parse in a particular Locale.
+CLT methods.
+Thus we could add 3 days to dt directly as follows: CODEID=0.
+The direct methods are fine for simple usage, but more flexibility can be achieved via the property/field mechanism.
+The day of week property is obtained by CODEID=0 which can be used to get richer information about the field, such as CODEID=1 which return short and long name strings (based on the current locale) of the day-of-week.
+Localized versions of these methods are also available, thus CODEID=2 can be used to return the day-of-week name string in French.
+For a complete reference, see the documentation for the base class CLT.
+In practice, one would not actually create the intermediate pDoW variable.
+Thus, for example, CODEID=4 would be written instead of the more indirect code presented earlier.
+Note: For the single case of getting the numerical value of a field, we recommend using the get method on the main DateTime object as it is more efficient.
+Many, perhaps most, applications will never need to see what's below the surface.
+In particular, we cover the usage of the key CLT, CLT, CLT and CLT classes.
+We finish with a look at the important topic of formatting and parsing and a few more advanced topics.
+For example, the converters can convert a JDK Date object to a CLT.
+If required, you can add your own converters to those supplied in Joda-Time.
+In particular this constructor can be passed a JDK Date, JDK Calendar or JDK GregorianCalendar (It also accepts an ISO8601 formatted String, or Long object representing milliseconds).
+Thus inter-conversion between Joda RELCLT and JDK Date can be performed as follows CODEID=0.
+To return to our prior example, if we wish to modify the dt object by changing its day-of-week field to Monday we can do so by using the RELCLT method of the property: CODEID=0.
+Note: If the RELCLT object is already set to Monday then the same object will be returned.
+To add to a date you could use the RELCLT method.
+Thus, this class can safely be passed around and used in multiple threads without synchronization.
+The millisecond instant can be converted to any date time field using a RELCLT.
+To assist with this, methods are provided on RELCLT that act as getters for the most common date and time fields.
+We discuss the chronology concept a litte further on in this overview.
+Objects of this class can be modified and are not thread-safe.
+SSSZZ, you would initialize fmt as CODEID=0.
+You would then use fmt as described above, to read or write datetime objects in this format.
+Durations can be added to an instant, or to either end of an interval to change those objects.
+In datetime maths you could say: CODEID=0.
+For instance, if you want to get the local time in London at this very moment, you would do the following CODEID=0 where DateTimeZone.
+A set of all TimeZone ID strings (such as &quot;,Europe/London&quot;,) may be obtained by calling RELCLTZone.
+Finally, if you have a format that is not easily represented by a pattern string, Joda Time architecture exposes a builder class that can be used to build a custom formatter which is programatically defined.
+Thus if you wanted a formatter to print and parse dates of the form &quot;,22-Jan-65&quot;,, you could do the following: CODEID=0.
+The final RELCLT method creates the actual formatter that will be used to print/parse.
+In this example the range will be (1956 - 50) = 1906, to (1956 + 49) = 2005.
+Thus 04 will be 2004 but 07 will be 1907.
+This allows the current time to be changed, which can be very useful for testing.
+Note that changing the current time this way does not affect the system clock.
+RELCLT objects have value semantics, and cannot be modified after construction (they are immutable).
+Remember that calling an add or set method on an immtable object has no effect on that object - only the result is updated.
+Thus if you want to get the datetime for the current time, but in the Buddhist Calendar, you would do CODEID=0 where RELCLT is a factory method for obtaining a Buddhist chronology.
+Property) which provides access to the field.
+For instance, the direct way to get the day of week for a particular CLT, involves calling the method CODEID=0 where iDoW can take the values (from class CLTConstants).
+RELCLT.
+Most users will never need to use or refer directly to the subclasses.
+Instead, they will simply obtain the chronology and use it as a singleton, as follows: CODEID=0.
+For most applications, the Chronology can be ignored as it will default to the RELCLT.
+You would change it if you need accurate dates before October 15, 1582, or whenever the Julian calendar ceased in the territory you're interested in).
+You'd also change it if you need a specific calendar like the Coptic calendar illustrated earlier.
+Thus to compute the hours, minutes and seconds of the instant represented by a RELCLT, we would write CODEID=0.
+The complete list of time fields can be found in the field reference.
+The fields represented by these properties behave pretty much as their names would suggest.
+As you would expect, all the methods we showed above in the day-of-week example can be applied to any of these properties.
+For example, to extract the standard month, day and year fields from a datetime, we can write CODEID=1.
+To create a datetime object representing a specific date and time, you may use an initialization string: CODEID=1.
+The initialization string must be in a format that is compatible with the ISO8601 standard.

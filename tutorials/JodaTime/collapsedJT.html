@@ -1,0 +1,365 @@
+<html>
+ <head></head>
+ <body>
+  section text 
+  <h2>Introduction<a name="Introduction"></a></h2> 
+  <p> Joda Time is like an iceberg, 9/10ths of it is invisible to user-code. Many, perhaps most, applications will never need to see what's below the surface. This document provides an introduction to the Joda-Time API for the average user, not for the would-be API developer. </p> 
+  <p> The bulk of the text is devoted to code snippets that display the most common usage scenarios in which the library classes are used. In particular, we cover the usage of the key <tt>DateTime</tt>, <tt>Interval</tt>, <tt>Duration</tt> and <tt>Period</tt> classes. </p> 
+  <p> We finish with a look at the important topic of formatting and parsing and a few more advanced topics. </p> 
+  <h2>Introduction<a name="Introduction"></a></h2> 
+  <p> Joda Time is like an iceberg, 9/10ths of it is invisible to user-code. Many, perhaps most, applications will never need to see what's below the surface. This document provides an introduction to the Joda-Time API for the average user, not for the would-be API developer. </p> 
+  <p> The bulk of the text is devoted to code snippets that display the most common usage scenarios in which the library classes are used. In particular, we cover the usage of the key <tt>DateTime</tt>, <tt>Interval</tt>, <tt>Duration</tt> and <tt>Period</tt> classes. </p> 
+  <p> We finish with a look at the important topic of formatting and parsing and a few more advanced topics. </p> 
+  <h2>Introduction<a name="Introduction"></a></h2> 
+  <p> Joda Time is like an iceberg, 9/10ths of it is invisible to user-code. Many, perhaps most, applications will never need to see what's below the surface. This document provides an introduction to the Joda-Time API for the average user, not for the would-be API developer. </p> 
+  <p> The bulk of the text is devoted to code snippets that display the most common usage scenarios in which the library classes are used. In particular, we cover the usage of the key <tt>DateTime</tt>, <tt>Interval</tt>, <tt>Duration</tt> and <tt>Period</tt> classes. </p> 
+  <p> We finish with a look at the important topic of formatting and parsing and a few more advanced topics. </p> 
+  <h2>Introduction<a name="Introduction"></a></h2> 
+  <p> Joda Time is like an iceberg, 9/10ths of it is invisible to user-code. Many, perhaps most, applications will never need to see what's below the surface. This document provides an introduction to the Joda-Time API for the average user, not for the would-be API developer. </p> 
+  <p> The bulk of the text is devoted to code snippets that display the most common usage scenarios in which the library classes are used. In particular, we cover the usage of the key <tt>DateTime</tt>, <tt>Interval</tt>, <tt>Duration</tt> and <tt>Period</tt> classes. </p> 
+  <p> We finish with a look at the important topic of formatting and parsing and a few more advanced topics. </p> 
+  <div class="section">
+   <h2>Instants<a name="Instants"></a></h2> 
+   <p> The most frequently used concept in Joda-Time is that of the <i><tt>instant</tt></i>. An Instant is defined as <i>a moment in the datetime continuum specified as a number of milliseconds from 1970-01-01T00:00Z</i>. This definition of milliseconds is consistent with that of the JDK in <tt>Date</tt> or <tt>Calendar</tt>. Interoperating between the two APIs is thus simple. </p> 
+   <p> Within Joda-Time an instant is represented by the <tt>ReadableInstant</tt> interface. The main implementation of this interface, and the class that the average API user needs to be most familiar with, is <tt>DateTime</tt>. <tt>DateTime</tt> is immutable - and once created the values do not change. Thus, this class can safely be passed around and used in multiple threads without synchronization. </p> 
+   <p> The millisecond instant can be converted to any date time field using a <i>Chronology</i>. To assist with this, methods are provided on <tt>DateTime</tt> that act as getters for the most common date and time fields. </p> 
+   <p> We discuss the chronology concept a litte further on in this overview. </p> 
+   <p> A companion mutable class to <tt>DateTime</tt> is <tt>MutableDateTime</tt>. Objects of this class can be modified and are not thread-safe. </p> 
+   <p> Other implementations of <tt>ReadableInstant</tt> include <tt>Instant</tt> and <tt>DateMidnight</tt>. </p>
+  </div> 
+  <div class="section">
+   <h2>Instants<a name="Instants"></a></h2> 
+   <p> The most frequently used concept in Joda-Time is that of the <i>instant</i>. An Instant is defined as <i>a moment in the datetime continuum specified as a number of milliseconds from 1970-01-01T00:00Z</i>. This definition of milliseconds is consistent with that of the JDK in <tt>Date</tt> or <tt>Calendar</tt>. Interoperating between the two APIs is thus simple. </p> 
+   <p> Within Joda-Time an instant is represented by the <tt>ReadableInstant</tt> interface. The main implementation of this interface, and the class that the average API user needs to be most familiar with, is <tt>DateTime</tt>. DateTime is immutable - and once created the values do not change. Thus, this class can safely be passed around and used in multiple threads without synchronization. </p> 
+   <p> The millisecond instant can be converted to any date time field using a <i><tt>Chronology</tt></i>. To assist with this, methods are provided on <tt>DateTime</tt> that act as getters for the most common date and time fields. </p> 
+   <p> We discuss the chronology concept a litte further on in this overview. </p> 
+   <p> A companion mutable class to <tt>DateTime</tt> is <tt>MutableDateTime</tt>. Objects of this class can be modified and are not thread-safe. </p> 
+   <p> Other implementations of <tt>ReadableInstant</tt> include <tt>Instant</tt> and <tt>DateMidnight</tt>. </p>
+  </div> 
+  <div class="section">
+   <h2>Instants<a name="Instants"></a></h2> 
+   <p> The most frequently used concept in Joda-Time is that of the <i>instant</i>. An Instant is defined as <i>a moment in the datetime continuum specified as a number of milliseconds from 1970-01-01T00:00Z</i>. This definition of milliseconds is consistent with that of the JDK in <tt>Date</tt> or <tt>Calendar</tt>. Interoperating between the two APIs is thus simple. </p> 
+   <p> Within Joda-Time an instant is represented by the <tt>ReadableInstant</tt> interface. The main implementation of this interface, and the class that the average API user needs to be most familiar with, is <tt>DateTime</tt>. DateTime is immutable - and once created the values do not change. Thus, this class can safely be passed around and used in multiple threads without synchronization. </p> 
+   <p> The millisecond instant can be converted to any date time field using a <i>Chronology</i>. To assist with this, methods are provided on <tt>DateTime</tt> that act as getters for the most common date and time fields. </p> 
+   <p> We discuss the chronology concept a litte further on in this overview. </p> 
+   <p> A companion mutable class to <tt>DateTime</tt> is <tt>MutableDateTime</tt>. Objects of this class can be modified and are not thread-safe. </p> 
+   <p> Other implementations of <tt>ReadableInstant</tt> include <tt>Instant</tt> and <tt>DateMidnight</tt>. </p>
+  </div> 
+  <div class="section">
+   <h2>Instants<a name="Instants"></a></h2> 
+   <p> The most frequently used concept in Joda-Time is that of the <i>instant</i>. An Instant is defined as <i>a moment in the datetime continuum specified as a number of milliseconds from 1970-01-01T00:00Z</i>. This definition of milliseconds is consistent with that of the JDK in <tt>Date</tt> or <tt>Calendar</tt>. Interoperating between the two APIs is thus simple. </p> 
+   <p> Within Joda-Time an instant is represented by the <tt>ReadableInstant</tt> interface. The main implementation of this interface, and the class that the average API user needs to be most familiar with, is <tt>DateTime</tt>. DateTime is immutable - and once created the values do not change. Thus, this class can safely be passed around and used in multiple threads without synchronization. </p> 
+   <p> The millisecond instant can be converted to any date time field using a <i>Chronology</i>. To assist with this, methods are provided on <tt>DateTime</tt> that act as getters for the most common date and time fields. </p> 
+   <p> We discuss the chronology concept a litte further on in this overview. </p> 
+   <p> A companion mutable class to <tt>DateTime</tt> is <tt>MutableDateTime</tt>. Objects of this class can be modified and are not thread-safe. </p> 
+   <p> Other implementations of <tt>ReadableInstant</tt> include <tt>Instant</tt> and <tt>DateMidnight</tt>. </p>
+  </div> 
+  <div class="section">
+   <h2>Instants<a name="Instants"></a></h2> 
+   <p> The most frequently used concept in Joda-Time is that of the <i><tt>Instant</tt></i>. An Instant is defined as <i>a moment in the datetime continuum specified as a number of milliseconds from 1970-01-01T00:00Z</i>. This definition of milliseconds is consistent with that of the JDK in <tt>Date</tt> or <tt>Calendar</tt>. Interoperating between the two APIs is thus simple. </p> 
+   <p> Within Joda-Time an instant is represented by the <tt>ReadableInstant</tt> interface. The main implementation of this interface, and the class that the average API user needs to be most familiar with, is <tt>DateTime</tt>. DateTime is immutable - and once created the values do not change. Thus, this class can safely be passed around and used in multiple threads without synchronization. </p> 
+   <p> The millisecond instant can be converted to any date time field using a <i>Chronology</i>. To assist with this, methods are provided on <tt>DateTime</tt> that act as getters for the most common date and time fields. </p> 
+   <p> We discuss the chronology concept a litte further on in this overview. </p> 
+   <p> A companion mutable class to <tt>DateTime</tt> is <tt>MutableDateTime</tt>. Objects of this class can be modified and are not thread-safe. </p> 
+   <p> Other implementations of <tt>ReadableInstant</tt> include <tt>Instant</tt> and <tt>DateMidnight</tt>. </p>
+  </div> 
+  <div class="section">
+   <h2>Instants<a name="Instants"></a></h2> 
+   <p> The most frequently used concept in Joda-Time is that of the <i>instant</i>. An Instant is defined as <i>a moment in the datetime continuum specified as a number of milliseconds from 1970-01-01T00:00Z</i>. This definition of milliseconds is consistent with that of the JDK in <tt>Date</tt> or <tt>Calendar</tt>. Interoperating between the two APIs is thus simple. </p> 
+   <p> Within Joda-Time an instant is represented by the <tt>ReadableInstant</tt> interface. The main implementation of this interface, and the class that the average API user needs to be most familiar with, is <tt>DateTime</tt>. DateTime is immutable - and once created the values do not change. Thus, this class can safely be passed around and used in multiple threads without synchronization. </p> 
+   <p> The millisecond instant can be converted to any date time field using a <i>Chronology</i>. To assist with this, methods are provided on <tt>DateTime</tt> that act as getters for the most common date and time fields. </p> 
+   <p> We discuss the chronology concept a litte further on in this overview. </p> 
+   <p> A companion mutable class to <tt>DateTime</tt> is <tt>MutableDateTime</tt>. Objects of this class can be modified and are not thread-safe. </p> 
+   <p> Other implementations of <tt>ReadableInstant</tt> include <tt>Instant</tt> and <tt>DateMidnight</tt>. </p>
+  </div> 
+  <div class="section">
+   <h3>Fields<a name="Fields"></a></h3> 
+   <p> The main API of <tt>DateTime</tt> has been kept small, limited to just get methods for each calendar field. So, for instance, the 'day-of-year' calendar field would be retrieved by calling the <tt>getDayOfYear()</tt> method. For a complete list of fields and their descriptions, see the <a href="field.html">field reference</a>. </p> 
+  </div> 
+  <div class="section">
+   <h3>Fields<a name="Fields"></a></h3> 
+   <p> The main API of <tt>DateTime</tt> has been kept small, limited to just get methods for each calendar field. So, for instance, the 'day-of-year' calendar field would be retrieved by calling the <tt>getDayOfYear()</tt> method. For a complete list of fields and their descriptions, see the <a href="field.html">field reference</a>. </p> 
+  </div> 
+  <div class="section">
+   <h3>Properties<a name="Properties"></a></h3> 
+   <p> There is much more power available, however, through the use of what is termed a <i>property</i>. Each calendar field is associated with such a property. Thus, 'day-of-year', whose value is directly returned by the method <tt>getDayOfYear()</tt>, is also associated with the property returned by the <tt>dayOfYear()</tt> method. The property class associated with <tt>DateTime</tt> is <tt>DateTime.Property</tt>. </p> 
+   <p> Knowing the methods on the property is the secret to making the most of the API. We have more to say on the usage of properties later in this document. </p> 
+  </div>  
+  <div class="section">
+   <h3>Properties<a name="Properties"></a></h3> 
+   <p> There is much more power available, however, through the use of what is termed a <i>property</i>. Each calendar field is associated with such a property. Thus, 'day-of-year', whose value is directly returned by the method <tt>getDayOfYear()</tt>, is also associated with the property returned by the <tt>dayOfYear()</tt> method. The property class associated with <tt>DateTime</tt> is <tt>DateTime.Property</tt>. </p> 
+   <p> Knowing the methods on the property is the secret to making the most of the API. We have more to say on the usage of properties later in this document. </p> 
+  </div>  
+  <div class="section">
+   <h3>Properties<a name="Properties"></a></h3> 
+   <p> There is much more power available, however, through the use of what is termed a <i>property</i>. Each calendar field is associated with such a property. Thus, 'day-of-year', whose value is directly returned by the method <tt>getDayOfYear()</tt>, is also associated with the property returned by the <tt>dayOfYear()</tt> method. The property class associated with <tt>DateTime</tt> is <tt>DateTime.Property</tt>. </p> 
+   <p> Knowing the methods on the property is the secret to making the most of the API. We have more to say on the usage of properties later in this document. </p> 
+  </div>  
+  <div class="section">
+   <h3>Properties<a name="Properties"></a></h3> 
+   <p> There is much more power available, however, through the use of what is termed a <i>property</i>. Each calendar field is associated with such a property. Thus, 'day-of-year', whose value is directly returned by the method <tt>getDayOfYear()</tt>, is also associated with the property returned by the <tt>dayOfYear()</tt> method. The property class associated with <tt>DateTime</tt> is <tt>DateTime.Property</tt>. </p> 
+   <p> Knowing the methods on the property is the secret to making the most of the API. We have more to say on the usage of properties later in this document. </p> 
+  </div>  
+  <div class="section">
+   <h2>Intervals<a name="Intervals"></a></h2> 
+   <p> An <i><tt>Interval</tt></i> in Joda-Time represents an interval of time from one instant to another instant. Both instants are fully specified instants in the datetime continuum, complete with time zone. </p> 
+   <p> <tt>Intervals</tt> are implemented as <i>half-open</i>, which is to say that the start instant is inclusive but the end instant is exclusive. The end is always greater than or equal to the start. Both end-points are restricted to having the same chronology and the same time zone. </p> 
+   <p> Two implementations are provided, <tt>Interval</tt> and <tt>MutableInterval</tt>, both are specializations of <tt>ReadableInterval</tt>. </p> 
+  </div> 
+  <div class="section">
+   <h2>Intervals<a name="Intervals"></a></h2> 
+   <p> An <i>interval</i> in Joda-Time represents an interval of time from one instant to another instant. Both instants are fully specified instants in the datetime continuum, complete with time zone. </p> 
+   <p> Intervals are implemented as <i>half-open</i>, which is to say that the start instant is inclusive but the end instant is exclusive. The end is always greater than or equal to the start. Both end-points are restricted to having the same chronology and the same time zone. </p> 
+   <p> Two implementations are provided, <tt>Interval</tt> and <tt>MutableInterval</tt>, both are specializations of <tt>ReadableInterval</tt>. </p> 
+  </div> 
+  <div class="section">
+   <h2>Intervals<a name="Intervals"></a></h2> 
+   <p> An <i>interval</i> in Joda-Time represents an interval of time from one instant to another instant. Both instants are fully specified instants in the datetime continuum, complete with time zone. </p> 
+   <p> Intervals are implemented as <i>half-open</i>, which is to say that the start instant is inclusive but the end instant is exclusive. The end is always greater than or equal to the start. Both end-points are restricted to having the same chronology and the same time zone. </p> 
+   <p> Two implementations are provided, <tt>Interval</tt> and <tt>MutableInterval</tt>, both are specializations of <tt>ReadableInterval</tt>. </p> 
+  </div> 
+  <div class="section">
+   <h2>Durations<a name="Durations"></a></h2> 
+   <p> A <i><tt>Duration</tt></i> in Joda-Time represents a duration of time measured in milliseconds. The duration is often obtained from an interval. </p> 
+   <p> <tt>Durations</tt> are a very simple concept, and the implementation is also simple. They have no chronology or time zone, and consist solely of the millisecond duration. </p> 
+   <p> <tt>Durations</tt> can be added to an instant, or to either end of an interval to change those objects. In datetime maths you could say: CODEID=0. Currently, there is only one implementation of the <tt>ReadableDuration</tt> interface: <tt>Duration</tt>. </p> 
+  </div> 
+  <div class="section">
+   <h2>Durations<a name="Durations"></a></h2> 
+   <p> A <i>duration</i> in Joda-Time represents a duration of time measured in milliseconds. The duration is often obtained from an interval. </p> 
+   <p> Durations are a very simple concept, and the implementation is also simple. They have no chronology or time zone, and consist solely of the millisecond duration. </p> 
+   <p> Durations can be added to an instant, or to either end of an interval to change those objects. In datetime maths you could say: CODEID=1. Currently, there is only one implementation of the <tt>ReadableDuration</tt> interface: <tt>Duration</tt>. </p> 
+  </div> 
+  <div class="section">
+   <h2>Periods<a name="Periods"></a></h2> 
+   <p> A <i><tt>Period</tt></i> in Joda-Time represents a period of time defined in terms of fields, for example, 3 years 5 months 2 days and 7 hours. This differs from a duration in that it is inexact in terms of milliseconds. A period can only be resolved to an exact number of milliseconds by specifying the instant (including chronology and time zone) it is relative to. </p> 
+   <p> For example, consider a period of 1 month. If you add this period to the 1st February (ISO) then you will get the 1st March. If you add the same period to the 1st March you will get the 1st April. But the duration added (in milliseconds) in these two cases is very different. </p> 
+   <p> As a second example, consider adding 1 day at the daylight savings boundary. If you use a period to do the addition then either 23 or 25 hours will be added as appropriate. If you had created a duration equal to 24 hours, then you would end up with the wrong result. </p> 
+   <p> <tt>Periods</tt> are implemented as a set of <tt>int</tt> fields. The standard set of fields in a period are years, months, weeks, days, hours, minutes, seconds and millis. The <tt>PeriodType</tt> class allows this set of fields to be restricted, for example to elimate weeks. This is significant when converting a duration or interval to a period, as the calculation needs to know which period fields it should populate. </p> 
+   <p> Methods exist on periods to obtain each field value. <tt>Periods</tt> are not associated with either a chronology or a time zone. </p> 
+   <p> <tt>Periods</tt> can be added to an instant, or to either end of an interval to change those objects. In datetime maths you could say: CODEID=2. There are two implementations of the <tt>ReadablePeriod</tt> interface, <tt>Period</tt> and <tt>MutablePeriod</tt>. </p> 
+  </div> 
+  <div class="section">
+   <h2>Periods<a name="Periods"></a></h2> 
+   <p> A <i>period</i> in Joda-Time represents a period of time defined in terms of fields, for example, 3 years 5 months 2 days and 7 hours. This differs from a duration in that it is inexact in terms of milliseconds. A period can only be resolved to an exact number of milliseconds by specifying the instant (including chronology and time zone) it is relative to. </p> 
+   <p> For example, consider a period of 1 month. If you add this period to the 1st February (ISO) then you will get the 1st March. If you add the same period to the 1st March you will get the 1st April. But the duration added (in milliseconds) in these two cases is very different. </p> 
+   <p> As a second example, consider adding 1 day at the daylight savings boundary. If you use a period to do the addition then either 23 or 25 hours will be added as appropriate. If you had created a duration equal to 24 hours, then you would end up with the wrong result. </p> 
+   <p> Periods are implemented as a set of <tt>int</tt> fields. The standard set of fields in a period are years, months, weeks, days, hours, minutes, seconds and millis. The <tt>PeriodType</tt> class allows this set of fields to be restricted, for example to elimate weeks. This is significant when converting a duration or interval to a period, as the calculation needs to know which period fields it should populate. </p> 
+   <p> Methods exist on periods to obtain each field value. Periods are not associated with either a chronology or a time zone. </p> 
+   <p> Periods can be added to an instant, or to either end of an interval to change those objects. In datetime maths you could say: CODEID=3. There are two implementations of the <tt>ReadablePeriod</tt> interface, <tt>Period</tt> and <tt>MutablePeriod</tt>. </p> 
+  </div> 
+  <div class="section">
+   <h2>Periods<a name="Periods"></a></h2> 
+   <p> A <i>period</i> in Joda-Time represents a period of time defined in terms of fields, for example, 3 years 5 months 2 days and 7 hours. This differs from a duration in that it is inexact in terms of milliseconds. A period can only be resolved to an exact number of milliseconds by specifying the instant (including chronology and time zone) it is relative to. </p> 
+   <p> For example, consider a period of 1 month. If you add this period to the 1st February (ISO) then you will get the 1st March. If you add the same period to the 1st March you will get the 1st April. But the duration added (in milliseconds) in these two cases is very different. </p> 
+   <p> As a second example, consider adding 1 day at the daylight savings boundary. If you use a period to do the addition then either 23 or 25 hours will be added as appropriate. If you had created a duration equal to 24 hours, then you would end up with the wrong result. </p> 
+   <p> Periods are implemented as a set of <tt>int</tt> fields. The standard set of fields in a period are years, months, weeks, days, hours, minutes, seconds and millis. The <tt>PeriodType</tt> class allows this set of fields to be restricted, for example to elimate weeks. This is significant when converting a duration or interval to a period, as the calculation needs to know which period fields it should populate. </p> 
+   <p> Methods exist on periods to obtain each field value. Periods are not associated with either a chronology or a time zone. </p> 
+   <p> Periods can be added to an instant, or to either end of an interval to change those objects. In datetime maths you could say: CODEID=4. There are two implementations of the <tt>ReadablePeriod</tt> interface, <tt>Period</tt> and <tt>MutablePeriod</tt>. </p> 
+  </div> 
+  <div class="section">
+   <h2>Periods<a name="Periods"></a></h2> 
+   <p> A <i>period</i> in Joda-Time represents a period of time defined in terms of fields, for example, 3 years 5 months 2 days and 7 hours. This differs from a duration in that it is inexact in terms of milliseconds. A period can only be resolved to an exact number of milliseconds by specifying the instant (including chronology and time zone) it is relative to. </p> 
+   <p> For example, consider a period of 1 month. If you add this period to the 1st February (ISO) then you will get the 1st March. If you add the same period to the 1st March you will get the 1st April. But the duration added (in milliseconds) in these two cases is very different. </p> 
+   <p> As a second example, consider adding 1 day at the daylight savings boundary. If you use a period to do the addition then either 23 or 25 hours will be added as appropriate. If you had created a duration equal to 24 hours, then you would end up with the wrong result. </p> 
+   <p> Periods are implemented as a set of <tt>int</tt> fields. The standard set of fields in a period are years, months, weeks, days, hours, minutes, seconds and millis. The <tt>PeriodType</tt> class allows this set of fields to be restricted, for example to elimate weeks. This is significant when converting a duration or interval to a period, as the calculation needs to know which period fields it should populate. </p> 
+   <p> Methods exist on periods to obtain each field value. Periods are not associated with either a chronology or a time zone. </p> 
+   <p> Periods can be added to an instant, or to either end of an interval to change those objects. In datetime maths you could say: CODEID=5. There are two implementations of the <tt>ReadablePeriod</tt> interface, <tt>Period</tt> and <tt>MutablePeriod</tt>. </p> 
+  </div> 
+  <div class="section">
+   <h2>Chronology<a name="Chronology"></a></h2> 
+   <p> The Joda-Time design is based around the <i>Chronology</i>. It is a calculation engine that supports the complex rules for a calendar system. It encapsulates the field objects, which are used on demand to split the absolute time instant into recognisable calendar fields like 'day-of-week'. It is effectively a pluggable calendar system. </p> 
+   <p> The actual calculations of the chronology are split between the <tt>Chronology</tt> class itself and the field classes - <tt>DateTimeField</tt> and <tt>DurationField</tt>. Together, the subclasses of these three classes form the bulk of the code in the library. Most users will never need to use or refer directly to the subclasses. Instead, they will simply obtain the chronology and use it as a singleton, as follows: CODEID=6. Internally, all the chronology, field, etc. classes are maintained as singletons. Thus there is an initial setup cost when using Joda-Time, but after that only the main API instance classes (<tt>DateTime</tt>, <tt>Interval</tt>, <tt>Period</tt>, etc.) have creation and garbage collector costs. </p> 
+   <p> Although the Chronology is key to the design, it is not key to using the API !! </p> 
+   <p> For most applications, the Chronology can be ignored as it will default to the ISOChronology. This is suitable for most uses. You would change it if you need accurate dates before October 15, 1582, or whenever the Julian calendar ceased in the territory you're interested in). You'd also change it if you need a specific calendar like the Coptic calendar illustrated earlier. </p> 
+  </div> 
+  <div class="section">
+   <h2>Chronology<a name="Chronology"></a></h2> 
+   <p> The Joda-Time design is based around the <i>Chronology</i>. It is a calculation engine that supports the complex rules for a calendar system. It encapsulates the field objects, which are used on demand to split the absolute time instant into recognisable calendar fields like 'day-of-week'. It is effectively a pluggable calendar system. </p> 
+   <p> The actual calculations of the chronology are split between the <tt>Chronology</tt> class itself and the field classes - <tt>DateTimeField</tt> and <tt>DurationField</tt>. Together, the subclasses of these three classes form the bulk of the code in the library. Most users will never need to use or refer directly to the subclasses. Instead, they will simply obtain the chronology and use it as a singleton, as follows: CODEID=7. Internally, all the chronology, field, etc. classes are maintained as singletons. Thus there is an initial setup cost when using Joda-Time, but after that only the main API instance classes (<tt>DateTime</tt>, <tt>Interval</tt>, <tt>Period</tt>, etc.) have creation and garbage collector costs. </p> 
+   <p> Although the Chronology is key to the design, it is not key to using the API !! </p> 
+   <p> For most applications, the Chronology can be ignored as it will default to the ISOChronology. This is suitable for most uses. You would change it if you need accurate dates before October 15, 1582, or whenever the Julian calendar ceased in the territory you're interested in). You'd also change it if you need a specific calendar like the Coptic calendar illustrated earlier. </p> 
+  </div> 
+  <div class="section">
+   <h2>Chronology<a name="Chronology"></a></h2> 
+   <p> The Joda-Time design is based around the <i>Chronology</i>. It is a calculation engine that supports the complex rules for a calendar system. It encapsulates the field objects, which are used on demand to split the absolute time instant into recognisable calendar fields like 'day-of-week'. It is effectively a pluggable calendar system. </p> 
+   <p> The actual calculations of the chronology are split between the <tt>Chronology</tt> class itself and the field classes - <tt>DateTimeField</tt> and <tt>DurationField</tt>. Together, the subclasses of these three classes form the bulk of the code in the library. Most users will never need to use or refer directly to the subclasses. Instead, they will simply obtain the chronology and use it as a singleton, as follows: CODEID=8. Internally, all the chronology, field, etc. classes are maintained as singletons. Thus there is an initial setup cost when using Joda-Time, but after that only the main API instance classes (<tt>DateTime</tt>, <tt>Interval</tt>, <tt>Period</tt>, etc.) have creation and garbage collector costs. </p> 
+   <p> Although the Chronology is key to the design, it is not key to using the API !! </p> 
+   <p> For most applications, the Chronology can be ignored as it will default to the ISOChronology. This is suitable for most uses. You would change it if you need accurate dates before October 15, 1582, or whenever the Julian calendar ceased in the territory you're interested in). You'd also change it if you need a specific calendar like the Coptic calendar illustrated earlier. </p> 
+  </div> 
+  <div class="section">
+   <h2>Chronology<a name="Chronology"></a></h2> 
+   <p> The Joda-Time design is based around the <i><tt>Chronology</tt></i>. It is a calculation engine that supports the complex rules for a calendar system. It encapsulates the field objects, which are used on demand to split the absolute time instant into recognisable calendar fields like 'day-of-week'. It is effectively a pluggable calendar system. </p> 
+   <p> The actual calculations of the chronology are split between the <tt>Chronology</tt> class itself and the field classes - <tt>DateTimeField</tt> and <tt>DurationField</tt>. Together, the subclasses of these three classes form the bulk of the code in the library. Most users will never need to use or refer directly to the subclasses. Instead, they will simply obtain the chronology and use it as a singleton, as follows: CODEID=9. Internally, all the chronology, field, etc. classes are maintained as singletons. Thus there is an initial setup cost when using Joda-Time, but after that only the main API instance classes (<tt>DateTime</tt>, <tt>Interval</tt>, <tt>Period</tt>, etc.) have creation and garbage collector costs. </p> 
+   <p> Although the <tt>Chronology</tt> is key to the design, it is not key to using the API !! </p> 
+   <p> For most applications, the <tt>Chronology</tt> can be ignored as it will default to the ISOChronology. This is suitable for most uses. You would change it if you need accurate dates before October 15, 1582, or whenever the Julian calendar ceased in the territory you're interested in). You'd also change it if you need a specific calendar like the Coptic calendar illustrated earlier. </p> 
+  </div> 
+  <div class="section">
+   <h2>Chronology<a name="Chronology"></a></h2> 
+   <p> The Joda-Time design is based around the <i>Chronology</i>. It is a calculation engine that supports the complex rules for a calendar system. It encapsulates the field objects, which are used on demand to split the absolute time instant into recognisable calendar fields like 'day-of-week'. It is effectively a pluggable calendar system. </p> 
+   <p> The actual calculations of the chronology are split between the <tt>Chronology</tt> class itself and the field classes - <tt>DateTimeField</tt> and <tt>DurationField</tt>. Together, the subclasses of these three classes form the bulk of the code in the library. Most users will never need to use or refer directly to the subclasses. Instead, they will simply obtain the chronology and use it as a singleton, as follows: CODEID=10. Internally, all the chronology, field, etc. classes are maintained as singletons. Thus there is an initial setup cost when using Joda-Time, but after that only the main API instance classes (<tt>DateTime</tt>, <tt>Interval</tt>, <tt>Period</tt>, etc.) have creation and garbage collector costs. </p> 
+   <p> Although the Chronology is key to the design, it is not key to using the API !! </p> 
+   <p> For most applications, the Chronology can be ignored as it will default to the ISOChronology. This is suitable for most uses. You would change it if you need accurate dates before October 15, 1582, or whenever the Julian calendar ceased in the territory you're interested in). You'd also change it if you need a specific calendar like the Coptic calendar illustrated earlier. </p> 
+  </div> 
+  <div class="section">
+   <h2>Chronology<a name="Chronology"></a></h2> 
+   <p> The Joda-Time design is based around the <i>Chronology</i>. It is a calculation engine that supports the complex rules for a calendar system. It encapsulates the field objects, which are used on demand to split the absolute time instant into recognisable calendar fields like 'day-of-week'. It is effectively a pluggable calendar system. </p> 
+   <p> The actual calculations of the chronology are split between the <tt>Chronology</tt> class itself and the field classes - <tt>DateTimeField</tt> and <tt>DurationField</tt>. Together, the subclasses of these three classes form the bulk of the code in the library. Most users will never need to use or refer directly to the subclasses. Instead, they will simply obtain the chronology and use it as a singleton, as follows: CODEID=11. Internally, all the chronology, field, etc. classes are maintained as singletons. Thus there is an initial setup cost when using Joda-Time, but after that only the main API instance classes (<tt>DateTime</tt>, <tt>Interval</tt>, <tt>Period</tt>, etc.) have creation and garbage collector costs. </p> 
+   <p> Although the Chronology is key to the design, it is not key to using the API !! </p> 
+   <p> For most applications, the Chronology can be ignored as it will default to the <tt>ISOChronology</tt>. This is suitable for most uses. You would change it if you need accurate dates before October 15, 1582, or whenever the Julian calendar ceased in the territory you're interested in). You'd also change it if you need a specific calendar like the Coptic calendar illustrated earlier. </p> 
+  </div> 
+  <div class="section">
+   <h2>Chronology<a name="Chronology"></a></h2> 
+   <p> The Joda-Time design is based around the <i>Chronology</i>. It is a calculation engine that supports the complex rules for a calendar system. It encapsulates the field objects, which are used on demand to split the absolute time instant into recognisable calendar fields like 'day-of-week'. It is effectively a pluggable calendar system. </p> 
+   <p> The actual calculations of the chronology are split between the <tt>Chronology</tt> class itself and the field classes - <tt>DateTimeField</tt> and <tt>DurationField</tt>. Together, the subclasses of these three classes form the bulk of the code in the library. Most users will never need to use or refer directly to the subclasses. Instead, they will simply obtain the chronology and use it as a singleton, as follows: CODEID=12. Internally, all the chronology, field, etc. classes are maintained as singletons. Thus there is an initial setup cost when using Joda-Time, but after that only the main API instance classes (<tt>DateTime</tt>, <tt>Interval</tt>, <tt>Period</tt>, etc.) have creation and garbage collector costs. </p> 
+   <p> Although the Chronology is key to the design, it is not key to using the API !! </p> 
+   <p> For most applications, the Chronology can be ignored as it will default to the ISOChronology. This is suitable for most uses. You would change it if you need accurate dates before October 15, 1582, or whenever the Julian calendar ceased in the territory you're interested in). You'd also change it if you need a specific calendar like the Coptic calendar illustrated earlier. </p> 
+  </div> 
+  <div class="section">
+   <h2>Interface usage<a name="Interface_usage"></a></h2> 
+   <p> As you have seen, Joda-Time defines a number of new interfaces which are visible throughout the javadocs. The most important is <tt>ReadableInstant</tt> which currently has 4 implementations. Other significant interfaces include <tt>ReadableInterval</tt> and <tt>ReadablePeriod</tt>. These are currently used as generalizations for a value-only and a mutable class, respectively. </p> 
+   <p> An important point to mention here is that the Joda interfaces are used differently than, for instance, the JDK Collections Framework interfaces. When working with a Collections interface, such as <tt>List</tt> or <tt>Map</tt> you will normally hold your variable as a type of <tt>List</tt> or <tt>Map</tt>, only referencing the concrete class when you create the object. CODEID=13. In Joda-Time, the interfaces exist to allow 
+   <i>interoperation</i> between similar date implementations, such as a mutable and immutable version of a class. As such, they only offer a subset of the methods of the concrete class. 
+   <i>For most work, you will reference the concrete class, not the interface</i>. This gives access to the full power of the library. CODEID=14. 
+   <p> For maximum flexibility however, you might choose to declare your method parameters using the Joda-Time interface. A method on the interface can obtain the concrete class for use within the method. CODEID=15. 
+  </div> 
+  <div class="section">
+   <h2>Interface usage<a name="Interface_usage"></a></h2> 
+   <p> As you have seen, Joda-Time defines a number of new interfaces which are visible throughout the javadocs. The most important is <tt>ReadableInstant</tt> which currently has 4 implementations. Other significant interfaces include <tt>ReadableInterval</tt> and <tt>ReadablePeriod</tt>. These are currently used as generalizations for a value-only and a mutable class, respectively. </p> 
+   <p> An important point to mention here is that the Joda interfaces are used differently than, for instance, the JDK Collections Framework interfaces. When working with a Collections interface, such as <tt>List</tt> or <tt>Map</tt> you will normally hold your variable as a type of <tt>List</tt> or <tt>Map</tt>, only referencing the concrete class when you create the object. CODEID=16. In Joda-Time, the interfaces exist to allow 
+   <i>interoperation</i> between similar date implementations, such as a mutable and immutable version of a class. As such, they only offer a subset of the methods of the concrete class. 
+   <i>For most work, you will reference the concrete class, not the interface</i>. This gives access to the full power of the library. CODEID=17. 
+   <p> For maximum flexibility however, you might choose to declare your method parameters using the Joda-Time interface. A method on the interface can obtain the concrete class for use within the method. CODEID=18. 
+  </div> 
+  <div class="section">
+   <h2>Interface usage<a name="Interface_usage"></a></h2> 
+   <p> As you have seen, Joda-Time defines a number of new interfaces which are visible throughout the javadocs. The most important is <tt>ReadableInstant</tt> which currently has 4 implementations. Other significant interfaces include <tt>ReadableInterval</tt> and <tt>ReadablePeriod</tt>. These are currently used as generalizations for a value-only and a mutable class, respectively. </p> 
+   <p> An important point to mention here is that the Joda interfaces are used differently than, for instance, the JDK Collections Framework interfaces. When working with a Collections interface, such as <tt>List</tt> or <tt>Map</tt> you will normally hold your variable as a type of <tt>List</tt> or <tt>Map</tt>, only referencing the concrete class when you create the object. CODEID=19. In Joda-Time, the interfaces exist to allow 
+   <i>interoperation</i> between similar date implementations, such as a mutable and immutable version of a class. As such, they only offer a subset of the methods of the concrete class. 
+   <i>For most work, you will reference the concrete class, not the interface</i>. This gives access to the full power of the library. CODEID=20. 
+   <p> For maximum flexibility however, you might choose to declare your method parameters using the Joda-Time interface. A method on the interface can obtain the concrete class for use within the method. CODEID=21. 
+  </div> 
+  <div class="section">
+   <h3>Construction<a name="Construction"></a></h3> 
+   <p> A datetime object is created by using a <tt>DateTime</tt> constructor. The default constructor is used as follows CODEID=22 and creates a datetime object representing the current date and time in milliseconds as determined by the system clock. It is constructed using the ISO calendar in the default time zone. 
+   <p> To create a datetime object representing a specific date and time, you may use an initialization string: CODEID=23. The initialization string must be in a format that is compatible with the ISO8601 standard. 
+   <p> <tt>DateTime</tt> also provides <a href="apidocs/org/joda/time/DateTime.html#constructor_summary">other constructors</a> to create a specific date and time using a variety of standard fields. This also permits the use of any calendar and timezone. </p> 
+  </div> 
+  <div class="section">
+   <h3>JDK Interoperability<a name="JDK_Interoperability"></a></h3> 
+   <p> The <tt>DateTime</tt> class has a constructor which takes an <tt>Object</tt> as input. In particular this constructor can be passed a JDK <tt>Date</tt>, JDK <tt>Calendar</tt> or JDK <tt>GregorianCalendar</tt> (It also accepts an ISO8601 formatted String, or <tt>Long</tt> object representing milliseconds). This is one half of the interoperability with the JDK. The other half of interoperability with JDK is provided by <tt>DateTime</tt> methods which return JDK objects. </p> 
+   <p> Thus inter-conversion between Joda <tt>DateTime</tt> and JDK <tt>Date</tt> can be performed as follows CODEID=24. Similarly, for JDK <tt>Calendar</tt>: CODEID=25 and JDK <tt>GregorianCalendar</tt>: CODEID=26. 
+  </div>  
+  <div class="section">
+   <h2>Querying DateTimes<a name="Querying_DateTimes"></a></h2> 
+   <p> The separation of the calculation of calendar fields (<tt>DateTimeField</tt>) from the representation of the calendar instant (<tt>DateTime</tt>) makes for a powerful and flexible API. The connection between the two is maintained by the property (<tt>DateTime.Property</tt>) which provides access to the field. </p> 
+   <p> For instance, the direct way to get the day of week for a particular <tt>DateTime</tt>, involves calling the method CODEID=27 where 
+   <tt>iDoW</tt> can take the values (from class 
+   <tt>DateTimeConstants</tt>). CODEID=28. 
+   <div class="section">
+    <h2>Querying DateTimes<a name="Querying_DateTimes"></a></h2> 
+    <p> The separation of the calculation of calendar fields (<tt>DateTimeField</tt>) from the representation of the calendar instant (<tt>DateTime</tt>) makes for a powerful and flexible API. The connection between the two is maintained by the property (<tt>DateTime.Property</tt>) which provides access to the field. </p> 
+    <p> For instance, the direct way to get the day of week for a particular <tt>DateTime</tt>, involves calling the method CODEID=29 where 
+    <tt>iDoW</tt> can take the values (from class 
+    <tt>DateTimeConstants</tt>). CODEID=30. 
+    <div class="section">
+     <h2>Querying DateTimes<a name="Querying_DateTimes"></a></h2> 
+     <p> The separation of the calculation of calendar fields (<tt>DateTimeField</tt>) from the representation of the calendar instant (<tt>DateTime</tt>) makes for a powerful and flexible API. The connection between the two is maintained by the property (<tt>DateTime.Property</tt>) which provides access to the field. </p> 
+     <p> For instance, the direct way to get the day of week for a particular <tt>DateTime</tt>, involves calling the method CODEID=31 where 
+     <tt>iDoW</tt> can take the values (from class 
+     <tt>DateTimeConstants</tt>). CODEID=32. 
+     <div class="section">
+      <h2>Querying DateTimes<a name="Querying_DateTimes"></a></h2> 
+      <p> The separation of the calculation of calendar fields (<tt>DateTimeField</tt>) from the representation of the calendar instant (<tt>DateTime</tt>) makes for a powerful and flexible API. The connection between the two is maintained by the property (<tt>DateTime.Property</tt>) which provides access to the field. </p> 
+      <p> For instance, the direct way to get the day of week for a particular <tt>DateTime</tt>, involves calling the method CODEID=33 where 
+      <tt>iDoW</tt> can take the values (from class 
+      <tt>DateTimeConstants</tt>). CODEID=34. 
+      <div class="section">
+       <h3>Accessing fields<a name="Accessing_fields"></a></h3> 
+       <p>The direct methods are fine for simple usage, but more flexibility can be achieved via the property/field mechanism. The day of week property is obtained by CODEID=35 which can be used to get richer information about the field, such as CODEID=36 which return short and long name strings (based on the current locale) of the day-of-week. Localized versions of these methods are also available, thus CODEID=37 can be used to return the day-of-week name string in French. 
+       <p> Of course, the original integer value of the field is still accessible as CODEID=38. The property also provides access to other values associated with the field such as metadata on the minimum and maximum text size, leap status, related durations, etc. For a complete reference, see the 
+       <a href="apidocs/org/joda/time/field/AbstractReadableInstantFieldProperty.html">documentation</a> for the base class 
+       <tt>AbstractReadableInstantFieldProperty</tt> 
+       <p> In practice, one would not actually create the intermediate <tt>pDoW</tt> variable. The code is easier to read if the methods are called on anonymous intermediate objects. Thus, for example, CODEID=39 would be written instead of the more indirect code presented earlier. 
+       <p> Note: For the single case of getting the numerical value of a field, we recommend using the get method on the main <tt>DateTime</tt> object as it is more efficient. CODEID=40. 
+       <div class="section">
+        <h3>Date fields<a name="Date_fields"></a></h3> 
+        <p> The <tt>DateTime</tt> implementation provides a complete list of standard calendar fields: CODEID=41. Each of these also has a corresponding property method, which returns a 
+        <tt>DateTime.Property</tt> binding to the appropriate field, such as 
+        <tt>year()</tt> or 
+        <tt>monthOfYear()</tt>. The fields represented by these properties behave pretty much as their names would suggest. The precise definitions are available in the 
+        <a href="field.html">field reference</a>. 
+        <p> As you would expect, all the methods we showed above in the day-of-week example can be applied to any of these properties. For example, to extract the standard month, day and year fields from a datetime, we can write CODEID=42. 
+       </div> 
+       <div class="section">
+        <h3>Date fields<a name="Date_fields"></a></h3> 
+        <p> The <tt>DateTime</tt> implementation provides a complete list of standard calendar fields: CODEID=43. Each of these also has a corresponding property method, which returns a 
+        <tt>DateTime.Property</tt> binding to the appropriate field, such as 
+        <tt>year()</tt> or 
+        <tt>monthOfYear()</tt>. The fields represented by these properties behave pretty much as their names would suggest. The precise definitions are available in the 
+        <a href="field.html">field reference</a>. 
+        <p> As you would expect, all the methods we showed above in the day-of-week example can be applied to any of these properties. For example, to extract the standard month, day and year fields from a datetime, we can write CODEID=44. 
+       </div> 
+       <div class="section">
+        <h3>Date fields<a name="Date_fields"></a></h3> 
+        <p> The <tt>DateTime</tt> implementation provides a complete list of standard calendar fields: CODEID=45. Each of these also has a corresponding property method, which returns a 
+        <tt>DateTime.Property</tt> binding to the appropriate field, such as 
+        <tt>year()</tt> or 
+        <tt>monthOfYear()</tt>. The fields represented by these properties behave pretty much as their names would suggest. The precise definitions are available in the 
+        <a href="field.html">field reference</a>. 
+        <p> As you would expect, all the methods we showed above in the day-of-week example can be applied to any of these properties. For example, to extract the standard month, day and year fields from a datetime, we can write CODEID=46. 
+       </div> 
+       <div class="section">
+        <h3>Date fields<a name="Date_fields"></a></h3> 
+        <p> The <tt>DateTime</tt> implementation provides a complete list of standard calendar fields: CODEID=47. Each of these also has a corresponding property method, which returns a 
+        <tt>DateTime.Property</tt> binding to the appropriate field, such as 
+        <tt>year()</tt> or 
+        <tt>monthOfYear()</tt>. The fields represented by these properties behave pretty much as their names would suggest. The precise definitions are available in the 
+        <a href="field.html">field reference</a>. 
+        <p> As you would expect, all the methods we showed above in the day-of-week example can be applied to any of these properties. For example, to extract the standard month, day and year fields from a datetime, we can write CODEID=48. 
+       </div> 
+       <div class="section">
+        <h3>Date fields<a name="Date_fields"></a></h3> 
+        <p> The <tt>DateTime</tt> implementation provides a complete list of standard calendar fields: CODEID=49. Each of these also has a corresponding property method, which returns a 
+        <tt>DateTime.Property</tt> binding to the appropriate field, such as 
+        <tt>year()</tt> or 
+        <tt>monthOfYear()</tt>. The fields represented by these properties behave pretty much as their names would suggest. The precise definitions are available in the 
+        <a href="field.html">field reference</a>. 
+        <p> As you would expect, all the methods we showed above in the day-of-week example can be applied to any of these properties. For example, to extract the standard month, day and year fields from a datetime, we can write CODEID=50. 
+       </div> 
+       <div class="section">
+        <h3>Time fields<a name="Time_fields"></a></h3> 
+        <p> Another set of properties access fields representing intra-day durations for time calculations. Thus to compute the hours, minutes and seconds of the instant represented by a <tt>DateTime</tt>, we would write CODEID=51. Again each of these has a corresponding property method for more complex manipulation. The complete list of time fields can be found in the 
+        <a href="field.html">field reference</a>. 
+       </div> 
+       <div class="section">
+        <h2>Manipulating DateTimes<a name="Manipulating_DateTimes"></a></h2> 
+        <p> <tt>DateTime</tt> objects have value semantics, and cannot be modified after construction (they are immutable). Therefore, most simple manipulation of a datetime object involves construction of a new datetime as a modified copy of the original. </p> 
+        <p> WARNING: <i>A common mistake to make with immutable classes is to forget to assign the result to a variable. Remember that calling an add or set method on an immtable object has no effect on that object - only the result is updated.</i> </p>
+       </div> 
+       <div class="section">
+        <h3>Modifying fields<a name="Modifying_fields"></a></h3> 
+        <p> One way to do this is to use methods on properties. To return to our prior example, if we wish to modify the <tt>dt</tt> object by changing its day-of-week field to Monday we can do so by using the <tt>setCopy</tt> method of the property: CODEID=52. Note: If the 
+        <tt>DateTime</tt> object is already set to Monday then the same object will be returned. 
+        <p> To add to a date you could use the <tt>addToCopy</tt> method. CODEID=53. 
+       </div> 
+       <div class="section">
+        <h3>Modifying fields<a name="Modifying_fields"></a></h3> 
+        <p> One way to do this is to use methods on properties. To return to our prior example, if we wish to modify the <tt>dt</tt> object by changing its day-of-week field to Monday we can do so by using the <tt>setCopy</tt> method of the property: CODEID=54. Note: If the 
+        <tt>DateTime</tt> object is already set to Monday then the same object will be returned. 
+        <p> To add to a date you could use the <tt>addToCopy</tt> method. CODEID=55. 
+       </div> 
+       <div class="section">
+        <h3>Modifying fields<a name="Modifying_fields"></a></h3> 
+        <p> One way to do this is to use methods on properties. To return to our prior example, if we wish to modify the <tt>dt</tt> object by changing its day-of-week field to Monday we can do so by using the <tt>setCopy</tt> method of the property: CODEID=56. Note: If the 
+        <tt>DateTime</tt> object is already set to Monday then the same object will be returned. 
+        <p> To add to a date you could use the <tt>addToCopy</tt> method. CODEID=57. 
+       </div> 
+       <div class="section">
+        <h3>DateTime methods<a name="DateTime_methods"></a></h3> 
+        <p> Another means of accomplishing similar calculations is to use methods on the <tt>DateTime</tt> object itself. Thus we could add 3 days to <tt>dt</tt> directly as follows: CODEID=58. 
+       </div> 
+       <div class="section">
+        <h3>Using a MutableDateTime<a name="Using_a_MutableDateTime"></a></h3> 
+        <p> The methods outlined above are suitable for simple calculations involving one or two fields. In situations where multiple fields need to be modified, it is more efficient to create a mutable copy of the datetime, modify the copy and finally create a new value datetime. CODEID=59. 
+        <

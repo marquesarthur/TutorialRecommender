@@ -1,0 +1,263 @@
+<html>
+ <head> 
+  <title>Message Events</title> 
+  <link rel="stylesheet" type="text/css" href="style.css" /> 
+ </head> 
+ <body> 
+  <div class="subsection"> 
+   <div class="header">
+     Message Events 
+   </div> 
+   <p> This extension is used to request and respond to events relating to the delivery, display, and composition of messages. There are three stages in this extension:</p> 
+   <ol> 
+    <li>Request for event notifications, </li> 
+    <li>Receive the event notification requests and send event notifications, and </li> 
+    <li>Receive the event notifications.</li> 
+   </ol> 
+   <p>For more information on each stage please follow these links:</p> 
+   <ul> 
+    <li><a href="#reqevnot">Requesting Event Notifications</a></li> 
+    <li><a href="#lstevnotreq">Reacting to Event Notification Requests</a></li> 
+    <li><a href="#lstevnot">Reacting to Event Notifications</a></li> 
+   </ul> 
+   <b>JEP related:</b> 
+   <a href="http://www.jabber.org/jeps/jep-0022.html">JEP-22</a> 
+   <hr /> 
+  </div> 
+  <div class="subsection"> 
+   <div class="subheader"> 
+    <a name="reqevnot">Requesting Event Notifications</a> 
+   </div> 
+   <p> <b>Description</b></p> 
+   <p> In order to receive event notifications for a given message you first have to specify which events are you interested in. Each message that you send has to request its own event notifications. Therefore, every message that you send as part of a chat should request its own event notifications.</p> 
+   <b>Usage</b> 
+   <p> The class <i> 
+     <clt fqn="org.jivesoftware.smackx.MessageEventManager" api="MessageEventManager" kind="class">
+       MessageEventManager 
+     </clt></i> provides an easy way for requesting event notifications. All you have to do is specify the message that requires the event notifications and the events that you are interested in. </p> 
+   <p>Use the static method <i><b> 
+      <clt fqn="org.jivesoftware.smackx.MessageEventManager.addNotificationsRequests" api="addNotificationsRequests" kind="method">
+        MessageEventManager.addNotificationsRequests(Message message, boolean offline, boolean delivered, boolean displayed, boolean composing) 
+      </clt></b></i> for requesting event notifications. </p> 
+   <b>Example</b> 
+   <p> Below you can find an example that logs in a user to the server, creates a message, adds the requests for notifications and sends the message. </p> 
+   <blockquote> 
+    <pre>      <font color="#3f7f5f">// Connect to the server and log in</font>
+conn1 = new XMPPConnection(host);
+conn1.login(server_user1, pass1);
+<font color="#3f7f5f">// Create a chat with user2</font>
+Chat chat1 = conn1.createChat(user2);
+<font color="#3f7f5f">// Create a message to send</font>
+Message msg = chat1.createMessage();
+msg.setSubject(<font color="#0000FF">&quot;Any subject you want&quot;</font>);
+msg.setBody(<font color="#0000FF">&quot;An interesting body comes here...&quot;</font>);
+<font color="#3f7f5f">// Add to the message all the notifications requests (offline, delivered, displayed,</font>
+<font color="#3f7f5f">// composing)</font>
+MessageEventManager.addNotificationsRequests(msg, <font color="#7f0055"><b>true</b></font>, <font color="#7f0055"><b>true</b></font>, <font color="#7f0055"><b>true</b></font>, <font color="#7f0055"><b>true</b></font>);
+<font color="#3f7f5f">// Send the message that contains the notifications request</font>
+chat1.sendMessage(msg);
+</pre> 
+   </blockquote> 
+   <hr /> 
+  </div> 
+  <div class="subsection"> 
+   <div class="subheader"> 
+    <a name="lstevnotreq">Reacting to Event Notification Requests</a> 
+   </div> 
+   <p> <b>Description</b></p> 
+   <p> You can receive notification requests for the following events: delivered, displayed, composing and offline. You <b>must</b> listen for these requests and react accordingly.</p> 
+   <b>Usage</b> 
+   <p> The general idea is to create a new <i> 
+     <clt fqn="org.jivesoftware.smackx.DefaultMessageEventRequestListener" api="DefaultMessageEventRequestListener" kind="class">
+       DefaultMessageEventRequestListener 
+     </clt></i> that will listen to the event notifications requests and react with custom logic. Then you will have to add the listener to the <i> 
+     <clt fqn="org.jivesoftware.smackx.MessageEventManager" api="MessageEventManager" kind="class">
+       MessageEventManager 
+     </clt></i> that works on the desired <i> 
+     <clt fqn="org.jivesoftware.smack.Connection" api="Connection" kind="class">
+       Connection 
+     </clt></i>. </p> 
+   <p>Note that <i>
+     <clt fqn="org.jivesoftware.smackx.DefaultMessageEventRequestListener" api="DefaultMessageEventRequestListener" kind="class">
+      DefaultMessageEventRequestListener
+     </clt></i> is a default implementation of the <i> 
+     <clt fqn="org.jivesoftware.smackx.MessageEventRequestListener" api="MessageEventRequestListener" kind="class">
+       MessageEventRequestListener 
+     </clt></i> interface. The class <i> 
+     <clt fqn="org.jivesoftware.smackx.DefaultMessageEventRequestListener" api="DefaultMessageEventRequestListener" kind="class">
+       DefaultMessageEventRequestListener 
+     </clt></i> automatically sends a delivered notification to the sender of the message if the sender has requested to be notified when the message is delivered. If you decide to create a new class that implements the <i> 
+     <clt fqn="org.jivesoftware.smackx.MessageEventRequestListener" api="MessageEventRequestListener" kind="class">
+       MessageEventRequestListener 
+     </clt></i> interface, please remember to send the delivered notification.</p> 
+   <ul> 
+    <li>To create a new <i> 
+      <clt fqn="org.jivesoftware.smackx.MessageEventManager" api="MessageEventManager" kind="class">
+        MessageEventManager 
+      </clt></i> use the <i><b> 
+       <clt fqn="org.jivesoftware.smackx.MessageEventManager.MessageEventManager" api="MessageEventManager" kind="method">
+         MessageEventManager(Connection) 
+       </clt></b></i> constructor. </li> 
+    <li>To create an event notification requests listener create a subclass of <i><b> 
+       <clt fqn="org.jivesoftware.smackx.DefaultMessageEventRequestListener" api="DefaultMessageEventRequestListener" kind="class">
+         DefaultMessageEventRequestListener 
+       </clt></b></i> or create a class that implements the <i><b> 
+       <clt fqn="org.jivesoftware.smackx.MessageEventRequestListener" api="MessageEventRequestListener" kind="class">
+         MessageEventRequestListener 
+       </clt></b></i> interface. </li> 
+    <li>To add a listener to the messageEventManager use the MessageEventManager's message <i><b> 
+       <clt fqn="org.jivesoftware.smackx.MessageEventManager.addMessageEventRequestListener" api="addMessageEventRequestListener" kind="method">
+         addMessageEventRequestListener(MessageEventRequestListener) 
+       </clt></b></i>.</li> 
+   </ul> 
+   <b>Example</b> 
+   <p> Below you can find an example that connects two users to the server. One user will create a message, add the requests for notifications and will send the message to the other user. The other user will add a <i> 
+     <clt fqn="org.jivesoftware.smackx.DefaultMessageEventRequestListener" api="DefaultMessageEventRequestListener" kind="class">
+       DefaultMessageEventRequestListener 
+     </clt></i> to a <i> 
+     <clt fqn="org.jivesoftware.smackx.MessageEventManager" api="MessageEventManager" kind="class">
+       MessageEventManager 
+     </clt></i> that will listen and react to the event notification requested by the other user. </p> 
+   <blockquote> 
+    <pre>      <font color="#3f7f5f">// Connect to the server and log in the users</font>
+conn1 = new XMPPConnection(host);
+conn1.login(server_user1, pass1);
+conn2 = new XMPPConnection(host);
+conn2.login(server_user2, pass2);
+<font color="#3f7f5f">// User2 creates a MessageEventManager</font>
+MessageEventManager messageEventManager = new MessageEventManager(conn2);
+<font color="#3f7f5f">// User2 adds the listener that will react to the event notifications requests</font>
+messageEventManager.addMessageEventRequestListener(new DefaultMessageEventRequestListener() {
+public void deliveredNotificationRequested(
+String from,
+String packetID,
+MessageEventManager messageEventManager) {
+super.deliveredNotificationRequested(from, packetID, messageEventManager);
+<font color="#3f7f5f">// DefaultMessageEventRequestListener automatically responds that the message was delivered when receives this request</font>
+System.out.println(<font color="#0000FF">&quot;Delivered Notification Requested (&quot; + from + &quot;, &quot; + packetID + &quot;)&quot;</font>);
+}
+public void displayedNotificationRequested(
+String from,
+String packetID,
+MessageEventManager messageEventManager) {
+super.displayedNotificationRequested(from, packetID, messageEventManager);
+<font color="#3f7f5f">// Send to the message's sender that the message was displayed</font>
+messageEventManager.sendDisplayedNotification(from, packetID);
+}
+public void composingNotificationRequested(
+String from,
+String packetID,
+MessageEventManager messageEventManager) {
+super.composingNotificationRequested(from, packetID, messageEventManager);
+<font color="#3f7f5f">// Send to the message's sender that the message's receiver is composing a reply</font>
+messageEventManager.sendComposingNotification(from, packetID);
+}
+public void offlineNotificationRequested(
+String from,
+String packetID,
+MessageEventManager messageEventManager) {
+super.offlineNotificationRequested(from, packetID, messageEventManager);
+<font color="#3f7f5f">// The XMPP server should take care of this request. Do nothing.</font>
+System.out.println(<font color="#0000FF">&quot;Offline Notification Requested (&quot; + from + &quot;, &quot; + packetID + &quot;)&quot;</font>);
+}
+});
+<font color="#3f7f5f">// User1 creates a chat with user2</font>
+Chat chat1 = conn1.createChat(user2);
+<font color="#3f7f5f">// User1 creates a message to send to user2</font>
+Message msg = chat1.createMessage();
+msg.setSubject(<font color="#0000FF">&quot;Any subject you want&quot;</font>);
+msg.setBody(<font color="#0000FF">&quot;An interesting body comes here...&quot;</font>);
+<font color="#3f7f5f">// User1 adds to the message all the notifications requests (offline, delivered, displayed,</font>
+<font color="#3f7f5f">// composing)</font>
+MessageEventManager.addNotificationsRequests(msg, <font color="#7f0055"><b>true</b></font>, <font color="#7f0055"><b>true</b></font>, <font color="#7f0055"><b>true</b></font>, <font color="#7f0055"><b>true</b></font>);
+<font color="#3f7f5f">// User1 sends the message that contains the notifications request</font>
+chat1.sendMessage(msg);
+Thread.sleep(500);
+<font color="#3f7f5f">// User2 sends to the message's sender that the message's receiver cancelled composing a reply</font>
+messageEventManager.sendCancelledNotification(user1, msg.getPacketID());
+</pre> 
+   </blockquote> 
+   <hr /> 
+  </div> 
+  <div class="subsection"> 
+   <div class="subheader"> 
+    <a name="lstevnot">Reacting to Event Notifications</a> 
+   </div> 
+   <p> <b>Description</b></p> 
+   <p> Once you have requested for event notifications you will start to receive notifications of events. You can receive notifications of the following events: delivered, displayed, composing, offline and cancelled. You will probably want to react to some or all of these events.</p> 
+   <b>Usage</b> 
+   <p> The general idea is to create a new <i> 
+     <clt fqn="org.jivesoftware.smackx.MessageEventNotificationListener" api="MessageEventNotificationListener" kind="class">
+       MessageEventNotificationListener 
+     </clt></i> that will listen to the event notifications and react with custom logic. Then you will have to add the listener to the <i> 
+     <clt fqn="org.jivesoftware.smackx.MessageEventManager" api="MessageEventManager" kind="class">
+       MessageEventManager 
+     </clt></i> that works on the desired <i> 
+     <clt fqn="org.jivesoftware.smack.Connection" api="Connection" kind="class">
+       Connection 
+     </clt></i>. </p> 
+   <ul> 
+    <li>To create a new <i> 
+      <clt fqn="org.jivesoftware.smackx.MessageEventManager" api="MessageEventManager" kind="class">
+        MessageEventManager 
+      </clt></i> use the <i><b> 
+       <clt fqn="org.jivesoftware.smackx.MessageEventManager.MessageEventManager" api="MessageEventManager" kind="method">
+         MessageEventManager(Connection) 
+       </clt></b></i> constructor. </li> 
+    <li>To create an event notifications listener create a class that implements the <i><b> 
+       <clt fqn="org.jivesoftware.smackx.MessageEventNotificationListener" api="MessageEventNotificationListener" kind="class">
+         MessageEventNotificationListener 
+       </clt></b></i> interface. </li> 
+    <li>To add a listener to the messageEventManager use the MessageEventManager's message <i><b> 
+       <clt fqn="org.jivesoftware.smackx.MessageEventManager.addMessageEventNotificationListener" api="addMessageEventNotificationListener" kind="method">
+         addMessageEventNotificationListener(MessageEventNotificationListener) 
+       </clt></b></i>.</li> 
+   </ul> 
+   <b>Example</b> 
+   <p> Below you can find an example that logs in a user to the server, adds a <i> 
+     <clt fqn="org.jivesoftware.smackx.MessageEventNotificationListener" api="MessageEventNotificationListener" kind="class">
+       MessageEventNotificationListener 
+     </clt></i> to a <i> 
+     <clt fqn="org.jivesoftware.smackx.MessageEventManager" api="MessageEventManager" kind="class">
+       MessageEventManager 
+     </clt></i> that will listen and react to the event notifications, creates a message, adds the requests for notifications and sends the message. </p> 
+   <blockquote> 
+    <pre>      <font color="#3f7f5f">// Connect to the server and log in</font>
+conn1 = new XMPPConnection(host);
+conn1.login(server_user1, pass1);
+<font color="#3f7f5f">// Create a MessageEventManager</font>
+MessageEventManager messageEventManager = new MessageEventManager(conn1);
+<font color="#3f7f5f">// Add the listener that will react to the event notifications</font>
+messageEventManager.addMessageEventNotificationListener(new MessageEventNotificationListener() {
+public void deliveredNotification(String from, String packetID) {
+System.out.println(<font color="#0000FF">&quot;The message has been delivered (&quot; + from + &quot;, &quot; + packetID + &quot;)&quot;</font>);
+}
+public void displayedNotification(String from, String packetID) {
+System.out.println(<font color="#0000FF">&quot;The message has been displayed (&quot; + from + &quot;, &quot; + packetID + &quot;)&quot;</font>);
+}
+public void composingNotification(String from, String packetID) {
+System.out.println(<font color="#0000FF">&quot;The message's receiver is composing a reply (&quot; + from + &quot;, &quot; + packetID + &quot;)&quot;</font>);
+}
+public void offlineNotification(String from, String packetID) {
+System.out.println(<font color="#0000FF">&quot;The message's receiver is offline (&quot; + from + &quot;, &quot; + packetID + &quot;)&quot;</font>);
+}
+public void cancelledNotification(String from, String packetID) {
+System.out.println(<font color="#0000FF">&quot;The message's receiver cancelled composing a reply (&quot; + from + &quot;, &quot; + packetID + &quot;)&quot;</font>);
+}
+});
+<font color="#3f7f5f">// Create a chat with user2</font>
+Chat chat1 = conn1.createChat(user2);
+<font color="#3f7f5f">// Create a message to send</font>
+Message msg = chat1.createMessage();
+msg.setSubject(<font color="#0000FF">&quot;Any subject you want&quot;</font>);
+msg.setBody(<font color="#0000FF">&quot;An interesting body comes here...&quot;</font>);
+<font color="#3f7f5f">// Add to the message all the notifications requests (offline, delivered, displayed,</font>
+<font color="#3f7f5f">// composing)</font>
+MessageEventManager.addNotificationsRequests(msg, <font color="#7f0055"><b>true</b></font>, <font color="#7f0055"><b>true</b></font>, <font color="#7f0055"><b>true</b></font>, <font color="#7f0055"><b>true</b></font>);
+<font color="#3f7f5f">// Send the message that contains the notifications request</font>
+chat1.sendMessage(msg);
+</pre> 
+   </blockquote> 
+  </div>  
+ </body>
+</html>

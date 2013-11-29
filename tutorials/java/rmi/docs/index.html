@@ -1,0 +1,395 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html lang="en-US">
+ <head> 
+  <title>The Java™ Tutorials</title> 
+  <meta name="Description" content="Tutorials and reference guides for the Java Programming Language" />  
+  <style type="text/css">
+    div#TopBar_bl {
+        background: url(images/java_bar_bl.gif) 0 100% no-repeat;
+        width: 100%;
+        height: 60px;
+    }
+    div#TopBar_br {
+        background: url(images/java_bar_br.gif) 100% 100% no-repeat;
+        width: 100%;
+        height: 60px;
+    }
+    div#TopBar_tl {
+        background: url(images/java_bar_tl.gif) 0 0 no-repeat;
+        width: 100%;
+        height: 60px;
+    }
+    div#TopBar_tr {
+        background: url(images/java_bar_tr.gif) 100% 0 no-repeat;
+        width: 100%;
+        height: 60px;
+    }
+    div#TopBar {
+        font-family: sans-serif; 
+        background: #35556B url(images/java_bar.gif);
+        margin: 10px 10px 0 10px;
+        height:60px;
+        min-width:700px;
+        color: white;
+        font-weight: bold;
+    }
+    div#TopBar_left {
+        margin-left: 100px;
+        padding-top: 6px;
+    }
+    @media print {
+        div#TopBar_left {
+            margin-left: 0;
+        }
+    }
+    div#TopBar_right {
+        float: right;
+        padding-top: 8px;
+        padding-right: 30px;
+        text-align: center;
+    }
+    @media print {
+        div#TopBar_right {
+            display: none;
+        }
+    }
+    #TopBar_right a {
+        font-size: 12px;
+        margin: 3px;
+        padding: 0;
+    }
+    #TopBar a:visited, #TopBar a:link {
+        color: white;
+        text-decoration: none;
+    }
+    div#TopBar a:visited, div#TopBar a:link {
+        color: white;
+    }
+    div#TopBar a:hover, div#TopBar a:active  {
+        background-color: white;
+        color: #35556B;
+    }
+    div#PageTitle {
+    }
+    div#LeftBar {
+        width: 13em;
+        float: left;
+        margin-left: 10px;
+        margin-top: 10px;
+    }
+    div#Footer {
+        font-family: sans-serif; 
+        font-size: 10px;
+        padding-top: 10px;
+        margin: 3em;
+        clear: both;
+    }
+    div#Footer img#duke {
+    }
+    div#Footer img#sun {
+    }
+    div#TagNotes {
+        margin-top: 10px;
+        color: #35556B;
+    }
+    @media print {
+        span#TagNotes a:visited, span#TagNotes a:link {
+            text-decoration: none;
+        }
+    }
+    div#TutBody {
+        margin: 10px 20em 10px 3em;
+    }
+    div.RightBar {
+        font-family: sans-serif; 
+        float: right;
+    }
+    div.RightBar img {
+        margin: 0 0 1em 0;
+    }
+    div.RightBox {
+        margin: 10px 3em 10px 0;
+        width: 15em;
+        border-style: double;
+    }
+    div.BlueRightBox {
+        margin: 10px 3em 10px 0;
+        width: 15em;
+        border-style: double;
+        background-color: #747170;
+        color: #FFFFFF;
+    }
+    div.Pad {
+        font-size: 80%;
+        padding: 1em;
+    }
+    div.Pad h2 {
+        text-align: center;
+        margin: 0;
+    }
+    div.Pad div {
+        display: list-item;
+        list-style-image: url(images/arrow-right-gray.gif);
+        margin: 0.3em 1em;
+    }
+    ul.BlueArrows {
+        list-style-image: url(images/ar_dbl_blue.gif);
+    }
+    ul.BlueArrows a:visited, ul.BlueArrows a:link {
+        text-decoration: none;
+    }
+    ul.BlueArrows a:hover, ul.BlueArrows a:active {
+        text-decoration: underline;
+    }
+     h1, h2, h3, h4, h5 {
+        color: #F90000;
+        font-family: sans-serif;
+    }
+
+    h1 {
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    h2 {
+        font-weight: bold;
+        font-size: 17px;
+    }
+
+    h3 {
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+    h4 {
+        font-size: 15px;
+    }
+
+    h5 {
+        font-size: 12px;
+    }
+
+
+    .w {
+        font-family: Arial, Helvetica, sans-serif; 
+        color: #FFFFFF;
+        margin-bottom: 3px;
+    }
+
+</style> 
+ </head> 
+ <body> 
+  <noscript>
+    A browser with JavaScript enabled is required for this page to operate properly. 
+  </noscript> 
+  <div id="TopBar"> 
+   <div id="TopBar_tr"> 
+    <div id="TopBar_tl"> 
+     <div id="TopBar_br"> 
+      <div id="TopBar_bl"> 
+       <div id="TopBar_right"> 
+        <a href="search.html" target="_top">Search</a> 
+        <br /> 
+        <a href="http://docs.oracle.com/javase/feedback.html">Feedback</a> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <div class="RightBar"> 
+   <img src="images/ThinkingDuke.png" width="124" height="128" align="center" alt="Duke thinking about what to study" style="margin-top:2px" /> 
+   <br />Not sure where to start? 
+   <br />See 
+   <a href="tutorialLearningPaths.html">Learning Paths</a> 
+   <div class="BlueRightBox"> 
+    <h2 class="w"><p></p>
+     <center>
+      <b>Tutorial Contents</b>
+     </center></h2> 
+    <div> 
+     <center>
+      <a href="reallybigindex.html"><img src="images/really_big_index_button.gif" width="108" height="22" align="center" alt="really big index button" /></a>
+     </center>
+    </div> 
+   </div> 
+   <div class="RightBox">
+    <div class="Pad"> 
+     <div class="subsection">
+<h2>Tutorial Resources</h2> 
+     <div>
+      View the 
+      <a href="http://docs.oracle.com/javase/tutorial/">Java Tutorials</a> Online (Last Updated 
+      <a href="information/history.html">6/18/2013</a>).
+     </div> 
+     <div>
+      <a href="https://blogs.oracle.com/thejavatutorials/">The Java Tutorials' Blog</a> has news and updates about the Java SE tutorials.
+     </div> 
+     <div> 
+      <a href="http://www.oracle.com/technetwork/java/javase/downloads/java-se-7-tutorial-2012-02-28-1536013.html">Download the latest Java Tutorials bundle</a>. 
+     </div> 
+    </div>
+   </div> 
+   <div class="RightBox">
+    <div class="Pad"> 
+     </div>
+<div class="subsection">
+<h2>In Book Form</h2> 
+     <div>
+      <a href="http://www.oracle.com/technetwork/java/javase/downloads/java-se-7-tutorial-2012-02-28-1536013.html">Download ebook files</a>.
+     </div> 
+     <div>
+      <i>The Java Tutorial, Fifth Edition.</i> 
+      <a href="http://www.amazon.com/The-Java-Tutorial-Course-Edition/dp/0132761696" target="_blank">Amazon.com</a>. 
+     </div> 
+    </div>
+   </div> 
+   <div class="RightBox">
+    <div class="Pad"> 
+     </div>
+<div class="subsection">
+<h2>Other Resources</h2> 
+     <div>
+      <a href="http://docs.oracle.com/javase/7/docs/">Java SE Developer Guides</a>
+     </div> 
+     <div>
+      <a href="http://docs.oracle.com/javase/7/docs/api">API Documentation</a>
+     </div> 
+     <div>
+      <a href="http://docs.oracle.com/javafx/">JavaFX 2.0 Documentation</a>
+     </div> 
+     <div>
+      <a href="http://docs.oracle.com/javaee/6/tutorial/doc/">The Java EE 6 Tutorial</a>
+     </div> 
+     <div>
+      <a href="http://www.netbeans.org/kb/index.html">NetBeans™ Documentation</a>
+     </div> 
+    </div>
+   </div> 
+   <div class="RightBox">
+    <div class="Pad"> 
+     </div>
+<div class="subsection">
+<h2>Oracle Training and Professional Certification</h2> 
+     <div>
+      <a href="http://education.oracle.com/pls/web_prod-plq-dad/db_pages.getpage?page_id=402&amp;p_nl=JJAV">Java Certification and Training</a>
+     </div> 
+     <div>
+      <a href="http://education.oracle.com/pls/web_prod-plq-dad/db_pages.getpage?page_id=3">Oracle University</a>
+     </div> 
+    </div>
+   </div> 
+   <div class="RightBox">
+    <div class="Pad"> 
+     </div>
+<div class="subsection">
+<h2>Software</h2> 
+     <div>
+      The 
+      <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">Java Development Kit</a> (JDK) for Java SE 7.
+     </div> 
+     <div>
+      <a href="http://www.netbeans.org/">NetBeans IDE</a>
+     </div> 
+     <div>
+      <a href="http://www.oracle.com/technetwork/java/javaee/downloads/index.html">Java EE SDK</a>
+     </div> 
+    </div>
+   </div> 
+  </div> 
+  <div id="TutBody">
+    The Java Tutorials are practical guides for programmers who want to use the Java programming language to create applications. They include hundreds of complete, working examples, and dozens of lessons. Groups of related lessons are organized into &quot;trails&quot;. 
+   <p> The Java Tutorials primarily describe features in Java SE 7. For best results, <a class="OutsideLink" target="_blank" href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">download JDK 7</a>. </p> 
+   </div>
+<div class="subsection">
+<h2><a name="whatsnew">What's New</a></h2> 
+   <p>The Java Tutorials are continuously updated to keep up with changes to the Java Platform and to incorporate feedback from our readers. Apart from fixing typos and errors, this update includes the following:</p> 
+   <ul> 
+    <li>This release of the tutorial corresponds to the JDK 7u25 release. The JDK 7u25 release introduces new JAR file manifest attributes that are used to defend Rich Internet Applications (RIAs) against unauthorized code repurposing. The <tt>Permissions</tt> and <tt>Codebase</tt> attributes are described in <a href="deployment/jar/secman.html">Enhancing the Security of the JAR File</a>. The <a href="deployment/applet/deployingApplet.html">Deploying an Applet</a> and <a href="deployment/webstart/deploying.html">Deploying a Java Web Start Application</a> sections describe how to include these attributes in the manifest. <p> </p></li>
+    <li> Additional tips for deploying RIAs have been added to <a href="deployment/deploymentInDepth/bestPractices.html">Deployment Best Practices</a> and <a href="deployment/doingMoreWithRIA/security.html">Security in Rich Internet Applications</a>. <p> </p></li>
+    <li>Information on time stamping the signature of a JAR file has been added to <a href="deployment/jar/signing.html">Signing JAR Files</a>. Depending on the security level set in the Java Control Panel, RIAs that have an expired certificate might not be allowed to run. However, if the signature is time stamped and the time stamp shows that the certificate was valid when the RIA was signed, the RIA is allowed to run. </li>
+   </ul> 
+   <p>The previous release of the tutorial, which corresponded to the JDK 7u21 release, included the following:</p> 
+   <ul> 
+    <li> The JDK 7u21 release enabled users to make more informed decisions before running Rich Internet Applications (RIAs) by prompting users for permission before an RIA is run. The prompt contains information about the certificate used to sign the app and the level of access requested by the app. Depending on the security setting in the Java Control Panel, some apps might be blocked from running. <p> The tutorials were updated to reflect the recommendation that all RIAs be run from signed JAR files. A new page was added to the <a href="deployment/index.html">Deployment</a> trail on <a href="deployment/deploymentInDepth/userAcceptance.html" target="_blank">User Acceptance of RIAs</a>. You may also want to refer to the lesson on <a href="deployment/jar/signindex.html" target="_blank">Signing and Verifying JAR Files</a>. The Deployment ebook (both mobi and epub formats) were updated. Finally, all Java Web Start examples launched from within the tutorial are now signed and all applets run within the sandbox.</p> </li>
+    <li><p>As part of the ongoing Project Lambda work for Java SE 8, there is a new page on <a href="java/javaOO/methodreferences.html" target="_blank">Method References</a> that includes a new <a href="java/javaOO/examples/MethodReferencesTest.java" target="_blank">MethodReferencesTest.java</a> example (which requires the <a href="http://jdk8.java.net/lambda/" target="_blank">early access release of JDK 8 with Lambda support</a> to compile). This new page is available online only.</p></li> 
+   </ul> 
+   </div>
+<div class="subsection">
+<h2>Trails Covering the Basics</h2> These trails are available in book form as 
+   <i>The Java Tutorial, Fifth Edition</i>. To buy this book, refer to the box to the right. 
+   <ul class="BlueArrows"> 
+    <li><a href="getStarted/index.html">Getting Started</a> — An introduction to Java technology and lessons on installing Java development software and using it to create a simple program. </li>
+    <li><a href="java/index.html">Learning the Java Language</a> — Lessons describing the essential concepts and features of the Java Programming Language. </li>
+    <li><a href="essential/index.html">Essential Java Classes</a> — Lessons on exceptions, basic input/output, concurrency, regular expressions, and the platform environment. </li>
+    <li><a href="collections/index.html">Collections</a> — Lessons on using and extending the Java Collections Framework. </li>
+    <li><a href="deployment/index.html">Deployment</a> — How to package applications and applets using JAR files, and deploy them using Java Web Start and Java Plug-in. </li>
+    <li><a href="extra/certification/index.html">Preparation for Java Programming Language Certification</a> — List of available training and tutorial resources. </li>
+   </ul> 
+   </div>
+<div class="subsection">
+<h2>Creating Graphical User Interfaces</h2> 
+   <p> </p>
+   <ul class="BlueArrows"> 
+    <li><a href="uiswing/index.html">Creating a GUI with Swing</a> — A comprehensive introduction to GUI creation on the Java platform. </li>
+    <li><a href="http://docs.oracle.com/javafx/index.html">Creating a JavaFX GUI</a> — A collection of JavaFX tutorials. </li>
+   </ul> 
+   </div>
+<div class="subsection">
+<h2>Specialized Trails and Lessons</h2> These trails and lessons are only available as web pages. 
+   <p> </p>
+   <ul class="BlueArrows"> 
+    <li><a href="networking/index.html">Custom Networking</a> — An introduction to the Java platform's powerful networking features. </li>
+    <li><a href="ext/index.html">The Extension Mechanism</a> — How to make custom APIs available to all applications running on the Java platform. </li>
+    <li><a href="extra/fullscreen/index.html">Full-Screen Exclusive Mode API</a> — How to write applications that more fully utilize the user's graphics hardware. </li>
+    <li><a href="extra/generics/index.html">Generics</a> — An enhancement to the type system that supports operations on objects of various types while providing compile-time type safety. Note that this lesson is for advanced users. The <a href="java/index.html">Java Language</a> trail contains a <a href="java/generics/index.html">Generics</a> lesson that is suitable for beginners. </li>
+    <li><a href="i18n/index.html">Internationalization</a> — An introduction to designing software so that it can be easily be adapted (localized) to various languages and regions. </li>
+    <li><a href="javabeans/index.html">JavaBeans</a> — The Java platform's component technology. </li>
+    <li><a href="jdbc/index.html">JDBC Database Access</a> — Introduces an API for connectivity between the Java applications and a wide range of databases and a data sources. </li>
+    <li><a href="jmx/index.html">JMX</a>— Java Management Extensions provides a standard way of managing resources such as applications, devices, and services. </li>
+    <li><a href="jndi/index.html">JNDI</a>— Java Naming and Directory Interface enables accessing the Naming and Directory Service such as DNS and LDAP. </li>
+    <li><a href="jaxp/index.html">JAXP</a> — Introduces the Java API for XML Processing (JAXP) 1.4 technology. </li>
+    <li><a href="jaxb/index.html">JAXB</a> — Introduces the Java architecture for XML Binding (JAXB) technology. </li>
+    <li><a href="rmi/index.html">RMI</a> — The Remote Method Invocation API allows an object to invoke methods of an object running on another Java Virtual Machine. </li>
+    <li><a href="reflect/index.html">Reflection</a> — An API that represents (&quot;reflects&quot;) the classes, interfaces, and objects in the current Java Virtual Machine. </li>
+    <li><a href="security/index.html">Security</a> — Java platform features that help protect applications from malicious software. </li>
+    <li><a href="sound/index.html">Sound</a> — An API for playing sound data from applications. </li>
+    <li><a href="2d/index.html">2D Graphics</a> — How to display and print 2D graphics in applications. </li>
+    <li><a href="sdp/index.html">Sockets Direct Protocol</a> — How to enable the Sockets Direct Protocol to take advantage of InfiniBand. </li>
+   </ul> 
+  </div> 
+  <hr /> 
+  </div>
+<div id="Footer"> 
+   <p><font size="1"><a name="license_info">Your use of this</a> page <a href="http://docs.oracle.com/javase/tutorial/">(http://docs.oracle.com/javase/tutorial</a> (Last Updated <a href="information/history.html">6/18/2013</a>)) and all the material on pages under &quot;The Java Tutorials&quot; banner is subject to these <a href="information/cpyr.html">legal notices</a>. </font></p> 
+   <p> </p>
+   <table width="100%" border="0" cellspacing="0" cellpadding="5"> 
+    <tbody>
+     <tr> 
+      <td headers="h1" width="20%"> 
+       <table width="100%" border="0" cellspacing="0" cellpadding="5"> 
+        <tbody>
+         <tr> 
+          <td headers="h1" align="center"><img id="duke" src="images/DukeWave.gif" width="55" height="55" alt="Waving Duke" /></td> 
+          <td headers="h2" align="left" valign="middle"><img id="oracle" src="images/logo_oracle_footer.gif" width="100" height="29" alt="Oracle logo" /></td> 
+         </tr> 
+        </tbody>
+       </table> </td> 
+      <td width="55%" valign="middle" align="center"> <font size="1"><a href="http://www.oracle.com/us/corporate/index.html">About Oracle</a> | <a href="http://www.oracle.com/technology/index.html">Oracle Technology Network</a> | <a href="https://www.samplecode.oracle.com/servlets/CompulsoryClickThrough?type=TermsOfService">Terms of Service</a> | <a href="information/docaccessibility.html">Documentation Accessibility</a></font> </td> 
+      <td width="25%" valign="middle" align="right"> <font size="2">Copyright &copy; 1995, 2013 Oracle and/or its affiliates. All rights reserved.</font> </td> 
+     </tr> 
+    </tbody>
+   </table> 
+  </div> 
+  <!-- Start SiteCatalyst code   --> 
+  <script type="text/javascript" language="JavaScript" src="http://www.oracle.com/ocom/groups/systemobject/@mktg_admin/documents/systemobject/s_code_download.js"></script> 
+  <script type="text/javascript" language="JavaScript" src="http://www.oracle.com/ocom/groups/systemobject/@mktg_admin/documents/systemobject/s_code.js"></script> 
+  <noscript>
+    A browser with JavaScript enabled is required for this page to operate properly. 
+  </noscript> 
+  <!-- ********** DO NOT ALTER ANYTHING BELOW THIS LINE ! *********** --> 
+  <!--  Below code will send the info to Omniture server --> 
+  <script type="text/javascript" language="javascript">var s_code=s.t();if(s_code)document.write(s_code)</script> 
+  <!-- End SiteCatalyst code -->   
+ </body>
+</html>

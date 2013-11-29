@@ -1,0 +1,74 @@
+,,,,"Yes-yes","Yes-no","No-yes","No-no"
+"Section1-Intorduction","DateTime",0,0,0,0,0,1
+"Section1-Intorduction","Interval",0,0,0,0,0,1
+"Section1-Intorduction","Duration",0,0,0,0,0,1
+"Section1-Intorduction","Period",0,0,0,0,0,1
+"Section3-Instants","DateTime	",1,1,1,0,0,0
+"Section3-Instants","Chronology	",1,0,0,1,0,0
+"Section3-Instants","ReadableInstant",0,1,0,0,1,0
+"Section3-Instants","MutableDateTime	",1,0,0,1,0,0
+"Section3-Instants","Instant	",1,1,1,0,0,0
+"Section3-Instants","DateMidnight",0,1,0,0,1,0
+"Subsection3.1-Fields","DateTime",0,0,0,0,0,1
+"Subsection3.1-Fields","getDayOfYear()",1,0,0,1,0,0
+"SubSection3.2-Properties ","DateTime",0,0,0,0,0,1
+"SubSection3.2-Properties ","getDayOfYear()",1,0,0,1,0,0
+"SubSection3.2-Properties ","dayOfYear()",1,0,0,1,0,0
+"SubSection3.2-Properties ","DateTime.Property	",1,1,1,0,0,0
+"Section4-Intervals","Interval	",1,1,1,0,0,0
+"Section4-Intervals","MutableInterval",0,1,0,0,1,0
+"Section4-Intervals","ReadableInterval",0,1,0,0,1,0
+"Section5-Durations ","Duration	",1,1,1,0,0,0
+"Section5-Durations ","ReadableDuration",0,1,0,0,1,0
+"Section6-Periods","Period	",1,1,1,0,0,0
+"Section6-Periods","PeriodType	",1,1,1,0,0,0
+"Section6-Periods","ReadablePeriod",0,1,0,0,1,0
+"Section6-Periods","MutablePeriod",0,1,0,0,1,0
+"Section7-Chronology","DateTime",0,0,0,0,0,1
+"Section7-Chronology","Interval",0,0,0,0,0,1
+"Section7-Chronology","Period",0,0,0,0,0,1
+"Section7-Chronology","Chronology	",1,1,1,0,0,0
+"Section7-Chronology","DateTimeField",0,0,0,0,0,1
+"Section7-Chronology","ISOChronology	",1,1,1,0,0,0
+"Section7-Chronology","DurationField",0,0,0,0,0,1
+"Section9-Interface usage","ReadableInstant",0,0,0,0,0,1
+"Section9-Interface usage","ReadableInterval",0,0,0,0,0,1
+"Section9-Interface usage","ReadablePeriod",0,0,0,0,0,1
+"SubSection11.1-Construction","DateTime	",1,1,1,0,0,0
+"SubSection11.2-JDK Interoperability","DateTime",1,1,1,0,0,0
+"Section12-Querying DateTimes","DateTime",0,1,0,0,1,0
+"Section12-Querying DateTimes","DateTime.Property",0,0,0,0,0,1
+"Section12-Querying DateTimes","DateTimeField",0,0,0,0,0,1
+"Section12-Querying DateTimes","DateTimeConstants",1,0,0,1,0,0
+"SubSection12.1-Accessing fields","AbstractReadableInstantFieldProperty",0,0,0,0,0,1
+"SubSection12.2-Date fields","DateTime",0,1,0,0,1,0
+"SubSection12.2-Date fields","getDayOfYear()",0,0,0,0,0,1
+"SubSection12.2-Date fields","DateTime.Property",1,0,0,1,0,0
+"SubSection12.2-Date fields","year()",0,0,0,0,0,1
+"SubSection12.2-Date fields","monthOfYear()",1,0,0,1,0,0
+"SubSection12.3-Time fields","DateTime",0,1,0,0,1,0
+"Section13-Manipulating DateTimes","DateTime",1,1,1,0,0,0
+"SubSection13.1-Modifying fields","DateTime",1,1,1,0,0,0
+"SubSection13.1-Modifying fields","setCopy",1,0,0,1,0,0
+"SubSection13.1-Modifying fields","addToCopy",1,1,1,0,0,0
+"SubSection13.2-DateTime methods","DateTime",0,0,0,0,0,1
+"SubSection13.3-Using a MutableDateTime","MutableDateTime",1,1,1,0,0,0
+"Section14-Changing TimeZone","DateTime",1,1,1,0,0,0
+"Section14-Changing TimeZone","DateTimeZone.getAvailableIDs()",1,1,1,0,0,0
+"Section15-Changing Chronology","Chronology",0,1,0,0,1,0
+"Section15-Changing Chronology","DateTime",1,1,1,0,0,0
+"Section15-Changing Chronology","BuddhistChronology.getInstance",1,1,1,0,0,0
+"SubSection16.1-Formatters","DateTime",0,0,0,0,0,1
+"SubSection16.2-Standard Formatters","DateTimeFormatter",1,1,1,0,0,0
+"SubSection16.2-Standard Formatters","ISODateTimeFormat",1,1,1,0,0,0
+"SubSection16.3-Custom Formatters","withLocale",1,1,1,0,0,0
+"SubSection16.3-Custom Formatters","DateTimeFormatter",1,1,1,0,0,0
+"SubSection16.3-Custom Formatters","DateTimeFormat",1,1,1,0,0,0
+"SubSection16.4-Freaky Formatters","DateTimeFormatter",1,1,1,0,0,0
+"SubSection16.4-Freaky Formatters","toFormatter",1,1,1,0,0,0
+"SubSection16.4-Freaky Formatters","appendTwoDigitYear",1,0,0,1,0,0
+"SubSection16.5-Direct access","DateTime",0,1,0,0,1,0
+"SubSection17.1-Change the Current Time","DateTimeUtils",1,1,1,0,0,0
+"Section17.2-Converters","DateTime",0,0,0,0,0,1
+"Section17.3-Security","JodaTimePermission",1,1,1,0,0,0
+,,,,28,10,12,22

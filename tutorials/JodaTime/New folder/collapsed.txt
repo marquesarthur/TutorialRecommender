@@ -1,0 +1,200 @@
+In  particular    ,  we cover  theusage of  CLT    .   
+In  particular    ,  we cover  theusage of  CLT    .   
+In  particular    ,  we cover  theusage of  CLT    .   
+In  particular    ,  we cover  theusage of  CLT    .   
+AnInstant is  defined  as  amoment in  thedatetimecontinuum specified  as  anumber of  milliseconds    from  1970-01-01T00:00Z. Thisdefinition of  milliseconds   is  consistent  with  that of  theJDK in  CLT                   .   
+Within  Joda-Time  aninstant is  represented  by  CLT    .   
+Themainimplementation of  thisinterface   ,  and  theclass that  theaverageAPIuser needs  to  be  most  familiar   with           ,   is  CLT  .   
+Themillisecondinstant can  be  converted  to  anydatetimefield  using  CLT      .   
+To  assist  with  this     ,  methods are  provided  on  CLT that   act  as  getters for  themostcommondate and  timefields            .   
+Acompanionmutableclass to  CLT   is  CLT  .   
+Otherimplementations of  CLT   include  CLT  .  ''  ''   
+AnInstant is  defined  as  amoment in  thedatetimecontinuum specified  as  anumber of  milliseconds    from  1970-01-01T00:00Z. Thisdefinition of  milliseconds   is  consistent  with  that of  theJDK in  CLT                   .   
+Within  Joda-Time  aninstant is  represented  by  CLT    .   
+Themainimplementation of  thisinterface   ,  and  theclass that  theaverageAPIuser needs  to  be  most  familiar   with           ,   is  CLT  .   
+Themillisecondinstant can  be  converted  to  anydatetimefield  using  CLT      .   
+To  assist  with  this     ,  methods are  provided  on  CLT that   act  as  getters for  themostcommondate and  timefields            .   
+Acompanionmutableclass to  CLT   is  CLT  .   
+Otherimplementations of  CLT   include  CLT  .  ''  ''   
+AnInstant is  defined  as  amoment in  thedatetimecontinuum specified  as  anumber of  milliseconds    from  1970-01-01T00:00Z. Thisdefinition of  milliseconds   is  consistent  with  that of  theJDK in  CLT                   .   
+Within  Joda-Time  aninstant is  represented  by  CLT    .   
+Themainimplementation of  thisinterface   ,  and  theclass that  theaverageAPIuser needs  to  be  most  familiar   with           ,   is  CLT  .   
+To  assist  with  this     ,  methods are  provided  on  CLT that   act  as  getters for  themostcommondate and  timefields            .   
+Acompanionmutableclass to  CLT   is  CLT  .   
+Otherimplementations of  CLT   include  CLT  .  ''  ''   
+AnInstant is  defined  as  amoment in  thedatetimecontinuum specified  as  anumber of  milliseconds    from  1970-01-01T00:00Z. Thisdefinition of  milliseconds   is  consistent  with  that of  theJDK in  CLT                   .   
+Within  Joda-Time  aninstant is  represented  by  CLT    .   
+Themainimplementation of  thisinterface   ,  and  theclass that  theaverageAPIuser needs  to  be  most  familiar   with           ,   is  CLT  .   
+To  assist  with  this     ,  methods are  provided  on  CLT that   act  as  getters for  themostcommondate and  timefields            .   
+Acompanionmutableclass to  CLT   is  CLT  .   
+Otherimplementations of  CLT   include  CLT  .  ''  ''   
+The  most  frequently   used   concept   in  Joda-Time   is  that of  CLT    .   
+AnInstant is  defined  as  amoment in  thedatetimecontinuum specified  as  anumber of  milliseconds    from  1970-01-01T00:00Z. Thisdefinition of  milliseconds   is  consistent  with  that of  theJDK in  CLT                   .   
+Within  Joda-Time  aninstant is  represented  by  CLT    .   
+Themainimplementation of  thisinterface   ,  and  theclass that  theaverageAPIuser needs  to  be  most  familiar   with           ,   is  CLT  .   
+To  assist  with  this     ,  methods are  provided  on  CLT that   act  as  getters for  themostcommondate and  timefields            .   
+Acompanionmutableclass to  CLT   is  CLT  .   
+Otherimplementations of  CLT   include  CLT  .  ''  ''   
+AnInstant is  defined  as  amoment in  thedatetimecontinuum specified  as  anumber of  milliseconds    from  1970-01-01T00:00Z. Thisdefinition of  milliseconds   is  consistent  with  that of  theJDK in  CLT                   .   
+Within  Joda-Time  aninstant is  represented  by  CLT    .   
+Themainimplementation of  thisinterface   ,  and  theclass that  theaverageAPIuser needs  to  be  most  familiar   with           ,   is  CLT  .   
+To  assist  with  this     ,  methods are  provided  on  CLT that   act  as  getters for  themostcommondate and  timefields            .   
+Acompanionmutableclass to  CLT   is  CLT  .   
+Otherimplementations of  CLT   include  CLT  .  ''  ''   
+ThemainAPI of  CLT   has  been  kept  small    ,  limited  to  just   get  methods for  eachcalendarfield           .   
+So   ,  for  instance  ,  the`day-of-year'calendarfield would  be  retrieved  by  calling  CLT       .   
+ThemainAPI of  CLT   has  been  kept  small    ,  limited  to  just   get  methods for  eachcalendarfield           .   
+So   ,  for  instance  ,  the`day-of-year'calendarfield would  be  retrieved  by  calling  CLT       .   
+Thus   ,  `  day-of-year '  ,  whose  value   is  directly   returned  by  CLT      ,    is  also   associated  with  theproperty returned  by  CLT       .   
+Thepropertyclass associated  with  CLT    is  CLT  .   
+Thus   ,  `  day-of-year '  ,  whose  value   is  directly   returned  by  CLT      ,    is  also   associated  with  theproperty returned  by  CLT       .   
+Thepropertyclass associated  with  CLT    is  CLT  .   
+Thus   ,  `  day-of-year '  ,  whose  value   is  directly   returned  by  CLT      ,    is  also   associated  with  theproperty returned  by  CLT       .   
+Thepropertyclass associated  with  CLT    is  CLT  .   
+Thus   ,  `  day-of-year '  ,  whose  value   is  directly   returned  by  CLT      ,    is  also   associated  with  theproperty returned  by  CLT       .   
+Thepropertyclass associated  with  CLT    is  CLT  .   
+CLT in  Joda-Time   represents  aninterval of  time   from  oneinstant to  anotherinstant     .   
+CLT are  implemented  as  half-open ,  which   is  to  say  that  thestartinstant is  inclusive                 but  theendinstant is  exclusive     .   
+Twoimplementations are  provided  ,  CLT    ,  both are  specializations of  CLT    .  ''  ''   
+Twoimplementations are  provided  ,  CLT    ,  both are  specializations of  CLT    .  ''  ''   
+Twoimplementations are  provided  ,  CLT    ,  both are  specializations of  CLT    .  ''  ''   
+CLT in  Joda-Time   represents  aduration of  time measured  in  milliseconds       .   
+CLT are  averysimpleconcept   ,  and  theimplementation is  also   simple     .   
+CLT can  be  added  to  aninstant  ,  or  to  eitherend of  aninterval     to  change  thoseobjects       .   
+In  datetimemaths you could  say       :  instant +  duration=instantCurrently    ,  there is  onlyoneimplementation of  CLT   :  CLT   .  ''  ''   
+In  datetimemaths you could  say       :  instant +  duration=instantCurrently    ,  there is  onlyoneimplementation of  CLT   :  CLT   .  ''  ''   
+CLT in  Joda-Time   represents  aperiod of  time defined  in  terms of  fields    ,  for  example ,  3years5months 2  days    and  7hours        .   
+CLT are  implemented  as  aset of  CLT      .   
+CLT allows  thisset of  fields   to  be  restricted   ,  for  example  to  elimate  weeks          .   
+CLT are  not  associated  with  eitherachronologyoratimezone    .   
+CLT can  be  added  to  aninstant  ,  or  to  eitherend of  aninterval     to  change  thoseobjects       .   
+In  datetimemaths  you could  say  :  instant+period =  instant There are  twoimplementations of  CLT           .  ''  ''   
+Periods are  implemented  as  aset of  CLT      .   
+CLT allows  thisset of  fields   to  be  restricted   ,  for  example  to  elimate  weeks          .   
+In  datetimemaths  you could  say  :  instant+period =  instant There are  twoimplementations of  CLT           .  ''  ''   
+Periods are  implemented  as  aset of  CLT      .   
+CLT allows  thisset of  fields   to  be  restricted   ,  for  example  to  elimate  weeks          .   
+In  datetimemaths  you could  say  :  instant+period =  instant There are  twoimplementations of  CLT           .  ''  ''   
+Periods are  implemented  as  aset of  CLT      .   
+CLT allows  thisset of  fields   to  be  restricted   ,  for  example  to  elimate  weeks          .   
+In  datetimemaths  you could  say  :  instant+period =  instant There are  twoimplementations of  CLT           .  ''  ''   
+Theactualcalculations of  thechronology   are  split  between  CLT and  thefieldclasses -  CLT and  CLT     .   
+Thus   there is  aninitialsetupcost when   using  Joda-Time    ,  but  after  thatonlythemainAPIinstanceclasses -LRB-  CLT ,  CLT ,  etc.   -RRB-    have  creationandgarbagecollectorcosts      .   
+For  mostapplications  ,  theChronology can  be  ignored  as  it will  default  to  CLT         .   
+Theactualcalculations of  thechronology   are  split  between  CLT and  thefieldclasses -  CLT and  CLT     .   
+Thus   there is  aninitialsetupcost when   using  Joda-Time    ,  but  after  thatonlythemainAPIinstanceclasses -LRB-  CLT ,  CLT ,  etc.   -RRB-    have  creationandgarbagecollectorcosts      .   
+Theactualcalculations of  thechronology   are  split  between  CLT and  thefieldclasses -  CLT and  CLT     .   
+Thus   there is  aninitialsetupcost when   using  Joda-Time    ,  but  after  thatonlythemainAPIinstanceclasses -LRB-  CLT ,  CLT ,  etc.   -RRB-    have  creationandgarbagecollectorcosts      .   
+TheJoda-Timedesign is  based  around  CLT    .   
+Theactualcalculations of  thechronology   are  split  between  CLT and  thefieldclasses -  CLT and  CLT     .   
+Thus   there is  aninitialsetupcost when   using  Joda-Time    ,  but  after  thatonlythemainAPIinstanceclasses -LRB-  CLT ,  CLT ,  etc.   -RRB-    have  creationandgarbagecollectorcosts      .   
+Although  CLT is  key  to  thedesign      ,  it is  not  key  to  using  theAPI!!       
+For  mostapplications  ,  CLT can  be  ignored  as  it will  default  to  theISOChronology         .   
+Theactualcalculations of  thechronology   are  split  between  CLT and  thefieldclasses -  CLT and  CLT     .   
+Thus   there is  aninitialsetupcost when   using  Joda-Time    ,  but  after  thatonlythemainAPIinstanceclasses -LRB-  CLT ,  CLT ,  etc.   -RRB-    have  creationandgarbagecollectorcosts      .   
+Theactualcalculations of  thechronology   are  split  between  CLT and  thefieldclasses -  CLT and  CLT     .   
+Thus   there is  aninitialsetupcost when   using  Joda-Time    ,  but  after  thatonlythemainAPIinstanceclasses -LRB-  CLT ,  CLT ,  etc.   -RRB-    have  creationandgarbagecollectorcosts      .   
+For  mostapplications  ,  theChronology can  be  ignored  as  it will  default  to  CLT         .   
+Theactualcalculations of  thechronology   are  split  between  CLT and  thefieldclasses -  CLT and  CLT     .   
+Thus   there is  aninitialsetupcost when   using  Joda-Time    ,  but  after  thatonlythemainAPIinstanceclasses -LRB-  CLT ,  CLT ,  etc.   -RRB-    have  creationandgarbagecollectorcosts      .   
+Themostimportant is  CLT which   currently   has  4implementations      .   
+Othersignificantinterfaces include  CLT  .   
+When   working  with  aCollectionsinterface ,  such  as  CLT       you will  normally   hold  yourvariable as  atype of  CLT    ,  only   referencing  theconcreteclass when   you create  theobject         .   
+Themostimportant is  CLT which   currently   has  4implementations      .   
+Othersignificantinterfaces include  CLT  .   
+When   working  with  aCollectionsinterface ,  such  as  CLT       you will  normally   hold  yourvariable as  atype of  CLT    ,  only   referencing  theconcreteclass when   you create  theobject         .   
+Themostimportant is  CLT which   currently   has  4implementations      .   
+Othersignificantinterfaces include  CLT  .   
+When   working  with  aCollectionsinterface ,  such  as  CLT       you will  normally   hold  yourvariable as  atype of  CLT    ,  only   referencing  theconcreteclass when   you create  theobject         .   
+Adatetimeobject is  created  by  using  CLT      .   
+CLT also   provides  otherconstructors to  create  aspecificdateandtime using  avariety of  standardfields         .   
+CLT has  aconstructor which   takes  CLT as  input        .   
+In  particular    thisconstructor can  be  passed  CLT -LRB-  It also   accepts  anISO8601 formatted  String ,  or  CLT representing  milliseconds         -RRB-      .   
+Theotherhalf of  interoperability with  JDK     is  provided  by  CLT which   return  JDKobjects        .   
+Thus   inter-conversion between  CLT   can  be  performed  as  follows        .   
+toDate -LRB-  -RRB- ,  \/  \/  from   JDK to  Jodadt=newDateTime -LRB-  jdkDate -RRB-         ,  Similarly   ,    for  JDK  CLT   :   \/  \/  from  Joda to  JDKDateTimedt   =newDateTime -LRB-  -RRB- ,  CalendarjdkCal  =  dt     .   
+CHINESE-RRB- ,  \/  \/  from  JDK to  Joda   dt =newDateTime -LRB-  jdkCal -RRB-    ,  and  CLT :     \/  \/  from   Joda to  JDKDateTimedt=      new  DateTime   -LRB-  -RRB- ,  GregorianCalendar    jdkGCal  =dt  .   
+Theseparation of  thecalculation of  calendarfields -LRB-  CLT -RRB-    from  therepresentation of  thecalendarinstant         -LRB-  CLT -RRB-    makes  for  apowerfulandflexibleAPI   .   
+Theconnection between  thetwo   is  maintained  by  theproperty -LRB-  CLT -RRB-   which   provides  access to  thefield         .   
+For  instance  ,  the  direct  way  to  get  theday of  week   for  CLT      ,  involves  calling  themethod    .   
+getDayOfWeek  -LRB-  -RRB-   ,  where   CLT can  take  thevalues      -LRB-  from  CLT  -RRB-     .   
+Theseparation of  thecalculation of  calendarfields -LRB-  CLT -RRB-    from  therepresentation of  thecalendarinstant         -LRB-  CLT -RRB-    makes  for  apowerfulandflexibleAPI   .   
+Theconnection between  thetwo   is  maintained  by  theproperty -LRB-  CLT -RRB-   which   provides  access to  thefield         .   
+For  instance  ,  the  direct  way  to  get  theday of  week   for  CLT      ,  involves  calling  themethod    .   
+getDayOfWeek  -LRB-  -RRB-   ,  where   CLT can  take  thevalues      -LRB-  from  CLT  -RRB-     .   
+Theseparation of  thecalculation of  calendarfields -LRB-  CLT -RRB-    from  therepresentation of  thecalendarinstant         -LRB-  CLT -RRB-    makes  for  apowerfulandflexibleAPI   .   
+Theconnection between  thetwo   is  maintained  by  theproperty -LRB-  CLT -RRB-   which   provides  access to  thefield         .   
+For  instance  ,  the  direct  way  to  get  theday of  week   for  CLT      ,  involves  calling  themethod    .   
+getDayOfWeek  -LRB-  -RRB-   ,  where   CLT can  take  thevalues      -LRB-  from  CLT  -RRB-     .   
+Theseparation of  thecalculation of  calendarfields -LRB-  CLT -RRB-    from  therepresentation of  thecalendarinstant         -LRB-  CLT -RRB-    makes  for  apowerfulandflexibleAPI   .   
+Theconnection between  thetwo   is  maintained  by  theproperty -LRB-  CLT -RRB-   which   provides  access to  thefield         .   
+For  instance  ,  the  direct  way  to  get  theday of  week   for  CLT      ,  involves  calling  themethod    .   
+getDayOfWeek  -LRB-  -RRB-   ,  where   CLT can  take  thevalues      -LRB-  from  CLT  -RRB-     .   
+For  acompletereference  ,  see  thedocumentation for  CLT  In  practice  ,  one would  not  actually   create  CLT       .   
+Note :  For  thesinglecase of  getting  thenumericalvalue of  afield        ,  we recommend  using  the get  method on  CLT   as  it is  more  efficient            .   
+CLT provides  acompletelist of  standardcalendarfields   :  dt   .   
+getDayOfWeek -LRB-  -RRB-   ,  Each of  these      also   has  acorrespondingpropertymethod ,  which   returns  CLT to  theappropriatefield     ,   such  as  CLT    .   
+CLT provides  acompletelist of  standardcalendarfields   :  dt   .   
+getDayOfWeek -LRB-  -RRB-   ,  Each of  these      also   has  acorrespondingpropertymethod ,  which   returns  CLT to  theappropriatefield     ,   such  as  CLT    .   
+CLT provides  acompletelist of  standardcalendarfields   :  dt   .   
+getDayOfWeek -LRB-  -RRB-   ,  Each of  these      also   has  acorrespondingpropertymethod ,  which   returns  CLT to  theappropriatefield     ,   such  as  CLT    .   
+CLT provides  acompletelist of  standardcalendarfields   :  dt   .   
+getDayOfWeek -LRB-  -RRB-   ,  Each of  these      also   has  acorrespondingpropertymethod ,  which   returns  CLT to  theappropriatefield     ,   such  as  CLT    .   
+Thus  to  compute  thehours,minutesandseconds of  theinstant represented  by  CLT         ,  we would  write    .   
+CLT have  valuesemantics  ,  and  can  not  be  modified  after  construction -LRB-  they are  immutable     -RRB-         .   
+To  return  to  ourpriorexample  ,  if  we wish  to  modify  CLT by  changing  itsday-of-weekfield to  Monday              we can  do  so   by  using  CLT of  theproperty   :  DateTimeresult=dt       .   
+MONDAY  -RRB-   ,  Note    :  If  CLT is  already   set  to  Monday      then   thesameobject will  be  returned      .   
+To  add  to  adate     you could  use  CLT   .   
+To  return  to  ourpriorexample  ,  if  we wish  to  modify  CLT by  changing  itsday-of-weekfield to  Monday              we can  do  so   by  using  CLT of  theproperty   :  DateTimeresult=dt       .   
+MONDAY  -RRB-   ,  Note    :  If  CLT is  already   set  to  Monday      then   thesameobject will  be  returned      .   
+To  add  to  adate     you could  use  CLT   .   
+To  return  to  ourpriorexample  ,  if  we wish  to  modify  CLT by  changing  itsday-of-weekfield to  Monday              we can  do  so   by  using  CLT of  theproperty   :  DateTimeresult=dt       .   
+MONDAY  -RRB-   ,  Note    :  If  CLT is  already   set  to  Monday      then   thesameobject will  be  returned      .   
+To  add  to  adate     you could  use  CLT   .   
+Another means  of  accomplishing  similarcalculations      is  to  use  methods on  CLT      itself .   
+Thus   we could  add  3days to  CLT  directly   as  follows         :  DateTimeresult =dt  .   
+toDateTime -LRB-  -RRB- ,  CLT   has  anumber of  methods  ,  including  standardsetters   ,  for  directly   modifying  thedatetime     .  ''  ''   
+CLT comes  with  support for  acouple of  commontimezonecalculations       .   
+forID -LRB-  ''  ,  Europe\/London  ''  ,   -RRB-   -RRB-   ,  where   CLT returns  thetimezonevalue for  London       .   
+Theresulting  CLT has  thesameabsolutemillisecondtime  ,  but  adifferentset of  fieldvalues     .   
+forID -LRB-  ''  ,  Europe\/London  ''  ,   -RRB-   -RRB-   ,  Aset of  allTimeZoneIDstrings    -LRB-  suchas'' ,  Europe\/London'' ,   -RRB-  may  be  obtained  by  calling  CLT         .   
+CLT comes  with  support for  acouple of  commontimezonecalculations       .   
+forID -LRB-  ''  ,  Europe\/London  ''  ,   -RRB-   -RRB-   ,  where   CLT returns  thetimezonevalue for  London       .   
+Theresulting  CLT has  thesameabsolutemillisecondtime  ,  but  adifferentset of  fieldvalues     .   
+forID -LRB-  ''  ,  Europe\/London  ''  ,   -RRB-   -RRB-   ,  Aset of  allTimeZoneIDstrings    -LRB-  suchas'' ,  Europe\/London'' ,   -RRB-  may  be  obtained  by  calling  CLT         .   
+Changing  CLT  .   
+CLT also   has  onemethod for  changingcalendars    .   
+getYear-LRB--RRB-, \/  \/  returns2547  where   CLT is  afactorymethod for  obtaining  aBuddhistchronology         .  ''  ''   
+CLT also   has  onemethod for  changingcalendars    .   
+getYear-LRB--RRB-, \/  \/  returns2547  where   CLT is  afactorymethod for  obtaining  aBuddhistchronology         .  ''  ''   
+CLT also   has  onemethod for  changingcalendars    .   
+getYear-LRB--RRB-, \/  \/  returns2547  where   CLT is  afactorymethod for  obtaining  aBuddhistchronology         .  ''  ''   
+Allprintingandparsing is  performed  using  CLT     .   
+Given  such  CLT    ,  parsing is  performed  as  follows       .   
+parseDateTime -LRB-  strInputDateTime -RRB-    ,  Thus   CLT is  returned  from  theparsemethod of  theformatter      .   
+Support for  standardformats based  on  ISO8601      is  provided  by  CLT    .   
+For  example  ,  if  you wanted  to  use  theISOstandardformat for  datetime ,  which   is  CLT             ,  you would  initialize  CLT as     .   
+dateTime -LRB-  -RRB- ,  You   would  then  use  CLT as  described  above   ,  to  read  or  write  datetimeobjects in  thisformat           .  ''  ''   
+If  you need  acustomformatter which   can  be  described  in  terms of  aformatpattern             ,  you can  use  thefactorymethod provided  by  CLT     .   
+Thus  to  get  aformatter for  a4digityear,2digitmonthand2digit   day of  month   ,  i.e.  aformat of  CLT    you would  do         .   
+You may  need  to  print  or  parse  in  CLT       .   
+This is  achieved  by  calling  CLT on  aformatter ,  which   returns  anotherformatter based  on  theoriginal             .   
+GERMAN  -RRB-   ,  Formatters are  immutable   ,  so  theoriginal is  not  altered  by  CLT       .  ''  ''   
+If  you need  acustomformatter which   can  be  described  in  terms of  aformatpattern             ,  you can  use  thefactorymethod provided  by  CLT     .   
+Thus  to  get  aformatter for  a4digityear,2digitmonthand2digit   day of  month   ,  i.e.  aformat of  CLT    you would  do         .   
+You may  need  to  print  or  parse  in  CLT       .   
+This is  achieved  by  calling  CLT on  aformatter ,  which   returns  anotherformatter based  on  theoriginal             .   
+GERMAN  -RRB-   ,  Formatters are  immutable   ,  so  theoriginal is  not  altered  by  CLT       .  ''  ''   
+CLT creates  theactualformatter that   will  be  used  to  print\/parse            .   
+Since  theinterpretation of  atwodigityear   is  ambiguous      ,  CLT takes  anextraparameter that   defines  the100yearrange of  thetwodigits       ,  by  specifying  themidpoint of  therange       .   
+CLT creates  theactualformatter that   will  be  used  to  print\/parse            .   
+Since  theinterpretation of  atwodigityear   is  ambiguous      ,  CLT takes  anextraparameter that   defines  the100yearrange of  thetwodigits       ,  by  specifying  themidpoint of  therange       .   
+To  simplify  theaccess to  theformatterarchitecture     ,  methods have  been  provided  on  thedatetimeclasses such  as  CLT       .   
+CLT is  thestandardISO8601string for  theDateTime    .   
+CLT will  output using  thepattern `  dd :  MM:yy '    -LRB-  note that  patterns are  cached  internally        -RRB-       .   
+CLT will  output using  thepattern`EEE' in  French      .   
+CLT will  output using  thespecifiedformatter     ,  and  is  thus   thesame as  CLT     .  ''  ''   
+Allmethods that   get  thecurrenttime     are  indirected  via  CLT    .   
+Theconstructors on  eachmajorconcreteclass in  theAPI     take  CLT as  aparameter   .   
+For  example  ,  theconverters can  convert  CLT to  CLT    .   
+See  CLT for  details    .  ''   

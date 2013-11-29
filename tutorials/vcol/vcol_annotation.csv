@@ -1,0 +1,597 @@
+"","","1. Java Collections - part 2","<h3>1.&nbsp;Java Collections - part 2</h3>
+<p> The following code shows an example how to create a Collection of type <code class=""code""> 
+  <clt fqn=""java.util.List"" api=""List"" kind=""class"">
+    List 
+  </clt></code> which is parameterized with &lt;String&gt; to indicate to the Java compiler that only Strings are allowed in this list. . </p> 
+<p>If you try to put a non String into this list, you would receive a compiler error. </p> 
+<p> <code class=""code""> 
+  <clt fqn=""java.util.List"" api=""List"" kind=""class"">
+    List 
+  </clt></code> is only an interface, a common implementation is the <code class=""code""> 
+  <clt fqn=""java.util.ArrayList"" api=""ArrayList"" kind=""class"">
+    ArrayList 
+  </clt></code> class, hence you need to call <code class=""code""> 
+  <clt fqn=""java.util.ArrayList.ArrayList"" api=""ArrayList"" kind=""method"">
+   new ArrayList.ArrayList()
+  </clt></code>. </p>","List","java.util.List","class","false"
+"","","1. Java Collections - part 2","<h3>1.&nbsp;Java Collections - part 2</h3>
+<p> The following code shows an example how to create a Collection of type <code class=""code""> 
+  <clt fqn=""java.util.List"" api=""List"" kind=""class"">
+    List 
+  </clt></code> which is parameterized with &lt;String&gt; to indicate to the Java compiler that only Strings are allowed in this list. . </p> 
+<p>If you try to put a non String into this list, you would receive a compiler error. </p> 
+<p> <code class=""code""> 
+  <clt fqn=""java.util.List"" api=""List"" kind=""class"">
+    List 
+  </clt></code> is only an interface, a common implementation is the <code class=""code""> 
+  <clt fqn=""java.util.ArrayList"" api=""ArrayList"" kind=""class"">
+    ArrayList 
+  </clt></code> class, hence you need to call <code class=""code""> 
+  <clt fqn=""java.util.ArrayList.ArrayList"" api=""ArrayList"" kind=""method"">
+   new ArrayList.ArrayList()
+  </clt></code>. </p>","ArrayList","java.util.ArrayList","class","false"
+"","","2. Important implementations","<div class=""titlepage""> 
+ <div> 
+  <div> 
+   <h2 class=""title"">2.&nbsp;Important implementations</h2> 
+  </div> 
+ </div> 
+</div> 
+<div class=""section""> 
+ <div class=""titlepage""> 
+  <div> 
+   <div> 
+    <h3 class=""title"">2.1.&nbsp;Map and HashMap</h3> 
+   </div> 
+  </div> 
+ </div> 
+ <p> The <code class=""code""> 
+   <clt fqn=""java.util.Map"" api=""Map"" kind=""class"">
+     Map 
+   </clt></code> interface defines an object that maps keys to values. A map cannot contain duplicate keys; each key can map to at most one value. </p> 
+ <p> The <code class=""code""> 
+   <clt fqn=""java.util.HashMap"" api=""HashMap"" kind=""class"">
+     HashMap 
+   </clt></code> class is an efficient implementation of the <code class=""code""> 
+   <clt fqn=""java.util.Map"" api=""Map"" kind=""class"">
+     Map 
+   </clt></code> interface. The following code demonstrates its usage. </p> 
+</div> 
+<div class=""section""> 
+ <div class=""titlepage""> 
+  <div> 
+   <div> 
+    <h3 class=""title"">2.2.&nbsp;List, ArrayList and LinkedList</h3> 
+   </div> 
+  </div> 
+ </div> 
+ <p> <code class=""code""> 
+   <clt fqn=""java.util.List"" api=""List"" kind=""class"">
+     List 
+   </clt></code> is the interface which allows to store objects in a resizable container. </p> 
+ <p> <code class=""code""> 
+   <clt fqn=""java.util.ArrayList"" api=""ArrayList"" kind=""class"">
+     ArrayList 
+   </clt></code> is implemented as a resizable array. If more elements are added to ArrayList than its initial size, its size is increased dynamically. The elements in an <code class=""code""> 
+   <clt fqn=""java.util.ArrayList"" api=""ArrayList"" kind=""class"">
+     ArrayList 
+   </clt></code> can be accessed directly and efficiently by using the <code class=""code""> 
+   <clt fqn=""java.util.ArrayList.get"" api=""ArrayList"" kind=""method"">
+    ArrayList.get()
+   </clt></code> and <code class=""code"">get()</code> methods, since ArrayList is implemented based on an array. </p> 
+ <p> <code class=""code""> 
+   <clt fqn=""java.util.LinkedList"" api=""LinkedList"" kind=""class"">
+     LinkedList 
+   </clt></code> is implemented as a double linked list. Its performance on <code class=""code""> 
+   <clt fqn=""java.util.LinkedList.add"" api=""LinkedList"" kind=""method"">
+    LinkedList.add()
+   </clt></code> and <code class=""code""> 
+   <clt fqn=""java.util.LinkedList.remove"" api=""LinkedList"" kind=""method"">
+    LinkedList.remove()
+   </clt></code> is better than the performance of Arraylist. The <code class=""code""> 
+   <clt fqn=""java.util.LinkedList.get"" api=""LinkedList"" kind=""method"">
+    LinkedList.get()
+   </clt></code> and <code class=""code""> 
+   <clt fqn=""java.util.LinkedList.get"" api=""LinkedList"" kind=""method"">
+    LinkedList.get()
+   </clt></code> methods have worse performance than the ArrayList, as the <code class=""code""> 
+   <clt fqn=""java.util.LinkedList"" api=""LinkedList"" kind=""class"">
+     LinkedList 
+   </clt></code> does not provide direct access. </p> 
+ <p> The following code demonstrates the usage of <code class=""code""> 
+   <clt fqn=""java.util.List"" api=""List"" kind=""class"">
+     List 
+   </clt></code> and <code class=""code""> 
+   <clt fqn=""java.util.ArrayList"" api=""ArrayList"" kind=""class"">
+     ArrayList 
+   </clt></code>. </p> 
+</div>","Map","java.util.Map","class","false"
+"","","2. Important implementations","<div class=""titlepage""> 
+ <div> 
+  <div> 
+   <h2 class=""title"">2.&nbsp;Important implementations</h2> 
+  </div> 
+ </div> 
+</div> 
+<div class=""section""> 
+ <div class=""titlepage""> 
+  <div> 
+   <div> 
+    <h3 class=""title"">2.1.&nbsp;Map and HashMap</h3> 
+   </div> 
+  </div> 
+ </div> 
+ <p> The <code class=""code""> 
+   <clt fqn=""java.util.Map"" api=""Map"" kind=""class"">
+     Map 
+   </clt></code> interface defines an object that maps keys to values. A map cannot contain duplicate keys; each key can map to at most one value. </p> 
+ <p> The <code class=""code""> 
+   <clt fqn=""java.util.HashMap"" api=""HashMap"" kind=""class"">
+     HashMap 
+   </clt></code> class is an efficient implementation of the <code class=""code""> 
+   <clt fqn=""java.util.Map"" api=""Map"" kind=""class"">
+     Map 
+   </clt></code> interface. The following code demonstrates its usage. </p> 
+</div> 
+<div class=""section""> 
+ <div class=""titlepage""> 
+  <div> 
+   <div> 
+    <h3 class=""title"">2.2.&nbsp;List, ArrayList and LinkedList</h3> 
+   </div> 
+  </div> 
+ </div> 
+ <p> <code class=""code""> 
+   <clt fqn=""java.util.List"" api=""List"" kind=""class"">
+     List 
+   </clt></code> is the interface which allows to store objects in a resizable container. </p> 
+ <p> <code class=""code""> 
+   <clt fqn=""java.util.ArrayList"" api=""ArrayList"" kind=""class"">
+     ArrayList 
+   </clt></code> is implemented as a resizable array. If more elements are added to ArrayList than its initial size, its size is increased dynamically. The elements in an <code class=""code""> 
+   <clt fqn=""java.util.ArrayList"" api=""ArrayList"" kind=""class"">
+     ArrayList 
+   </clt></code> can be accessed directly and efficiently by using the <code class=""code""> 
+   <clt fqn=""java.util.ArrayList.get"" api=""ArrayList"" kind=""method"">
+    ArrayList.get()
+   </clt></code> and <code class=""code"">get()</code> methods, since ArrayList is implemented based on an array. </p> 
+ <p> <code class=""code""> 
+   <clt fqn=""java.util.LinkedList"" api=""LinkedList"" kind=""class"">
+     LinkedList 
+   </clt></code> is implemented as a double linked list. Its performance on <code class=""code""> 
+   <clt fqn=""java.util.LinkedList.add"" api=""LinkedList"" kind=""method"">
+    LinkedList.add()
+   </clt></code> and <code class=""code""> 
+   <clt fqn=""java.util.LinkedList.remove"" api=""LinkedList"" kind=""method"">
+    LinkedList.remove()
+   </clt></code> is better than the performance of Arraylist. The <code class=""code""> 
+   <clt fqn=""java.util.LinkedList.get"" api=""LinkedList"" kind=""method"">
+    LinkedList.get()
+   </clt></code> and <code class=""code""> 
+   <clt fqn=""java.util.LinkedList.get"" api=""LinkedList"" kind=""method"">
+    LinkedList.get()
+   </clt></code> methods have worse performance than the ArrayList, as the <code class=""code""> 
+   <clt fqn=""java.util.LinkedList"" api=""LinkedList"" kind=""class"">
+     LinkedList 
+   </clt></code> does not provide direct access. </p> 
+ <p> The following code demonstrates the usage of <code class=""code""> 
+   <clt fqn=""java.util.List"" api=""List"" kind=""class"">
+     List 
+   </clt></code> and <code class=""code""> 
+   <clt fqn=""java.util.ArrayList"" api=""ArrayList"" kind=""class"">
+     ArrayList 
+   </clt></code>. </p> 
+</div>","HashMap","java.util.HashMap","class","false"
+"","","2. Important implementations","<div class=""titlepage""> 
+ <div> 
+  <div> 
+   <h2 class=""title"">2.&nbsp;Important implementations</h2> 
+  </div> 
+ </div> 
+</div> 
+<div class=""section""> 
+ <div class=""titlepage""> 
+  <div> 
+   <div> 
+    <h3 class=""title"">2.1.&nbsp;Map and HashMap</h3> 
+   </div> 
+  </div> 
+ </div> 
+ <p> The <code class=""code""> 
+   <clt fqn=""java.util.Map"" api=""Map"" kind=""class"">
+     Map 
+   </clt></code> interface defines an object that maps keys to values. A map cannot contain duplicate keys; each key can map to at most one value. </p> 
+ <p> The <code class=""code""> 
+   <clt fqn=""java.util.HashMap"" api=""HashMap"" kind=""class"">
+     HashMap 
+   </clt></code> class is an efficient implementation of the <code class=""code""> 
+   <clt fqn=""java.util.Map"" api=""Map"" kind=""class"">
+     Map 
+   </clt></code> interface. The following code demonstrates its usage. </p> 
+</div> 
+<div class=""section""> 
+ <div class=""titlepage""> 
+  <div> 
+   <div> 
+    <h3 class=""title"">2.2.&nbsp;List, ArrayList and LinkedList</h3> 
+   </div> 
+  </div> 
+ </div> 
+ <p> <code class=""code""> 
+   <clt fqn=""java.util.List"" api=""List"" kind=""class"">
+     List 
+   </clt></code> is the interface which allows to store objects in a resizable container. </p> 
+ <p> <code class=""code""> 
+   <clt fqn=""java.util.ArrayList"" api=""ArrayList"" kind=""class"">
+     ArrayList 
+   </clt></code> is implemented as a resizable array. If more elements are added to ArrayList than its initial size, its size is increased dynamically. The elements in an <code class=""code""> 
+   <clt fqn=""java.util.ArrayList"" api=""ArrayList"" kind=""class"">
+     ArrayList 
+   </clt></code> can be accessed directly and efficiently by using the <code class=""code""> 
+   <clt fqn=""java.util.ArrayList.get"" api=""ArrayList"" kind=""method"">
+    ArrayList.get()
+   </clt></code> and <code class=""code"">get()</code> methods, since ArrayList is implemented based on an array. </p> 
+ <p> <code class=""code""> 
+   <clt fqn=""java.util.LinkedList"" api=""LinkedList"" kind=""class"">
+     LinkedList 
+   </clt></code> is implemented as a double linked list. Its performance on <code class=""code""> 
+   <clt fqn=""java.util.LinkedList.add"" api=""LinkedList"" kind=""method"">
+    LinkedList.add()
+   </clt></code> and <code class=""code""> 
+   <clt fqn=""java.util.LinkedList.remove"" api=""LinkedList"" kind=""method"">
+    LinkedList.remove()
+   </clt></code> is better than the performance of Arraylist. The <code class=""code""> 
+   <clt fqn=""java.util.LinkedList.get"" api=""LinkedList"" kind=""method"">
+    LinkedList.get()
+   </clt></code> and <code class=""code""> 
+   <clt fqn=""java.util.LinkedList.get"" api=""LinkedList"" kind=""method"">
+    LinkedList.get()
+   </clt></code> methods have worse performance than the ArrayList, as the <code class=""code""> 
+   <clt fqn=""java.util.LinkedList"" api=""LinkedList"" kind=""class"">
+     LinkedList 
+   </clt></code> does not provide direct access. </p> 
+ <p> The following code demonstrates the usage of <code class=""code""> 
+   <clt fqn=""java.util.List"" api=""List"" kind=""class"">
+     List 
+   </clt></code> and <code class=""code""> 
+   <clt fqn=""java.util.ArrayList"" api=""ArrayList"" kind=""class"">
+     ArrayList 
+   </clt></code>. </p> 
+</div>","List","java.util.List","class","false"
+"","","2. Important implementations","<div class=""titlepage""> 
+ <div> 
+  <div> 
+   <h2 class=""title"">2.&nbsp;Important implementations</h2> 
+  </div> 
+ </div> 
+</div> 
+<div class=""section""> 
+ <div class=""titlepage""> 
+  <div> 
+   <div> 
+    <h3 class=""title"">2.1.&nbsp;Map and HashMap</h3> 
+   </div> 
+  </div> 
+ </div> 
+ <p> The <code class=""code""> 
+   <clt fqn=""java.util.Map"" api=""Map"" kind=""class"">
+     Map 
+   </clt></code> interface defines an object that maps keys to values. A map cannot contain duplicate keys; each key can map to at most one value. </p> 
+ <p> The <code class=""code""> 
+   <clt fqn=""java.util.HashMap"" api=""HashMap"" kind=""class"">
+     HashMap 
+   </clt></code> class is an efficient implementation of the <code class=""code""> 
+   <clt fqn=""java.util.Map"" api=""Map"" kind=""class"">
+     Map 
+   </clt></code> interface. The following code demonstrates its usage. </p> 
+</div> 
+<div class=""section""> 
+ <div class=""titlepage""> 
+  <div> 
+   <div> 
+    <h3 class=""title"">2.2.&nbsp;List, ArrayList and LinkedList</h3> 
+   </div> 
+  </div> 
+ </div> 
+ <p> <code class=""code""> 
+   <clt fqn=""java.util.List"" api=""List"" kind=""class"">
+     List 
+   </clt></code> is the interface which allows to store objects in a resizable container. </p> 
+ <p> <code class=""code""> 
+   <clt fqn=""java.util.ArrayList"" api=""ArrayList"" kind=""class"">
+     ArrayList 
+   </clt></code> is implemented as a resizable array. If more elements are added to ArrayList than its initial size, its size is increased dynamically. The elements in an <code class=""code""> 
+   <clt fqn=""java.util.ArrayList"" api=""ArrayList"" kind=""class"">
+     ArrayList 
+   </clt></code> can be accessed directly and efficiently by using the <code class=""code""> 
+   <clt fqn=""java.util.ArrayList.get"" api=""ArrayList"" kind=""method"">
+    ArrayList.get()
+   </clt></code> and <code class=""code"">get()</code> methods, since ArrayList is implemented based on an array. </p> 
+ <p> <code class=""code""> 
+   <clt fqn=""java.util.LinkedList"" api=""LinkedList"" kind=""class"">
+     LinkedList 
+   </clt></code> is implemented as a double linked list. Its performance on <code class=""code""> 
+   <clt fqn=""java.util.LinkedList.add"" api=""LinkedList"" kind=""method"">
+    LinkedList.add()
+   </clt></code> and <code class=""code""> 
+   <clt fqn=""java.util.LinkedList.remove"" api=""LinkedList"" kind=""method"">
+    LinkedList.remove()
+   </clt></code> is better than the performance of Arraylist. The <code class=""code""> 
+   <clt fqn=""java.util.LinkedList.get"" api=""LinkedList"" kind=""method"">
+    LinkedList.get()
+   </clt></code> and <code class=""code""> 
+   <clt fqn=""java.util.LinkedList.get"" api=""LinkedList"" kind=""method"">
+    LinkedList.get()
+   </clt></code> methods have worse performance than the ArrayList, as the <code class=""code""> 
+   <clt fqn=""java.util.LinkedList"" api=""LinkedList"" kind=""class"">
+     LinkedList 
+   </clt></code> does not provide direct access. </p> 
+ <p> The following code demonstrates the usage of <code class=""code""> 
+   <clt fqn=""java.util.List"" api=""List"" kind=""class"">
+     List 
+   </clt></code> and <code class=""code""> 
+   <clt fqn=""java.util.ArrayList"" api=""ArrayList"" kind=""class"">
+     ArrayList 
+   </clt></code>. </p> 
+</div>","ArrayList","java.util.ArrayList","class","false"
+"","","2. Important implementations","<div class=""titlepage""> 
+ <div> 
+  <div> 
+   <h2 class=""title"">2.&nbsp;Important implementations</h2> 
+  </div> 
+ </div> 
+</div> 
+<div class=""section""> 
+ <div class=""titlepage""> 
+  <div> 
+   <div> 
+    <h3 class=""title"">2.1.&nbsp;Map and HashMap</h3> 
+   </div> 
+  </div> 
+ </div> 
+ <p> The <code class=""code""> 
+   <clt fqn=""java.util.Map"" api=""Map"" kind=""class"">
+     Map 
+   </clt></code> interface defines an object that maps keys to values. A map cannot contain duplicate keys; each key can map to at most one value. </p> 
+ <p> The <code class=""code""> 
+   <clt fqn=""java.util.HashMap"" api=""HashMap"" kind=""class"">
+     HashMap 
+   </clt></code> class is an efficient implementation of the <code class=""code""> 
+   <clt fqn=""java.util.Map"" api=""Map"" kind=""class"">
+     Map 
+   </clt></code> interface. The following code demonstrates its usage. </p> 
+</div> 
+<div class=""section""> 
+ <div class=""titlepage""> 
+  <div> 
+   <div> 
+    <h3 class=""title"">2.2.&nbsp;List, ArrayList and LinkedList</h3> 
+   </div> 
+  </div> 
+ </div> 
+ <p> <code class=""code""> 
+   <clt fqn=""java.util.List"" api=""List"" kind=""class"">
+     List 
+   </clt></code> is the interface which allows to store objects in a resizable container. </p> 
+ <p> <code class=""code""> 
+   <clt fqn=""java.util.ArrayList"" api=""ArrayList"" kind=""class"">
+     ArrayList 
+   </clt></code> is implemented as a resizable array. If more elements are added to ArrayList than its initial size, its size is increased dynamically. The elements in an <code class=""code""> 
+   <clt fqn=""java.util.ArrayList"" api=""ArrayList"" kind=""class"">
+     ArrayList 
+   </clt></code> can be accessed directly and efficiently by using the <code class=""code""> 
+   <clt fqn=""java.util.ArrayList.get"" api=""ArrayList"" kind=""method"">
+    ArrayList.get()
+   </clt></code> and <code class=""code"">get()</code> methods, since ArrayList is implemented based on an array. </p> 
+ <p> <code class=""code""> 
+   <clt fqn=""java.util.LinkedList"" api=""LinkedList"" kind=""class"">
+     LinkedList 
+   </clt></code> is implemented as a double linked list. Its performance on <code class=""code""> 
+   <clt fqn=""java.util.LinkedList.add"" api=""LinkedList"" kind=""method"">
+    LinkedList.add()
+   </clt></code> and <code class=""code""> 
+   <clt fqn=""java.util.LinkedList.remove"" api=""LinkedList"" kind=""method"">
+    LinkedList.remove()
+   </clt></code> is better than the performance of Arraylist. The <code class=""code""> 
+   <clt fqn=""java.util.LinkedList.get"" api=""LinkedList"" kind=""method"">
+    LinkedList.get()
+   </clt></code> and <code class=""code""> 
+   <clt fqn=""java.util.LinkedList.get"" api=""LinkedList"" kind=""method"">
+    LinkedList.get()
+   </clt></code> methods have worse performance than the ArrayList, as the <code class=""code""> 
+   <clt fqn=""java.util.LinkedList"" api=""LinkedList"" kind=""class"">
+     LinkedList 
+   </clt></code> does not provide direct access. </p> 
+ <p> The following code demonstrates the usage of <code class=""code""> 
+   <clt fqn=""java.util.List"" api=""List"" kind=""class"">
+     List 
+   </clt></code> and <code class=""code""> 
+   <clt fqn=""java.util.ArrayList"" api=""ArrayList"" kind=""class"">
+     ArrayList 
+   </clt></code>. </p> 
+</div>","LinkedList","java.util.LinkedList","class","false"
+"","","3. Useful collection methods","<div class=""titlepage""> 
+ <div> 
+  <div> 
+   <h2 class=""title"">3.&nbsp;Useful collection methods</h2> 
+  </div> 
+ </div> 
+</div> 
+<p> The <code class=""code""> 
+  <clt fqn=""java.util.Collections"" api=""Collections"" kind=""class"">
+    java.util.Collections 
+  </clt></code> class provides useful functionalities for working with collections. </p> 
+<div class=""table""> 
+ <p class=""title""><b>Table&nbsp;1.&nbsp;Collections</b></p> 
+ <div class=""table-contents""> 
+  <table summary=""Collections"" border=""1""> 
+   <thead> 
+    <tr> 
+     <th align=""left"">Method</th> 
+     <th align=""left"">Description</th> 
+    </tr> 
+   </thead> 
+   <tbody> 
+    <tr> 
+     <td align=""left"">Collections.copy(list, list)</td> 
+     <td align=""left"">Copy a collection to another</td> 
+    </tr> 
+    <tr> 
+     <td align=""left"">Collections.reverse(list)</td> 
+     <td align=""left"">Reverse the order of the list</td> 
+    </tr> 
+    <tr> 
+     <td align=""left"">Collections.shuffle(list)</td> 
+     <td align=""left"">Shuffle the list</td> 
+    </tr> 
+    <tr> 
+     <td align=""left"">Collections.sort(list)</td> 
+     <td align=""left"">Sort the list</td> 
+    </tr> 
+   </tbody> 
+  </table> 
+ </div> 
+</div>","Collections","java.util.Collections","class","false"
+"","","4. Using Collections sort and Comparator in Java","<div class=""titlepage""> 
+ <div> 
+  <div> 
+   <h2 class=""title"">4.&nbsp;Using 
+    <clt fqn=""java.util.Collections"" api=""Collections"" kind=""class"">
+      Collections 
+    </clt>sort and Comparator in Java</h2> 
+  </div> 
+ </div> 
+</div> 
+<p> Sorting a collection in Java is easy, just use the <code class=""code""> 
+  <clt fqn=""java.util.Collections.sort"" api=""Collections"" kind=""method"">
+   Collections.Collections.sort(Collection)
+  </clt></code> to sort your values. The following code shows an example for this. </p> 
+<p> This is possible because Integer implements the <code class=""code""> 
+  <clt fqn=""java.lang.Comparable"" api=""Comparable"" kind=""class"">
+    Comparable 
+  </clt></code> interface. This interface defines the method compare which performs pairwise comparison of the elements and returns -1 if the element is smaller then the compared element, 0 if it is equal and 1 if it is larger. </p> 
+<p> If what to sort differently you can define your own implementation based on the <code class=""code""> 
+  <clt fqn=""java.util.Comparator"" api=""Comparator"" kind=""class"">
+    Comparator 
+  </clt></code> interface. </p> 
+<div class=""note"" style=""margin-left: 0.5in; margin-right: 0.5in;""> 
+ <h3 class=""title"">Note</h3> 
+ <p> For the above you could also have used the <code class=""code""> 
+   <clt fqn=""java.util.Collections.reverse"" api=""Collections"" kind=""method"">
+    Collection.Collections.reverse()
+   </clt></code> method call. </p> 
+</div> 
+<p> This approach is that you then sort any object by any attribute or even a combination of attributes. For example if you have objects of type <code class=""code"">Person</code> with an attribute income and dataOfBirth you could define different implementations of <code class=""code""> 
+  <clt fqn=""java.util.Comparator"" api=""Comparator"" kind=""class"">
+    Comparator 
+  </clt></code> and sort the objects according to your needs. </p>","Collections","java.util.Collections","class","false"
+"","","4. Using Collections sort and Comparator in Java","<div class=""titlepage""> 
+ <div> 
+  <div> 
+   <h2 class=""title"">4.&nbsp;Using 
+    <clt fqn=""java.util.Collections"" api=""Collections"" kind=""class"">
+      Collections 
+    </clt>sort and Comparator in Java</h2> 
+  </div> 
+ </div> 
+</div> 
+<p> Sorting a collection in Java is easy, just use the <code class=""code""> 
+  <clt fqn=""java.util.Collections.sort"" api=""Collections"" kind=""method"">
+   Collections.Collections.sort(Collection)
+  </clt></code> to sort your values. The following code shows an example for this. </p> 
+<p> This is possible because Integer implements the <code class=""code""> 
+  <clt fqn=""java.lang.Comparable"" api=""Comparable"" kind=""class"">
+    Comparable 
+  </clt></code> interface. This interface defines the method compare which performs pairwise comparison of the elements and returns -1 if the element is smaller then the compared element, 0 if it is equal and 1 if it is larger. </p> 
+<p> If what to sort differently you can define your own implementation based on the <code class=""code""> 
+  <clt fqn=""java.util.Comparator"" api=""Comparator"" kind=""class"">
+    Comparator 
+  </clt></code> interface. </p> 
+<div class=""note"" style=""margin-left: 0.5in; margin-right: 0.5in;""> 
+ <h3 class=""title"">Note</h3> 
+ <p> For the above you could also have used the <code class=""code""> 
+   <clt fqn=""java.util.Collections.reverse"" api=""Collections"" kind=""method"">
+    Collection.Collections.reverse()
+   </clt></code> method call. </p> 
+</div> 
+<p> This approach is that you then sort any object by any attribute or even a combination of attributes. For example if you have objects of type <code class=""code"">Person</code> with an attribute income and dataOfBirth you could define different implementations of <code class=""code""> 
+  <clt fqn=""java.util.Comparator"" api=""Comparator"" kind=""class"">
+    Comparator 
+  </clt></code> and sort the objects according to your needs. </p>","Comparable","java.lang.Comparable","class","false"
+"","","4. Using Collections sort and Comparator in Java","<div class=""titlepage""> 
+ <div> 
+  <div> 
+   <h2 class=""title"">4.&nbsp;Using 
+    <clt fqn=""java.util.Collections"" api=""Collections"" kind=""class"">
+      Collections 
+    </clt>sort and Comparator in Java</h2> 
+  </div> 
+ </div> 
+</div> 
+<p> Sorting a collection in Java is easy, just use the <code class=""code""> 
+  <clt fqn=""java.util.Collections.sort"" api=""Collections"" kind=""method"">
+   Collections.Collections.sort(Collection)
+  </clt></code> to sort your values. The following code shows an example for this. </p> 
+<p> This is possible because Integer implements the <code class=""code""> 
+  <clt fqn=""java.lang.Comparable"" api=""Comparable"" kind=""class"">
+    Comparable 
+  </clt></code> interface. This interface defines the method compare which performs pairwise comparison of the elements and returns -1 if the element is smaller then the compared element, 0 if it is equal and 1 if it is larger. </p> 
+<p> If what to sort differently you can define your own implementation based on the <code class=""code""> 
+  <clt fqn=""java.util.Comparator"" api=""Comparator"" kind=""class"">
+    Comparator 
+  </clt></code> interface. </p> 
+<div class=""note"" style=""margin-left: 0.5in; margin-right: 0.5in;""> 
+ <h3 class=""title"">Note</h3> 
+ <p> For the above you could also have used the <code class=""code""> 
+   <clt fqn=""java.util.Collections.reverse"" api=""Collections"" kind=""method"">
+    Collection.Collections.reverse()
+   </clt></code> method call. </p> 
+</div> 
+<p> This approach is that you then sort any object by any attribute or even a combination of attributes. For example if you have objects of type <code class=""code"">Person</code> with an attribute income and dataOfBirth you could define different implementations of <code class=""code""> 
+  <clt fqn=""java.util.Comparator"" api=""Comparator"" kind=""class"">
+    Comparator 
+  </clt></code> and sort the objects according to your needs. </p>","Comparator","java.util.Comparator","class","false"
+"","","5. Exercise: Use Java Collections","<div class=""titlepage""> 
+ <div> 
+  <div> 
+   <h2 class=""title"">5.&nbsp;Exercise: Use Java Collections</h2> 
+  </div> 
+ </div> 
+</div> 
+<p> Create a new Java project called <code class=""code"">com.vogella.java.collections</code>. Also add a package with the same name. </p> 
+<p> Create a Java class called <em class=""wordasword"">Server</em> with one String attribute called <span class=""property"">url</span>. </p> 
+<p> Create getter and setter methods for this attribute using code generation capabilities of Eclipse. For this select <span class=""guimenu"">Source</span> → <span class=""guisubmenu"">Generate Getters and Setters</span> from the Eclipse menu. </p> 
+<p> Create via Eclipse a constructor which gets a url as parameter. For this select <span class=""guimenu"">Source</span> → <span class=""guisubmenu"">Generate Constructor using Fields...</span> from the Eclipse menu. </p> 
+<p> Type <em class=""parameter""><code>main</code></em> in the class body and use code completion (<span class=""keycap""><strong>Ctrl</strong></span>+<span class=""keycap""><strong>Space</strong></span>) to generate a <code class=""code"">main</code> method. </p> 
+<p> In your <code class=""code"">main</code> method create a <code class=""code""> 
+  <clt fqn=""java.util.List"" api=""List"" kind=""class"">
+    List 
+  </clt></code> of type <code class=""code""> 
+  <clt fqn=""java.util.ArrayList"" api=""ArrayList"" kind=""class"">
+    ArrayList 
+  </clt></code> and add 3 objects of type <code class=""code"">Server</code> objects to this list. </p> 
+<p> Use code completion to create a <span class=""guilabel"">foreach</span> loop and write the <code class=""code"">toString</code> method to the console. Use code completion based on <code class=""code"">syso</code> for that. </p> 
+<p>Run your program.</p> 
+<p> Use Eclipse to create a <code class=""code"">toString</code> method based on the <span class=""property"">url</span> parameter and re-run your program again. </p>","List","java.util.List","class","false"
+"","","5. Exercise: Use Java Collections","<div class=""titlepage""> 
+ <div> 
+  <div> 
+   <h2 class=""title"">5.&nbsp;Exercise: Use Java Collections</h2> 
+  </div> 
+ </div> 
+</div> 
+<p> Create a new Java project called <code class=""code"">com.vogella.java.collections</code>. Also add a package with the same name. </p> 
+<p> Create a Java class called <em class=""wordasword"">Server</em> with one String attribute called <span class=""property"">url</span>. </p> 
+<p> Create getter and setter methods for this attribute using code generation capabilities of Eclipse. For this select <span class=""guimenu"">Source</span> → <span class=""guisubmenu"">Generate Getters and Setters</span> from the Eclipse menu. </p> 
+<p> Create via Eclipse a constructor which gets a url as parameter. For this select <span class=""guimenu"">Source</span> → <span class=""guisubmenu"">Generate Constructor using Fields...</span> from the Eclipse menu. </p> 
+<p> Type <em class=""parameter""><code>main</code></em> in the class body and use code completion (<span class=""keycap""><strong>Ctrl</strong></span>+<span class=""keycap""><strong>Space</strong></span>) to generate a <code class=""code"">main</code> method. </p> 
+<p> In your <code class=""code"">main</code> method create a <code class=""code""> 
+  <clt fqn=""java.util.List"" api=""List"" kind=""class"">
+    List 
+  </clt></code> of type <code class=""code""> 
+  <clt fqn=""java.util.ArrayList"" api=""ArrayList"" kind=""class"">
+    ArrayList 
+  </clt></code> and add 3 objects of type <code class=""code"">Server</code> objects to this list. </p> 
+<p> Use code completion to create a <span class=""guilabel"">foreach</span> loop and write the <code class=""code"">toString</code> method to the console. Use code completion based on <code class=""code"">syso</code> for that. </p> 
+<p>Run your program.</p> 
+<p> Use Eclipse to create a <code class=""code"">toString</code> method based on the <span class=""property"">url</span> parameter and re-run your program again. </p>","ArrayList","java.util.ArrayList","class","false"

@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head> 
+  <meta charset="utf-8" /> 
+  <link rel="stylesheet" type="text/css" href="/css/stylesheet-mobile-minified.css" /> 
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> 
+  <script src="/javascript/resize-fit-minified.js"></script> 
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/jenkov-com?format=xml" /> 
+  <meta name="viewport" content="width=device-width" /> 
+  <title>Sorting Java Collections</title> 
+  <meta name="Title" content="Sorting Java Collections" /> 
+  <link rel="schema.dc" href="http://purl.org/metadata/dublin_core_elements" /> 
+  <meta name="DC.Title" content="Sorting Java Collections" /> 
+  <meta name="DC.Subject" content="Sorting Java Collections" /> 
+  <meta name="Robots" content="ALL" /> 
+  <link href="https://plus.google.com/108227213807945109821" rel="publisher" /> 
+  <meta name="google-site-verification" content="i_TwzdElg-by5uXLvyAjuIaCjxo0yjtW8LdRPUDEEcw" /> 
+  <style>
+#body-div {
+width             : 870px; /* default with 900px wide page */
+padding-left      : 10px;
+padding-right     : 20px;
+padding-top       : 10px;
+background-color  : #ffffff;
+}
+#left-bar {
+width             : 240px;
+background-color  : #ffffff;
+padding           : 10px;
+float             : left;
+}
+#left-bar-menu a {
+font-size         : 0.9em;
+}
+#article-div {
+width             : 606px;    /* default size with 900px wide page */
+display           : block;
+float             : left;
+background-color  : #ffffff;
+border-x          : 1px solid black;
+}
+#side-ads {
+padding-left: 10px; /* +10 from left-bar, so 20 in total */
+}
+#top-ads {
+padding-left : 20px;
+}
+#bottom-ads {
+padding-left : 36px;
+}
+.book-link {
+height            : 100px;
+background-repeat : no-repeat;
+border            : 1px solid #eeeeee;
+margin-top        : 30px;
+padding-left      : 102px;
+color             : #333333;
+font-weight       : normal;
+cursor            : pointer;
+}
+.book-link p{
+margin-top        : 0px;
+padding-top       : 5px;
+padding-right     : 20px;
+font-size         : 0.8em;
+}
+.book-link-title {
+margin-top        :  5px;
+margin-bottom     :  5px;
+font-size         : 0.9em;
+font-weight       : bold;
+}
+.signupframe {
+border: 1px solid #cccccc;
+background: #ffffff;
+color: #002d62;
+font-family: Arial, Helvetica, sans-serif;
+}
+.articleTopMiniHeader {
+Font-size: 13px; Font-weight: bold;
+}
+.articleTopMiniHeaderCell {
+border-bottomx: 1px solid #cccccc;
+}
+</style> 
+ </head> 
+ <body> 
+  <div id="page-div"> 
+   <div id="header"> 
+    <div id="header-div"> 
+     <div id="link-bar" style="float: left;"> 
+      <a href="http://tutorials.jenkov.com">TUTORIALS</a> &nbsp;&nbsp;|&nbsp;&nbsp; 
+      <a href="http://jenkov.com/books/index.html">BOOKS</a> &nbsp;&nbsp;|&nbsp;&nbsp; 
+      <a href="http://butterfly.jenkov.com">BUTTERFLY COMPONENTS</a> &nbsp;|&nbsp;&nbsp; 
+      <a href="http://jenkov.com/about/index.html">ABOUT</a> &nbsp;&nbsp;|&nbsp;&nbsp; 
+      <a href="http://feeds2.feedburner.com/jenkov-com">RSS</a> 
+     </div> 
+     <div id="logo-bar"> 
+      <br /> 
+      <br /> 
+      <br /> &nbsp;&nbsp;&nbsp;A Voice in the Buzz on Software 
+     </div> &nbsp; 
+    </div> 
+    <div id="header-divider"></div> 
+   </div> 
+   <div id="body-div"> 
+    <div id="top-ads"> 
+     <script type="text/javascript"><!--
+google_ad_client = "ca-pub-5569543489255665";
+/* Tutorials - Top Banner */
+google_ad_slot = "7630855405";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script> 
+     <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script> 
+    </div> 
+    <div id="left-bar"> 
+     <div id="left-bar-menu"> 
+      <table cellspacing="2" border="0" width="100%" style="border-bottom: 1px solid #dddddd" bgcolor="#ffffff"> 
+       <tbody> 
+        <tr> 
+         <!--<td colspan="2"><img src="/images/toc.png" alt="Table of Contents"/></td>--> 
+         <td colspan="3" style="padding-top:10px;"><span class="trailhead">&nbsp;&nbsp;Java Collections</span></td> 
+        </tr> 
+        <tr> 
+         <td height="5"></td> 
+        </tr> 
+        <tr> 
+         <td width="10"></td> 
+         <td style="padding-right: 4px;" valign="top"><img src="/images/arrow-right-light-medium.png" alt="" /></td> 
+         <td style="padding-top: 2px;"><a href="index.html">Java Collections Introduction</a></td> 
+        </tr> 
+        <tr> 
+         <td width="10"></td> 
+         <td style="padding-right: 4px;" valign="top"><img src="/images/arrow-right-light-medium.png" alt="" /></td> 
+         <td style="padding-top: 2px;"><a href="overview.html">Overview of Interfaces</a></td> 
+        </tr> 
+        <tr> 
+         <td width="10"></td> 
+         <td style="padding-right: 4px;" valign="top"><img src="/images/arrow-right-light-medium.png" alt="" /></td> 
+         <td style="padding-top: 2px;"><a href="iterable.html">Iterable</a></td> 
+        </tr> 
+        <tr> 
+         <td width="10"></td> 
+         <td style="padding-right: 4px;" valign="top"><img src="/images/arrow-right-light-medium.png" alt="" /></td> 
+         <td style="padding-top: 2px;"><a href="collection.html">Collection</a></td> 
+        </tr> 
+        <tr> 
+         <td width="10"></td> 
+         <td style="padding-right: 4px;" valign="top"><img src="/images/arrow-right-light-medium.png" alt="" /></td> 
+         <td style="padding-top: 2px;"><a href="generic-collections.html">Generic Collections</a></td> 
+        </tr> 
+        <tr> 
+         <td width="10"></td> 
+         <td style="padding-right: 4px;" valign="top"><img src="/images/arrow-right-light-medium.png" alt="" /></td> 
+         <td style="padding-top: 2px;"><a href="list.html">List</a></td> 
+        </tr> 
+        <tr> 
+         <td width="10"></td> 
+         <td style="padding-right: 4px;" valign="top"><img src="/images/arrow-right-light-medium.png" alt="" /></td> 
+         <td style="padding-top: 2px;"><a href="set.html">Set</a></td> 
+        </tr> 
+        <tr> 
+         <td width="10"></td> 
+         <td style="padding-right: 4px;" valign="top"><img src="/images/arrow-right-light-medium.png" alt="" /></td> 
+         <td style="padding-top: 2px;"><a href="sortedset.html">SortedSet</a></td> 
+        </tr> 
+        <tr> 
+         <td width="10"></td> 
+         <td style="padding-right: 4px;" valign="top"><img src="/images/arrow-right-light-medium.png" alt="" /></td> 
+         <td style="padding-top: 2px;"><a href="navigableset.html">NavigableSet</a></td> 
+        </tr> 
+        <tr> 
+         <td width="10"></td> 
+         <td style="padding-right: 4px;" valign="top"><img src="/images/arrow-right-light-medium.png" alt="" /></td> 
+         <td style="padding-top: 2px;"><a href="map.html">Map</a></td> 
+        </tr> 
+        <tr> 
+         <td width="10"></td> 
+         <td style="padding-right: 4px;" valign="top"><img src="/images/arrow-right-light-medium.png" alt="" /></td> 
+         <td style="padding-top: 2px;"><a href="sortedmap.html">SortedMap</a></td> 
+        </tr> 
+        <tr> 
+         <td width="10"></td> 
+         <td style="padding-right: 4px;" valign="top"><img src="/images/arrow-right-light-medium.png" alt="" /></td> 
+         <td style="padding-top: 2px;"><a href="navigablemap.html">NavigableMap</a></td> 
+        </tr> 
+        <tr> 
+         <td width="10"></td> 
+         <td style="padding-right: 4px;" valign="top"><img src="/images/arrow-right-light-medium.png" alt="" /></td> 
+         <td style="padding-top: 2px;"><a href="queue.html">Queue</a></td> 
+        </tr> 
+        <tr> 
+         <td width="10"></td> 
+         <td style="padding-right: 4px;" valign="top"><img src="/images/arrow-right-light-medium.png" alt="" /></td> 
+         <td style="padding-top: 2px;"><a href="deque.html">Deque</a></td> 
+        </tr> 
+        <tr> 
+         <td width="10"></td> 
+         <td style="padding-right: 4px;" valign="top"><img src="/images/arrow-right-light-medium.png" alt="" /></td> 
+         <td style="padding-top: 2px;"><a href="stack.html">Stack</a></td> 
+        </tr> 
+        <tr> 
+         <td width="10"></td> 
+         <td style="padding-right: 4px;" valign="top"><img src="/images/arrow-right-light-medium.png" alt="" /></td> 
+         <td style="padding-top: 2px;"><a href="hashcode-equals.html">hashCode() and equals()</a></td> 
+        </tr> 
+        <tr> 
+         <td width="10"></td> 
+         <td style="padding-right: 4px;" valign="top"><img src="/images/arrow-right-light-medium.png" alt="" /></td> 
+         <td style="padding-top: 2px;"><a href="sorting.html">Sorting</a></td> 
+        </tr> 
+        <tr> 
+         <td>&nbsp;</td> 
+        </tr> 
+       </tbody> 
+      </table> 
+     </div> 
+     <br /> 
+     <br /> 
+     <div id="SignUp"> 
+      <form action="http://jenkov.us4.list-manage.com/subscribe/post?u=39844b57926863757a8be6553&amp;id=74bcc45775" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank"> 
+       <input type="hidden" name="listid" value="9579" /> 
+       <input type="hidden" name="specialid:9579" value="SW15" /> 
+       <input type="hidden" name="clientid" value="435086" /> 
+       <input type="hidden" name="formid" value="587" /> 
+       <input type="hidden" name="reallistid" value="1" /> 
+       <input type="hidden" name="doubleopt" value="1" /> 
+       <input type="hidden" name="listid" value="9579" /> 
+       <input type="hidden" name="specialid:9579" value="SW15" /> 
+       <input type="hidden" name="clientid" value="435086" /> 
+       <input type="hidden" name="formid" value="587" /> 
+       <input type="hidden" name="reallistid" value="1" /> 
+       <input type="hidden" name="doubleopt" value="1" /> 
+       <input type="hidden" name="listid" value="9579" /> 
+       <input type="hidden" name="specialid:9579" value="SW15" /> 
+       <input type="hidden" name="clientid" value="435086" /> 
+       <input type="hidden" name="formid" value="587" /> 
+       <input type="hidden" name="reallistid" value="1" /> 
+       <input type="hidden" name="doubleopt" value="1" /> 
+       <input type="hidden" name="listid" value="9579" /> 
+       <input type="hidden" name="specialid:9579" value="SW15" /> 
+       <input type="hidden" name="clientid" value="435086" /> 
+       <input type="hidden" name="formid" value="587" /> 
+       <input type="hidden" name="reallistid" value="1" /> 
+       <input type="hidden" name="doubleopt" value="1" /> 
+       <input type="hidden" name="listid" value="9579" /> 
+       <input type="hidden" name="specialid:9579" value="SW15" /> 
+       <input type="hidden" name="clientid" value="435086" /> 
+       <input type="hidden" name="formid" value="587" /> 
+       <input type="hidden" name="reallistid" value="1" /> 
+       <input type="hidden" name="doubleopt" value="1" /> 
+       <input type="hidden" name="listid" value="9579" /> 
+       <input type="hidden" name="specialid:9579" value="SW15" /> 
+       <input type="hidden" name="clientid" value="435086" /> 
+       <input type="hidden" name="formid" value="587" /> 
+       <input type="hidden" name="reallistid" value="1" /> 
+       <input type="hidden" name="doubleopt" value="1" /> 
+       <input type="hidden" name="listid" value="9579" /> 
+       <input type="hidden" name="specialid:9579" value="SW15" /> 
+       <input type="hidden" name="clientid" value="435086" /> 
+       <input type="hidden" name="formid" value="587" /> 
+       <input type="hidden" name="reallistid" value="1" /> 
+       <input type="hidden" name="doubleopt" value="1" /> 
+       <input type="hidden" name="listid" value="9579" /> 
+       <input type="hidden" name="specialid:9579" value="SW15" /> 
+       <input type="hidden" name="clientid" value="435086" /> 
+       <input type="hidden" name="formid" value="587" /> 
+       <input type="hidden" name="reallistid" value="1" /> 
+       <input type="hidden" name="doubleopt" value="1" /> 
+       <input type="hidden" name="listid" value="9579" /> 
+       <input type="hidden" name="specialid:9579" value="SW15" /> 
+       <input type="hidden" name="clientid" value="435086" /> 
+       <input type="hidden" name="formid" value="587" /> 
+       <input type="hidden" name="reallistid" value="1" /> 
+       <input type="hidden" name="doubleopt" value="1" /> 
+       <input type="hidden" name="listid" value="9579" /> 
+       <input type="hidden" name="specialid:9579" value="SW15" /> 
+       <input type="hidden" name="clientid" value="435086" /> 
+       <input type="hidden" name="formid" value="587" /> 
+       <input type="hidden" name="reallistid" value="1" /> 
+       <input type="hidden" name="doubleopt" value="1" /> 
+       <input type="hidden" name="listid" value="9579" /> 
+       <input type="hidden" name="specialid:9579" value="SW15" /> 
+       <input type="hidden" name="clientid" value="435086" /> 
+       <input type="hidden" name="formid" value="587" /> 
+       <input type="hidden" name="reallistid" value="1" /> 
+       <input type="hidden" name="doubleopt" value="1" /> 
+       <input type="hidden" name="listid" value="9579" /> 
+       <input type="hidden" name="specialid:9579" value="SW15" /> 
+       <input type="hidden" name="clientid" value="435086" /> 
+       <input type="hidden" name="formid" value="587" /> 
+       <input type="hidden" name="reallistid" value="1" /> 
+       <input type="hidden" name="doubleopt" value="1" /> 
+       <input type="hidden" name="listid" value="9579" /> 
+       <input type="hidden" name="specialid:9579" value="SW15" /> 
+       <input type="hidden" name="clientid" value="435086" /> 
+       <input type="hidden" name="formid" value="587" /> 
+       <input type="hidden" name="reallistid" value="1" /> 
+       <input type="hidden" name="doubleopt" value="1" /> 
+       <input type="hidden" name="listid" value="9579" /> 
+       <input type="hidden" name="specialid:9579" value="SW15" /> 
+       <input type="hidden" name="clientid" value="435086" /> 
+       <input type="hidden" name="formid" value="587" /> 
+       <input type="hidden" name="reallistid" value="1" /> 
+       <input type="hidden" name="doubleopt" value="1" /> 
+       <input type="hidden" name="listid" value="9579" /> 
+       <input type="hidden" name="specialid:9579" value="SW15" /> 
+       <input type="hidden" name="clientid" value="435086" /> 
+       <input type="hidden" name="formid" value="587" /> 
+       <input type="hidden" name="reallistid" value="1" /> 
+       <input type="hidden" name="doubleopt" value="1" /> 
+       <input type="hidden" name="listid" value="9579" /> 
+       <input type="hidden" name="specialid:9579" value="SW15" /> 
+       <input type="hidden" name="clientid" value="435086" /> 
+       <input type="hidden" name="formid" value="587" /> 
+       <input type="hidden" name="reallistid" value="1" /> 
+       <input type="hidden" name="doubleopt" value="1" /> 
+       <input type="hidden" name="listid" value="9579" /> 
+       <input type="hidden" name="specialid:9579" value="SW15" /> 
+       <input type="hidden" name="clientid" value="435086" /> 
+       <input type="hidden" name="formid" value="587" /> 
+       <input type="hidden" name="reallistid" value="1" /> 
+       <input type="hidden" name="doubleopt" value="1" /> 
+       <input type="hidden" name="listid" value="9579" /> 
+       <input type="hidden" name="specialid:9579" value="SW15" /> 
+       <input type="hidden" name="clientid" value="435086" /> 
+       <input type="hidden" name="formid" value="587" /> 
+       <input type="hidden" name="reallistid" value="1" /> 
+       <input type="hidden" name="doubleopt" value="1" /> 
+       <input type="hidden" name="listid" value="9579" /> 
+       <input type="hidden" name="specialid:9579" value="SW15" /> 
+       <input type="hidden" name="clientid" value="435086" /> 
+       <input type="hidden" name="formid" value="587" /> 
+       <input type="hidden" name="reallistid" value="1" /> 
+       <input type="hidden" name="doubleopt" value="1" /> 
+       <input type="hidden" name="listid" value="9579" /> 
+       <input type="hidden" name="specialid:9579" value="SW15" /> 
+       <input type="hidden" name="clientid" value="435086" /> 
+       <input type="hidden" name="formid" value="587" /> 
+       <input type="hidden" name="reallistid" value="1" /> 
+       <input type="hidden" name="doubleopt" value="1" /> 
+       <input type="hidden" name="listid" value="9579" /> 
+       <input type="hidden" name="specialid:9579" value="SW15" /> 
+       <input type="hidden" name="clientid" value="435086" /> 
+       <input type="hidden" name="formid" value="587" /> 
+       <input type="hidden" name="reallistid" value="1" /> 
+       <input type="hidden" name="doubleopt" value="1" /> 
+       <input type="hidden" name="listid" value="9579" /> 
+       <input type="hidden" name="specialid:9579" value="SW15" /> 
+       <input type="hidden" name="clientid" value="435086" /> 
+       <input type="hidden" name="formid" value="587" /> 
+       <input type="hidden" name="reallistid" value="1" /> 
+       <input type="hidden" name="doubleopt" value="1" /> 
+       <input type="hidden" name="listid" value="9579" /> 
+       <input type="hidden" name="specialid:9579" value="SW15" /> 
+       <input type="hidden" name="clientid" value="435086" /> 
+       <input type="hidden" name="formid" value="587" /> 
+       <input type="hidden" name="reallistid" value="1" /> 
+       <input type="hidden" name="doubleopt" value="1" /> 
+       <input type="hidden" name="listid" value="9579" /> 
+       <input type="hidden" name="specialid:9579" value="SW15" /> 
+       <input type="hidden" name="clientid" value="435086" /> 
+       <input type="hidden" name="formid" value="587" /> 
+       <input type="hidden" name="reallistid" value="1" /> 
+       <input type="hidden" name="doubleopt" value="1" /> 
+       <input type="hidden" name="listid" value="9579" /> 
+       <input type="hidden" name="specialid:9579" value="SW15" /> 
+       <input type="hidden" name="clientid" value="435086" /> 
+       <input type="hidden" name="formid" value="587" /> 
+       <input type="hidden" name="reallistid" value="1" /> 
+       <input type="hidden" name="doubleopt" value="1" /> 
+       <input type="hidden" name="listid" value="9579" />
+       <input type="hidden" name="specialid:9579" value="SW15" />
+       <input type="hidden" name="clientid" value="435086" />
+       <input type="hidden" name="formid" value="587" />
+       <input type="hidden" name="reallistid" value="1" />
+       <input type="hidden" name="doubleopt" value="1" />
+       <table width="100%" class="signupframe" border="0" cellspacing="0" cellpadding="5"> 
+        <tbody> 
+         <tr> 
+          <td colspan="2"><font color="red"><b>Jakob Jenkov's Free Tips &amp; Tutorials!</b></font></td> 
+         </tr> 
+         <tr> 
+          <td colspan="2" valign="top"><img src="/images/layout/small-portrait_mini.jpg" align="right" width="111" height="127" /> Sign up for my news letter or <a href="http://feeds2.feedburner.com/jenkov-com" target="_blank">RSS feed</a>, and never miss any of my tips about Java and web development. </td> 
+         </tr> 
+         <tr> 
+          <td valign="top" align="right"> <font size="1" face="Arial,Helvetica, sans-serif">*</font> <font size="2">First Name</font> </td> 
+          <td align="left"> <input type="text" value="" name="FNAME" class="" id="mce-FNAME" /> </td> 
+         </tr> 
+         <tr> 
+          <td valign="top" align="right"> <font size="1" face="Arial,Helvetica, sans-serif">*</font> <font size="2">Last Name</font> </td> 
+          <td align="left"> <input type="text" value="" name="LNAME" class="" id="mce-LNAME" /> </td> 
+         </tr> 
+         <tr> 
+          <td valign="top" align="right"> <font size="1" face="Arial,Helvetica, sans-serif">*</font> <font size="2">Email</font> </td> 
+          <td align="left"> <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" /> </td> 
+         </tr> 
+         <input type="hidden" name="listid" value="9579" /> 
+         <input type="hidden" name="specialid:9579" value="SW15" /> 
+         <input type="hidden" name="clientid" value="435086" /> 
+         <input type="hidden" name="formid" value="587" /> 
+         <input type="hidden" name="reallistid" value="1" /> 
+         <input type="hidden" name="doubleopt" value="1" /> 
+         <tr> 
+          <td> </td> 
+          <td><input type="submit" value="Yes, give me tips!" name="subscribe" id="mc-embedded-subscribe" class="button" /></td> 
+         </tr> 
+         <tr> 
+          <td colspan="2" align="center"><a href="http://feeds2.feedburner.com/jenkov-com"><img src="http://feeds2.feedburner.com/~fc/jenkov-com?bg=FF9900&amp;fg=000000&amp;anim=0" height="26" width="88" style="border:0" alt="" /></a></td> 
+         </tr> 
+         <tr> 
+          <td colspan="2" align="center"><a href="http://www.twitter.com/jjenkov" style="font-size: 0.8em;"><img src="/images/social-site-icons/twitter_32.png" border="0" width="32" alt="Follow me on Twitter" /> Follow me on Twitter</a></td> 
+         </tr> 
+        </tbody> 
+       </table> 
+      </form> 
+     </div> 
+     <br /> 
+     <div id="side-ads"> 
+      <script async="" src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> 
+      <ins class="adsbygoogle" style="display:inline-block;width:160px;height:600px" data-ad-client="ca-pub-5569543489255665" data-ad-slot="3389666608"></ins> 
+      <script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script> 
+     </div> 
+     <br /> 
+     <br /> 
+    </div> 
+    <div id="article-div"> 
+     <div class="subsection"> 
+      <h1>Sorting Java Collections</h1> 
+      <p> You can sort <code> 
+        <clt fqn="java.util.List" api="List" kind="class">
+          List 
+        </clt></code> collections using the <code> 
+        <clt fqn="java.util.Collections.sort" api="sort" kind="method">
+          java.util.Collections.sort() 
+        </clt></code> method. You can sort these two types of <code> 
+        <clt fqn="java.util.List" api="List" kind="class">
+          List 
+        </clt></code>'s. </p> 
+      <ol> 
+       <li>List</li> 
+       <li>LinkedList</li> 
+      </ol> 
+      <br /> 
+     </div> 
+     <div class="subsection"> 
+      <h2>Sorting Objects by their Natural Order</h2> 
+      <p> To sort a <code> 
+        <clt fqn="java.util.List" api="List" kind="class">
+          List 
+        </clt></code> you do this: </p> 
+      <pre class="codeBox">
+List list = new ArrayList();
+//add elements to the list
+Collections.sort(list);
+</pre> 
+      <p> When sorting a list like this the elements are ordered according to their &quot;natural order&quot;. For objects to have a natural order they must implement the interface <code> 
+        <clt fqn="java.lang.Comparable" api="Comparable" kind="class">
+          java.lang.Comparable 
+        </clt></code>. In other words, the objects must be comparable to determine their order. Here is how the <code> 
+        <clt fqn="java.lang.Comparable" api="Comparable" kind="class">
+          Comparable 
+        </clt></code> interface looks: </p> 
+      <pre class="codeBox">
+public interface Comparable&lt;T&gt; {
+int compareTo(T o);
+}
+</pre> 
+      <p> The <code> 
+        <clt fqn="java.lang.Comparable.compareTo" api="compareTo" kind="method">
+          compareTo() 
+        </clt></code> method should compare this object to another object, return an <code>int</code> value. Here are the rules for that <code>int</code> value: </p> 
+      <ul> 
+       <li>Return a <b>negative</b> value if this object is <b>smaller</b> than the other object</li> 
+       <li>Return <b>0 (zero)</b> if this object is <b>equal</b> to the other object.</li> 
+       <li>Return a <b>positive</b> value if this object is <b>larger</b> than the other object.</li> 
+      </ul> 
+      <p> There are a few more specific rules to obey in the implementation, but the above is the primary requirements. Check out the JavaDoc for the details. </p> 
+      <p> Let's say you are sorting a <code> 
+        <clt fqn="java.util.List" api="List" kind="class">
+          List 
+        </clt></code> of <code> 
+        <clt fqn="java.lang.String" api="String" kind="class">
+          String 
+        </clt></code> elements. To sort them, each string is compared to the others according to some sorting algorithm (not interesting here). Each string compares itself to another string by alphabetic comparison. So, if a string is less than another string by alphabetic comparison it will return a negative number from the <code> 
+        <clt fqn="java.lang.Comparable.compareTo" api="compareTo" kind="method">
+          compareTo() 
+        </clt></code> method. </p> 
+      <p> When you implement the <code> 
+        <clt fqn="java.lang.Comparable.compareTo" api="compareTo" kind="method">
+          compareTo() 
+        </clt></code> method in your own classes you will have to decide how these objects should be compared to each other. For instance, <code>Employee</code> objects can be compared by their first name, last name, salary, start year or whatever else you think makes sense. </p> 
+      <br /> 
+     </div> 
+     <div class="subsection"> 
+      <h2>Sorting Objects Using a Comparator</h2> 
+      <p> Sometimes you may want to sort a list according to another order than their natural order. Perhaps the objects you are sorting do not even have a natural order. In that case you can use a <code> 
+        <clt fqn="java.util.Comparator" api="Comparator" kind="class">
+          Comparator 
+        </clt></code> instead. Here is how you sort a list using a <code> 
+        <clt fqn="java.util.Comparator" api="Comparator" kind="class">
+          Comparator 
+        </clt></code>: </p> 
+      <pre class="codeBox">
+List list = new ArrayList();
+//add elements to the list
+Comparator comparator = new SomeComparator();
+Collections.sort(list, comparator);
+</pre> 
+      <p> Notice how the <code> 
+        <clt fqn="java.util.Collections.sort" api="sort" kind="method">
+          Collections.sort() 
+        </clt></code> method now takes a <code> 
+        <clt fqn="java.util.Comparator" api="Comparator" kind="class">
+          java.util.Comparator 
+        </clt></code> as parameter in addition to the <code> 
+        <clt fqn="java.util.List" api="List" kind="class">
+          List 
+        </clt></code>. This <code> 
+        <clt fqn="java.util.Comparator" api="Comparator" kind="class">
+          Comparator 
+        </clt></code> compares the elements in the list two by two. Here is how the <code> 
+        <clt fqn="java.util.Comparator" api="Comparator" kind="class">
+          Comparator 
+        </clt></code> interface looks: </p> 
+      <pre class="codeBox">
+public interface Comparator&lt;T&gt; {
+int compare(T object1, T object2);
+}
+</pre> 
+      <p> The <code> 
+        <clt fqn="java.util.Comparator.compare" api="compare" kind="method">
+          compare() 
+        </clt></code> method compares two objects to each other and should: </p> 
+      <ul> 
+       <li>Return a <b>negative</b> value if object1 is <b>smaller</b> than object2</li> 
+       <li>Return <b>0 (zero)</b> if objec1 is <b>equal</b> to object2.</li> 
+       <li>Return a <b>positive</b> value if object1 is <b>larger</b> than object2.</li> 
+      </ul> 
+      <p> There are a few more requirements to the implementation of the <code> 
+        <clt fqn="java.util.Comparator.compare" api="compare" kind="method">
+          compare() 
+        </clt></code> method, but these are the primary requirements. Check out the JavaDoc for more specific details. </p> 
+      <p> Here is an example <code>
+        <clt fqn="java.util.Comparator" api="Comparator" kind="class">
+         Comparator
+        </clt></code> that compares two fictive Employee objects: </p> 
+      <pre class="codeBox">
+public class MyComparator&lt;Employee&gt; implements Comparator&lt;Employee&gt; {
+public int compare(Employee emp1, Employee emp2){
+if(emp1.getSalary() &lt;  emp2.getSalary()) return -1;
+if(emp1.getSalary() == emp2.getSalary()) return 0;
+return 1;
+}
+}
+</pre> 
+      <p> A shorter way to write the comparison would be like this: </p> 
+      <pre class="codeBox">
+public class MyComparator&lt;Employee&gt; implements Comparator&lt;Employee&gt; {
+public int compare(Employee emp1, Employee emp2){
+return emp1.getSalary() - emp2.getSalary();
+}
+}
+</pre> 
+      <p> By subtracting one salary from the other, the resulting value is automatically either negative, 0 or positive. Smart, right? </p> 
+      <p> If you want to compare objects by more than one factor, start by comparing by the first factor (e.g first name). Then, if the first factors are equal, compare by the second factor (e.g. last name, or salary) etc. </p> 
+      <br /> 
+     </div> 
+    </div> 
+    <div id="bottom-ads"> 
+     <script async="" src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> 
+     <ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5569543489255665" data-ad-slot="7776167002"></ins> 
+     <script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script> 
+     <br /> 
+     <br /> 
+     <br /> 
+    </div> 
+    <div id="footer-divider"></div> 
+    <div id="footer"></div> 
+   </div> 
+   <script>
+$(document).ready(function() {
+//alert($("body").width());
+$(window).resize(function(event) {
+doResize(false);
+});
+// resize window depending on browser size.
+doResize(false);
+// activate book link, if any present.
+$(".book-link").click(function() {
+window.open( $(this).attr("book-link-url"));
+});
+});
+</script> 
+   <script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-4036229-3']);
+_gaq.push(['_trackPageview']);
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script> 
+  </div>  
+ </body>
+</html>

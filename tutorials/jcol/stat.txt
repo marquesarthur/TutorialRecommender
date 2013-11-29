@@ -1,0 +1,95 @@
+"number of Section-APIElement pairs is 150"		
+"number of relevant pairs is 42"		
+"number of unique API Elements is 28"		
+"number of unique relevant API Elements is 21"		
+"-------------------------------------------"		
+"number of API Elements per Section in relevant/total"		
+"-------------------------------------------"		
+"ceilingKey()"	1	1
+"Java's NavigableMap Interface"	0	4
+"headSet()"	1	1
+"Queue Implementations"	2	6
+"More Details in the JavaDoc"	0	9
+"Java's List Interface"	0	2
+"Java Collections and Generics"	0	1
+"Adding and Removing Elements"	1	3
+"Java's Collection Interface"	0	1
+"Collection Size"	0	1
+"Sorting Objects Using a Comparator"	1	3
+"Checking if a Collection Contains a Certain Element"	1	1
+"More Detail in the JavaDoc"	0	1
+"Java's SortedSet Interface"	2	5
+"Java Set Example"	1	2
+"Generic Lists"	0	2
+"Java's Map Interface"	0	2
+"List Implementations"	0	2
+"Generic Collections in Java"	0	4
+"descendingKeySet() and descendingMap()"	2	3
+"Adding and Removing Elements - part 2"	1	1
+"pollFirst() and pollLast()"	1	1
+"equals()"	0	2
+"headMap()"	1	1
+"Sorting Java Collections"	0	2
+"Sorting Objects by their Natural Order - part 2"	1	3
+"pollFirstEntry() and pollLastEntry()"	1	1
+"Java's NavigableSet Interface"	0	3
+"Searching the Stack"	1	1
+"celingEntry()"	0	2
+"Set Implementations"	3	5
+"Map Implementations"	3	3
+"Generic Deque"	0	2
+"Set Implementations - part 2"	1	6
+"Java's Set Interface"	0	2
+"Adding and Accessing Elements"	5	13
+"ceiling()"	1	1
+"Java Collections Tutorial"	0	1
+"Java's Stack Class"	1	3
+"Java's Deque Interface"	1	2
+"Removing Elements"	3	5
+"Generic Maps"	0	3
+"descendingIterator() and descendingSet()"	1	2
+"Java's Queue Interface"	0	3
+"Java's Iterable Interface"	1	2
+"Generic Queue"	0	2
+"Java Collections and the equals() and hashCode() Methods"	0	2
+"Java Collections Overview"	0	3
+"Sorting Objects by their Natural Order"	1	2
+"Deque Implementations"	2	5
+"Sorting Objects Using a Comparator - part 2"	0	1
+"Java's SortedMap Interface"	1	6
+"hashCode()"	0	2
+"Iterating a Collection"	0	1
+"Generic Sets"	0	2
+	0.76	2.73
+"-------------------------------------------"		
+"number of unique API Elements per Section in relevant"	"total"	
+"-------------------------------------------"		
+"Stack"	2	2
+"NavigableSet"	5	6
+"NavigableMap"	4	7
+"Iterator"	0	4
+"Comparator"	1	6
+"SortedMap"	1	3
+"Comparable"	2	6
+"Iterable"	1	1
+"SortedSet"	1	6
+"TreeSet"	2	4
+"Queue"	3	9
+"LinkedList"	0	2
+"ArrayList"	0	1
+"Set"	4	11
+"List"	2	15
+"Object"	0	6
+"HashSet"	1	3
+"Collection"	3	18
+"Entry"	0	1
+"Deque"	3	6
+"Collections"	0	8
+"Map"	2	9
+"HashMap"	1	3
+"TreeMap"	1	4
+"LinkedHashSet"	1	1
+"PriorityQueue"	1	1
+"String"	0	6
+"ArrayDeque"	1	1
+	1.5	5.36

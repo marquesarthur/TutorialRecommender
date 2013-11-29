@@ -1,0 +1,87 @@
+Create a Form to fill out,Form,true,true,0,true
+Create a Form to fill out,FormField,true,true,0,true
+Answer a Form,Form,true,true,0,true
+Answer a Form,FormField,false,false,0,false
+Answer a Form - part 2,Form,true,true,0,true
+Send a file to another user,FileTransferManager,true,true,0,true
+Send a file to another user - part 2,OutgoingFileTransfer,true,true,0,true
+Recieving a file from another user,FileTransferManager,true,false,1,TRUE
+Recieving a file from another user,FileTransferListener,true,false,1,TRUE
+Recieving a file from another user,FileTransferRequest,false,false,0,false
+Recieving a file from another user - part 2,FileTransferRequest,true,true,0,true
+Recieving a file from another user - part 2,IncomingFileTransfer,true,true,0,true
+Monitoring the progress of a file transfer,IncomingFileTransfer,false,false,0,false
+Monitoring the progress of a file transfer,OutgoingFileTransfer,false,false,0,false
+Monitoring the progress of a file transfer,FileTransfer,true,true,0,true
+Processing Incoming Packets,PacketCollector,true,true,0,true
+Processing Incoming Packets,PacketListener,true,true,0,true
+Processing Incoming Packets,Connection,false,true,1,FALSE
+Processing Incoming Packets,PacketFilter,false,true,1,FALSE
+Provider Architecture: Packet Extensions and Custom IQ's,IQProvider,false,false,0,false
+Provider Architecture: Packet Extensions and Custom IQ's,PacketExtension,false,false,0,false
+Node creation and configuration,PubSubManager,true,true,0,true
+Publishing to a node,LeafNode,true,false,1,FALSE
+Receiving pubsub messages,Node,true,true,0,true
+Retrieving persisted pubsub messages,LeafNode,true,false,1,TRUE
+Discover pubsub information,PubSubManager,true,true,0,true
+Discover pubsub information,Node,true,true,0,true
+Debugging with Smack,Connection,true,true,0,true
+Debugging with Smack,SmackDebugger,false,false,0,false
+Manage XMPP entity features,ServiceDiscoveryManager,true,true,0,true
+Provide node information,ServiceDiscoveryManager,true,true,0,true
+Provide node information,NodeInformationProvider,true,false,1,TRUE
+Discover items associated with an XMPP entity,ServiceDiscoveryManager,true,true,0,true
+Discover items associated with an XMPP entity,DiscoverItems,false,true,1,FALSE
+Discover information about an XMPP entity,ServiceDiscoveryManager,true,true,0,true
+Discover information about an XMPP entity,DiscoverInfo,false,true,1,FALSE
+Publish publicly available items,DiscoverItems,true,false,1,TRUE
+Publish publicly available items,ServiceDiscoveryManager,true,true,0,true
+Send a entire roster,RosterExchangeManager,true,true,0,true
+Send a roster group,RosterExchangeManager,true,true,0,true
+Send a roster entry,RosterExchangeManager,true,true,0,true
+Receive roster entries,RosterExchangeListener,true,true,0,true
+Receive roster entries,RosterExchangeManager,false,true,1,FALSE
+Receive roster entries,Connection,false,false,0,false
+Roster and Presence,Roster,true,true,0,true
+Roster and Presence,Connection,false,false,0,false
+Compose an XHTML Message - part 2,XHTMLText,true,true,0,true
+Compose an XHTML Message - part 2,XHTMLManager,true,true,0,true
+Send an XHTML Message,Chat,false,false,0,false
+Send an XHTML Message,Connection,false,false,0,false
+Receive an XHTML Message,XHTMLManager,true,true,0,true
+Discover support for XHTML Messages,XHTMLManager,true,true,0,true
+Create a new Room,MultiUserChat,true,true,0,true
+Join a room,MultiUserChat,true,true,0,true
+Manage room invitations,MultiUserChat,true,true,0,true
+Manage room invitations,InvitationListener,false,false,0,false
+Manage room invitations,InvitationRejectionListener,false,false,0,false
+Discover MUC support,MultiUserChat,true,true,0,true
+Discover joined rooms,MultiUserChat,true,true,0,true
+Discover room information,MultiUserChat,true,true,0,true
+Start a private chat,MultiUserChat,true,true,0,true
+Start a private chat,Chat,false,false,0,false
+Manage changes on room subject,MultiUserChat,true,true,0,true
+Manage changes on room subject,SubjectUpdatedListener,true,true,0,true
+Manage role modifications - part 2,MultiUserChat,true,true,0,true
+Manage role modifications - part 2,ParticipantStatusListener,true,true,0,true
+Manage role modifications - part 2,UserStatusListener,true,true,0,true
+Manage role modifications - part 2,DefaultUserStatusListener,false,false,0,false
+Manage role modifications - part 2,DefaultParticipantStatusListener,false,false,0,false
+Manage affiliation modifications - part 2,MultiUserChat,true,true,0,true
+Manage affiliation modifications - part 3,MultiUserChat,true,true,0,true
+Manage affiliation modifications - part 3,ParticipantStatusListener,true,true,0,true
+Manage affiliation modifications - part 3,UserStatusListener,true,true,0,true
+Manage affiliation modifications - part 3,DefaultUserStatusListener,false,false,0,false
+Manage affiliation modifications - part 3,DefaultParticipantStatusListener,false,false,0,false
+Messaging using Chats,Chat,false,false,0,false
+Requesting Event Notifications,MessageEventManager,true,true,0,true
+Reacting to Event Notification Requests,DefaultMessageEventRequestListener,true,true,0,true
+Reacting to Event Notification Requests,MessageEventManager,true,true,0,true
+Reacting to Event Notification Requests,Connection,false,false,0,false
+Reacting to Event Notification Requests,MessageEventRequestListener,false,true,1,FALSE
+Reacting to Event Notification Requests - part 2,DefaultMessageEventRequestListener,false,true,1,FALSE
+Reacting to Event Notification Requests - part 2,MessageEventManager,false,true,1,FALSE
+Reacting to Event Notifications,MessageEventNotificationListener,true,true,0,true
+Reacting to Event Notifications,MessageEventManager,true,true,0,true
+Reacting to Event Notifications,Connection,false,false,0,false
+,,,,14,

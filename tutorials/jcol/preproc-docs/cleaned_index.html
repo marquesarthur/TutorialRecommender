@@ -1,0 +1,197 @@
+<div id="page-div"> 
+ <div id="header"> 
+  <div id="header-div"> 
+   <div id="link-bar" style="float: left;"> 
+    <a href="http://tutorials.jenkov.com">TUTORIALS</a> &nbsp;&nbsp;|&nbsp;&nbsp; 
+    <a href="http://jenkov.com/books/index.html">BOOKS</a> &nbsp;&nbsp;|&nbsp;&nbsp; 
+    <a href="http://butterfly.jenkov.com">BUTTERFLY COMPONENTS</a> &nbsp;|&nbsp;&nbsp; 
+    <a href="http://jenkov.com/about/index.html">ABOUT</a> &nbsp;&nbsp;|&nbsp;&nbsp; 
+    <a href="http://feeds2.feedburner.com/jenkov-com">RSS</a> 
+   </div> 
+   <div id="logo-bar">  &nbsp;&nbsp;&nbsp;A Voice in the Buzz on Software 
+   </div> &nbsp; 
+  </div>  
+ </div> 
+ <div id="body-div">  
+  <div id="left-bar"> 
+   <div id="left-bar-menu">
+    <table cellspacing="2" border="0" width="100%" style="border-bottom: 1px solid #dddddd" bgcolor="#ffffff"> 
+     <tbody>
+      <tr> 
+       <!--<td colspan="2"><img src="/images/toc.png" alt="Table of Contents"/></td>--> 
+       <td colspan="3" style="padding-top:10px;"><span class="trailhead">&nbsp;&nbsp;Java Collections</span></td> 
+      </tr>  
+      <tr>   
+       <td style="padding-top: 2px;"><a href="index.html">Java Collections Introduction</a></td> 
+      </tr> 
+      <tr>   
+       <td style="padding-top: 2px;"><a href="overview.html">Overview of Interfaces</a></td> 
+      </tr> 
+      <tr>   
+       <td style="padding-top: 2px;"><a href="iterable.html">Iterable</a></td> 
+      </tr> 
+      <tr>   
+       <td style="padding-top: 2px;"><a href="collection.html">Collection</a></td> 
+      </tr> 
+      <tr>   
+       <td style="padding-top: 2px;"><a href="generic-collections.html">Generic Collections</a></td> 
+      </tr> 
+      <tr>   
+       <td style="padding-top: 2px;"><a href="list.html">List</a></td> 
+      </tr> 
+      <tr>   
+       <td style="padding-top: 2px;"><a href="set.html">Set</a></td> 
+      </tr> 
+      <tr>   
+       <td style="padding-top: 2px;"><a href="sortedset.html">SortedSet</a></td> 
+      </tr> 
+      <tr>   
+       <td style="padding-top: 2px;"><a href="navigableset.html">NavigableSet</a></td> 
+      </tr> 
+      <tr>   
+       <td style="padding-top: 2px;"><a href="map.html">Map</a></td> 
+      </tr> 
+      <tr>   
+       <td style="padding-top: 2px;"><a href="sortedmap.html">SortedMap</a></td> 
+      </tr> 
+      <tr>   
+       <td style="padding-top: 2px;"><a href="navigablemap.html">NavigableMap</a></td> 
+      </tr> 
+      <tr>   
+       <td style="padding-top: 2px;"><a href="queue.html">Queue</a></td> 
+      </tr> 
+      <tr>   
+       <td style="padding-top: 2px;"><a href="deque.html">Deque</a></td> 
+      </tr> 
+      <tr>   
+       <td style="padding-top: 2px;"><a href="stack.html">Stack</a></td> 
+      </tr> 
+      <tr>   
+       <td style="padding-top: 2px;"><a href="hashcode-equals.html">hashCode() and equals()</a></td> 
+      </tr> 
+      <tr>   
+       <td style="padding-top: 2px;"><a href="sorting.html">Sorting</a></td> 
+      </tr> 
+      <tr>
+       <td>&nbsp;</td>
+      </tr> 
+     </tbody>
+    </table> 
+   </div>  
+   <div id="SignUp"> 
+    <form action="http://jenkov.us4.list-manage.com/subscribe/post?u=39844b57926863757a8be6553&amp;id=74bcc45775" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank"> 
+     <table width="100%" class="signupframe" border="0" cellspacing="0" cellpadding="5"> 
+      <tbody>
+       <tr>
+        <td colspan="2"><font color="red"><b>Jakob Jenkov's Free Tips &amp; Tutorials!</b></font></td>
+       </tr> 
+       <tr>
+        <td colspan="2" valign="top"> Sign up for my news letter or <a href="http://feeds2.feedburner.com/jenkov-com" target="_blank">RSS feed</a>, and never miss any of my tips about Java and web development. </td>
+       </tr> 
+       <tr> 
+        <td valign="top" align="right"> <font size="1" face="Arial,Helvetica, sans-serif">*</font> <font size="2">First Name</font> </td>  
+       </tr> 
+       <tr> 
+        <td valign="top" align="right"> <font size="1" face="Arial,Helvetica, sans-serif">*</font> <font size="2">Last Name</font> </td>  
+       </tr> 
+       <tr> 
+        <td valign="top" align="right"> <font size="1" face="Arial,Helvetica, sans-serif">*</font> <font size="2">Email</font> </td>  
+       </tr>         
+       <tr>
+        <td colspan="2" align="center"><a href="http://www.twitter.com/jjenkov" style="font-size: 0.8em;"> Follow me on Twitter</a></td>
+       </tr> 
+      </tbody>
+     </table> 
+    </form> 
+   </div>    
+  </div> 
+  <div id="article-div"> 
+   <div class="subsection"> 
+    <h1>Java Collections Tutorial</h1> 
+    <p> The Java Collections API's provide Java developers with a set of classes and interfaces that makes it easier to handle collections of objects. In a sense Collection's works a bit like arrays, except their size can change dynamically, and they have more advanced behaviour than arrays. </p> 
+    <p> Rather than having to write your own collection classes, Java provides these ready-to-use collection classes for you. This tutorial will look closer at the Java Collection's, as they are also sometimes referred to, and more specifically the Java Collections available in Java 6. </p> 
+    <p> The purpose of this tutorial is to give you an overview of the Java Collection classes. Thus it will not describe each and every little detail of the Java Collection classes. But, once you have an overview of what is there, it is much easier to read the rest in the JavaDoc's afterwards. </p> 
+    <p> Most of the Java collections are located in the <code>java.util</code> package. Java also has a set of concurrent collections in the <code>java.util.concurrent</code> package. This tutorial will not describe the concurrent collections. These will be described in their own tutorial some time in the future. </p> 
+    <p> Here is a list of the texts in this trail: </p> 
+    <table cellspacing="2" border="0" width="100%" style="border-bottom: 1px solid #dddddd" bgcolor="#ffffff"> 
+     <tbody>
+      <tr> 
+       <!--<td colspan="2"><img src="/images/toc.png" alt="Table of Contents"/></td>--> 
+       <td colspan="3" style="padding-top:10px;"><span class="trailhead">&nbsp;&nbsp;Java Collections</span></td> 
+      </tr>  
+      <tr>   
+       <td style="padding-top: 2px;"><a href="index.html">Java Collections Introduction</a></td> 
+      </tr> 
+      <tr>   
+       <td style="padding-top: 2px;"><a href="overview.html">Overview of Interfaces</a></td> 
+      </tr> 
+      <tr>   
+       <td style="padding-top: 2px;"><a href="iterable.html">Iterable</a></td> 
+      </tr> 
+      <tr>   
+       <td style="padding-top: 2px;"><a href="collection.html">Collection</a></td> 
+      </tr> 
+      <tr>   
+       <td style="padding-top: 2px;"><a href="generic-collections.html">Generic Collections</a></td> 
+      </tr> 
+      <tr>   
+       <td style="padding-top: 2px;"><a href="list.html">List</a></td> 
+      </tr> 
+      <tr>   
+       <td style="padding-top: 2px;"><a href="set.html">Set</a></td> 
+      </tr> 
+      <tr>   
+       <td style="padding-top: 2px;"><a href="sortedset.html">SortedSet</a></td> 
+      </tr> 
+      <tr>   
+       <td style="padding-top: 2px;"><a href="navigableset.html">NavigableSet</a></td> 
+      </tr> 
+      <tr>   
+       <td style="padding-top: 2px;"><a href="map.html">Map</a></td> 
+      </tr> 
+      <tr>   
+       <td style="padding-top: 2px;"><a href="sortedmap.html">SortedMap</a></td> 
+      </tr> 
+      <tr>   
+       <td style="padding-top: 2px;"><a href="navigablemap.html">NavigableMap</a></td> 
+      </tr> 
+      <tr>   
+       <td style="padding-top: 2px;"><a href="queue.html">Queue</a></td> 
+      </tr> 
+      <tr>   
+       <td style="padding-top: 2px;"><a href="deque.html">Deque</a></td> 
+      </tr> 
+      <tr>   
+       <td style="padding-top: 2px;"><a href="stack.html">Stack</a></td> 
+      </tr> 
+      <tr>   
+       <td style="padding-top: 2px;"><a href="hashcode-equals.html">hashCode() and equals()</a></td> 
+      </tr> 
+      <tr>   
+       <td style="padding-top: 2px;"><a href="sorting.html">Sorting</a></td> 
+      </tr> 
+      <tr>
+       <td>&nbsp;</td>
+      </tr> 
+     </tbody>
+    </table>  
+   </div> 
+   <div class="subsection"> 
+    <h2>Overview of Java Collections</h2> 
+    <p> To help you get an overview of the Java Collections classes and interfaces, the first text in this Java Collections tutorial is the <a href="overview.html">Overview of Interfaces</a> text. </p>  
+   </div> 
+   <div class="subsection"> 
+    <h2>The Central Java Collection Interfaces</h2> 
+    <p> The third and fourth text explains the two central interfaces: <a href="collection.html">java.io.Collection</a> and <a href="iterable.html">java.io.Iterable</a>. Additionally, the <a href="map.html">java.io.Map</a> is central too. </p>  
+   </div> 
+   <div class="subsection"> 
+    <h2>Java Collections and Generics</h2> 
+    <p> The fifth text in this Java Collections tutorial covers how to use Generics in Java Collections. Generics is very useful when working with Java's Collection classes. </p>  
+   </div> 
+   <div class="subsection"> 
+    <h2>Java Collections and the equals() and hashCode() Methods</h2> 
+    <p> The last two texts in this Java Collections tutorial explains the central role the two <code>java.lang.Object</code> methods <code>equals()</code> and <code>hashCode()</code> play when using Java Collections. You should read this, if you plan to use Java Collections with your own classes, and thus need to implement <code>equals()</code> and <code>hashCode()</code>. </p>  
+   </div> 
+  </div>    
+ </div>   
+</div>

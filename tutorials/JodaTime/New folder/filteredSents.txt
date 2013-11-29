@@ -1,0 +1,200 @@
+In particular, we cover the usage of the key CLT , CLT , CLT and CLT classes.
+In particular, we cover the usage of the key CLT , CLT , CLT and CLT classes.
+In particular, we cover the usage of the key CLT , CLT , CLT and CLT classes.
+In particular, we cover the usage of the key CLT , CLT , CLT and CLT classes.
+An Instant is defined as a moment in the datetime continuum specified as a number of milliseconds from 1970-01-01T00:00Z. This definition of milliseconds is consistent with that of the JDK in CLT or CLT .
+Within Joda-Time an instant is represented by the CLT interface.
+The main implementation of this interface, and the class that the average API user needs to be most familiar with, is CLT .
+The millisecond instant can be converted to any date time field using a CLT .
+To assist with this, methods are provided on CLT that act as getters for the most common date and time fields.
+A companion mutable class to CLT is CLT .
+Other implementations of CLT include CLT and CLT . &quot; &quot;
+An Instant is defined as a moment in the datetime continuum specified as a number of milliseconds from 1970-01-01T00:00Z. This definition of milliseconds is consistent with that of the JDK in CLT or CLT .
+Within Joda-Time an instant is represented by the CLT interface.
+The main implementation of this interface, and the class that the average API user needs to be most familiar with, is CLT .
+The millisecond instant can be converted to any date time field using a CLT .
+To assist with this, methods are provided on CLT that act as getters for the most common date and time fields.
+A companion mutable class to CLT is CLT .
+Other implementations of CLT include CLT and CLT . &quot; &quot;
+An Instant is defined as a moment in the datetime continuum specified as a number of milliseconds from 1970-01-01T00:00Z. This definition of milliseconds is consistent with that of the JDK in CLT or CLT .
+Within Joda-Time an instant is represented by the CLT interface.
+The main implementation of this interface, and the class that the average API user needs to be most familiar with, is CLT .
+To assist with this, methods are provided on CLT that act as getters for the most common date and time fields.
+A companion mutable class to CLT is CLT .
+Other implementations of CLT include CLT and CLT . &quot; &quot;
+An Instant is defined as a moment in the datetime continuum specified as a number of milliseconds from 1970-01-01T00:00Z. This definition of milliseconds is consistent with that of the JDK in CLT or CLT .
+Within Joda-Time an instant is represented by the CLT interface.
+The main implementation of this interface, and the class that the average API user needs to be most familiar with, is CLT .
+To assist with this, methods are provided on CLT that act as getters for the most common date and time fields.
+A companion mutable class to CLT is CLT .
+Other implementations of CLT include CLT and CLT . &quot; &quot;
+The most frequently used concept in Joda-Time is that of the CLT .
+An Instant is defined as a moment in the datetime continuum specified as a number of milliseconds from 1970-01-01T00:00Z. This definition of milliseconds is consistent with that of the JDK in CLT or CLT .
+Within Joda-Time an instant is represented by the CLT interface.
+The main implementation of this interface, and the class that the average API user needs to be most familiar with, is CLT .
+To assist with this, methods are provided on CLT that act as getters for the most common date and time fields.
+A companion mutable class to CLT is CLT .
+Other implementations of CLT include CLT and CLT . &quot; &quot;
+An Instant is defined as a moment in the datetime continuum specified as a number of milliseconds from 1970-01-01T00:00Z. This definition of milliseconds is consistent with that of the JDK in CLT or CLT .
+Within Joda-Time an instant is represented by the CLT interface.
+The main implementation of this interface, and the class that the average API user needs to be most familiar with, is CLT .
+To assist with this, methods are provided on CLT that act as getters for the most common date and time fields.
+A companion mutable class to CLT is CLT .
+Other implementations of CLT include CLT and CLT . &quot; &quot;
+The main API of CLT has been kept small, limited to just get methods for each calendar field.
+So, for instance, the 'day-of-year' calendar field would be retrieved by calling the CLT method.
+The main API of CLT has been kept small, limited to just get methods for each calendar field.
+So, for instance, the 'day-of-year' calendar field would be retrieved by calling the CLT method.
+Thus, 'day-of-year', whose value is directly returned by the method CLT , is also associated with the property returned by the CLT method.
+The property class associated with CLT is CLT .
+Thus, 'day-of-year', whose value is directly returned by the method CLT , is also associated with the property returned by the CLT method.
+The property class associated with CLT is CLT .
+Thus, 'day-of-year', whose value is directly returned by the method CLT , is also associated with the property returned by the CLT method.
+The property class associated with CLT is CLT .
+Thus, 'day-of-year', whose value is directly returned by the method CLT , is also associated with the property returned by the CLT method.
+The property class associated with CLT is CLT .
+An CLT  in Joda-Time represents an interval of time from one instant to another instant.
+CLT are implemented as half-open, which is to say that the start instant is inclusive but the end instant is exclusive.
+Two implementations are provided, CLT and CLT , both are specializations of CLT . &quot; &quot;
+Two implementations are provided, CLT and CLT , both are specializations of CLT . &quot; &quot;
+Two implementations are provided, CLT and CLT , both are specializations of CLT . &quot; &quot;
+A CLT  in Joda-Time represents a duration of time measured in milliseconds.
+CLT are a very simple concept, and the implementation is also simple.
+CLT can be added to an instant, or to either end of an interval to change those objects.
+In datetime maths you could say:   instant + duration = instant   Currently, there is only one implementation of the CLT interface: CLT . &quot; &quot;
+In datetime maths you could say:   instant + duration = instant   Currently, there is only one implementation of the CLT interface: CLT . &quot; &quot;
+A CLT  in Joda-Time represents a period of time defined in terms of fields, for example, 3 years 5 months 2 days and 7 hours.
+CLT are implemented as a set of CLT fields.
+The CLT class allows this set of fields to be restricted, for example to elimate weeks.
+CLT are not associated with either a chronology or a time zone.
+CLT can be added to an instant, or to either end of an interval to change those objects.
+In datetime maths you could say:   instant + period = instant   There are two implementations of the CLT interface, CLT and CLT . &quot; &quot;
+Periods are implemented as a set of CLT fields.
+The CLT class allows this set of fields to be restricted, for example to elimate weeks.
+In datetime maths you could say:   instant + period = instant   There are two implementations of the CLT interface, CLT and CLT . &quot; &quot;
+Periods are implemented as a set of CLT fields.
+The CLT class allows this set of fields to be restricted, for example to elimate weeks.
+In datetime maths you could say:   instant + period = instant   There are two implementations of the CLT interface, CLT and CLT . &quot; &quot;
+Periods are implemented as a set of CLT fields.
+The CLT class allows this set of fields to be restricted, for example to elimate weeks.
+In datetime maths you could say:   instant + period = instant   There are two implementations of the CLT interface, CLT and CLT . &quot; &quot;
+The actual calculations of the chronology are split between the CLT class itself and the field classes - CLT and CLT .
+Thus there is an initial setup cost when using Joda-Time, but after that only the main API instance classes (CLT , CLT , CLT , etc.) have creation and garbage collector costs.
+For most applications, the Chronology can be ignored as it will default to the CLT .
+The actual calculations of the chronology are split between the CLT class itself and the field classes - CLT and CLT .
+Thus there is an initial setup cost when using Joda-Time, but after that only the main API instance classes (CLT , CLT , CLT , etc.) have creation and garbage collector costs.
+The actual calculations of the chronology are split between the CLT class itself and the field classes - CLT and CLT .
+Thus there is an initial setup cost when using Joda-Time, but after that only the main API instance classes (CLT , CLT , CLT , etc.) have creation and garbage collector costs.
+The Joda-Time design is based around the CLT .
+The actual calculations of the chronology are split between the CLT class itself and the field classes - CLT and CLT .
+Thus there is an initial setup cost when using Joda-Time, but after that only the main API instance classes (CLT , CLT , CLT , etc.) have creation and garbage collector costs.
+Although the CLT is key to the design, it is not key to using the API !!
+For most applications, the CLT can be ignored as it will default to the ISOChronology.
+The actual calculations of the chronology are split between the CLT class itself and the field classes - CLT and CLT .
+Thus there is an initial setup cost when using Joda-Time, but after that only the main API instance classes (CLT , CLT , CLT , etc.) have creation and garbage collector costs.
+The actual calculations of the chronology are split between the CLT class itself and the field classes - CLT and CLT .
+Thus there is an initial setup cost when using Joda-Time, but after that only the main API instance classes (CLT , CLT , CLT , etc.) have creation and garbage collector costs.
+For most applications, the Chronology can be ignored as it will default to the CLT .
+The actual calculations of the chronology are split between the CLT class itself and the field classes - CLT and CLT .
+Thus there is an initial setup cost when using Joda-Time, but after that only the main API instance classes (CLT , CLT , CLT , etc.) have creation and garbage collector costs.
+The most important is CLT which currently has 4 implementations.
+Other significant interfaces include CLT and CLT .
+When working with a Collections interface, such as CLT or CLT you will normally hold your variable as a type of CLT or CLT , only referencing the concrete class when you create the object.
+The most important is CLT which currently has 4 implementations.
+Other significant interfaces include CLT and CLT .
+When working with a Collections interface, such as CLT or CLT you will normally hold your variable as a type of CLT or CLT , only referencing the concrete class when you create the object.
+The most important is CLT which currently has 4 implementations.
+Other significant interfaces include CLT and CLT .
+When working with a Collections interface, such as CLT or CLT you will normally hold your variable as a type of CLT or CLT , only referencing the concrete class when you create the object.
+A datetime object is created by using a CLT constructor.
+CLT also provides other constructors to create a specific date and time using a variety of standard fields.
+The CLT class has a constructor which takes an CLT as input.
+In particular this constructor can be passed a JDK CLT , JDK CLT or JDK CLT (It also accepts an ISO8601 formatted String, or CLT object representing milliseconds).
+The other half of interoperability with JDK is provided by CLT methods which return JDK objects.
+Thus inter-conversion between Joda CLT and JDK CLT can be performed as follows.
+toDate(), // from JDK to Joda dt = new DateTime(jdkDate),   Similarly, for JDK CLT :   // from Joda to JDK DateTime dt = new DateTime(), Calendar jdkCal = dt.
+CHINESE), // from JDK to Joda dt = new DateTime(jdkCal),   and JDK CLT :   // from Joda to JDK DateTime dt = new DateTime(), GregorianCalendar jdkGCal = dt.
+The separation of the calculation of calendar fields (CLT ) from the representation of the calendar instant (CLT ) makes for a powerful and flexible API.
+The connection between the two is maintained by the property (CLT ) which provides access to the field.
+For instance, the direct way to get the day of week for a particular CLT , involves calling the method.
+getDayOfWeek(),   where CLT can take the values (from class CLT ).
+The separation of the calculation of calendar fields (CLT ) from the representation of the calendar instant (CLT ) makes for a powerful and flexible API.
+The connection between the two is maintained by the property (CLT ) which provides access to the field.
+For instance, the direct way to get the day of week for a particular CLT , involves calling the method.
+getDayOfWeek(),   where CLT can take the values (from class CLT ).
+The separation of the calculation of calendar fields (CLT ) from the representation of the calendar instant (CLT ) makes for a powerful and flexible API.
+The connection between the two is maintained by the property (CLT ) which provides access to the field.
+For instance, the direct way to get the day of week for a particular CLT , involves calling the method.
+getDayOfWeek(),   where CLT can take the values (from class CLT ).
+The separation of the calculation of calendar fields (CLT ) from the representation of the calendar instant (CLT ) makes for a powerful and flexible API.
+The connection between the two is maintained by the property (CLT ) which provides access to the field.
+For instance, the direct way to get the day of week for a particular CLT , involves calling the method.
+getDayOfWeek(),   where CLT can take the values (from class CLT ).
+For a complete reference, see the documentation for the base class CLT In practice, one would not actually create the intermediate CLT variable.
+Note: For the single case of getting the numerical value of a field, we recommend using the get method on the main CLT object as it is more efficient.
+The CLT implementation provides a complete list of standard calendar fields:   dt.
+getDayOfWeek(),   Each of these also has a corresponding property method, which returns a CLT binding to the appropriate field, such as CLT or CLT .
+The CLT implementation provides a complete list of standard calendar fields:   dt.
+getDayOfWeek(),   Each of these also has a corresponding property method, which returns a CLT binding to the appropriate field, such as CLT or CLT .
+The CLT implementation provides a complete list of standard calendar fields:   dt.
+getDayOfWeek(),   Each of these also has a corresponding property method, which returns a CLT binding to the appropriate field, such as CLT or CLT .
+The CLT implementation provides a complete list of standard calendar fields:   dt.
+getDayOfWeek(),   Each of these also has a corresponding property method, which returns a CLT binding to the appropriate field, such as CLT or CLT .
+Thus to compute the hours, minutes and seconds of the instant represented by a CLT , we would write.
+CLT objects have value semantics, and cannot be modified after construction (they are immutable).
+To return to our prior example, if we wish to modify the CLT object by changing its day-of-week field to Monday we can do so by using the CLT method of the property:   DateTime result = dt.
+MONDAY),   Note: If the CLT object is already set to Monday then the same object will be returned.
+To add to a date you could use the CLT method.
+To return to our prior example, if we wish to modify the CLT object by changing its day-of-week field to Monday we can do so by using the CLT method of the property:   DateTime result = dt.
+MONDAY),   Note: If the CLT object is already set to Monday then the same object will be returned.
+To add to a date you could use the CLT method.
+To return to our prior example, if we wish to modify the CLT object by changing its day-of-week field to Monday we can do so by using the CLT method of the property:   DateTime result = dt.
+MONDAY),   Note: If the CLT object is already set to Monday then the same object will be returned.
+To add to a date you could use the CLT method.
+Another means of accomplishing similar calculations is to use methods on the CLT object itself.
+Thus we could add 3 days to CLT directly as follows:   DateTime result = dt.
+toDateTime(),   CLT has a number of methods, including standard setters, for directly modifying the datetime. &quot; &quot;
+CLT comes with support for a couple of common timezone calculations.
+forID(&quot;,Europe/London&quot;,)),   where CLT returns the timezone value for London.
+The resulting value CLT has the same absolute millisecond time, but a different set of field values.
+forID(&quot;,Europe/London&quot;,)),   A set of all TimeZone ID strings (such as &quot;,Europe/London&quot;,) may be obtained by calling CLT .
+CLT comes with support for a couple of common timezone calculations.
+forID(&quot;,Europe/London&quot;,)),   where CLT returns the timezone value for London.
+The resulting value CLT has the same absolute millisecond time, but a different set of field values.
+forID(&quot;,Europe/London&quot;,)),   A set of all TimeZone ID strings (such as &quot;,Europe/London&quot;,) may be obtained by calling CLT .
+Changing CLT .
+The CLT class also has one method for changing calendars.
+getYear(), // returns 2547   where CLT is a factory method for obtaining a Buddhist chronology. &quot; &quot;
+The CLT class also has one method for changing calendars.
+getYear(), // returns 2547   where CLT is a factory method for obtaining a Buddhist chronology. &quot; &quot;
+The CLT class also has one method for changing calendars.
+getYear(), // returns 2547   where CLT is a factory method for obtaining a Buddhist chronology. &quot; &quot;
+All printing and parsing is performed using a CLT object.
+Given such an object CLT , parsing is performed as follows.
+parseDateTime(strInputDateTime),   Thus a CLT object is returned from the parse method of the formatter.
+Support for standard formats based on ISO8601 is provided by the CLT class.
+For example, if you wanted to use the ISO standard format for datetime, which is CLT , you would initialize CLT as.
+dateTime(),   You would then use CLT as described above, to read or write datetime objects in this format. &quot; &quot;
+If you need a custom formatter which can be described in terms of a format pattern, you can use the factory method provided by the CLT class.
+Thus to get a formatter for a 4 digit year, 2 digit month and 2 digit day of month, i.e. a format of CLT you would do.
+You may need to print or parse in a particular CLT .
+This is achieved by calling the CLT method on a formatter, which returns another formatter based on the original.
+GERMAN),   Formatters are immutable, so the original is not altered by the CLT method. &quot; &quot;
+If you need a custom formatter which can be described in terms of a format pattern, you can use the factory method provided by the CLT class.
+Thus to get a formatter for a 4 digit year, 2 digit month and 2 digit day of month, i.e. a format of CLT you would do.
+You may need to print or parse in a particular CLT .
+This is achieved by calling the CLT method on a formatter, which returns another formatter based on the original.
+GERMAN),   Formatters are immutable, so the original is not altered by the CLT method. &quot; &quot;
+The final CLT method creates the actual formatter that will be used to print/parse.
+Since the interpretation of a two digit year is ambiguous, the CLT takes an extra parameter that defines the 100 year range of the two digits, by specifying the mid point of the range.
+The final CLT method creates the actual formatter that will be used to print/parse.
+Since the interpretation of a two digit year is ambiguous, the CLT takes an extra parameter that defines the 100 year range of the two digits, by specifying the mid point of the range.
+To simplify the access to the formatter architecture, methods have been provided on the datetime classes such as CLT .
+Result CLT is the standard ISO8601 string for the DateTime.
+Result CLT will output using the pattern 'dd:MM:yy' (note that patterns are cached internally).
+Result CLT will output using the pattern 'EEE' in French.
+Result CLT will output using the specified formatter, and is thus the same as CLT . &quot; &quot;
+All methods that get the current time are indirected via CLT .
+The constructors on each major concrete class in the API take an CLT as a parameter.
+For example, the converters can convert a JDK CLT object to a CLT .
+See CLT for details. &quot;

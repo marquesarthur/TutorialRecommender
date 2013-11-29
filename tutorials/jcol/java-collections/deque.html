@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="utf-8">
+
+<link rel="stylesheet" type="text/css" href="/css/stylesheet-mobile-minified.css" >
+
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="/javascript/resize-fit-minified.js"></script>
+
+<link rel="alternate"  type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/jenkov-com?format=xml" />
+
+
+<meta name="viewport" content="width=device-width" />
+
+<title>Java's Deque Interface</title>
+
+<META NAME="Title" CONTENT="Java's Deque Interface">
+
+
+
+<LINK REL="schema.dc" HREF="http://purl.org/metadata/dublin_core_elements">
+<META NAME="DC.Title" CONTENT="Java's Deque Interface">
+
+<META NAME="DC.Subject" CONTENT="Java's Deque Interface">
+
+<META NAME="Robots" CONTENT="ALL">
+
+
+
+
+<link href="https://plus.google.com/108227213807945109821" rel="publisher" />
+
+
+<meta name="google-site-verification" content="i_TwzdElg-by5uXLvyAjuIaCjxo0yjtW8LdRPUDEEcw" />
+
+
+<style>
+
+
+#body-div {
+    width             : 870px; /* default with 900px wide page */
+
+    padding-left      : 10px;
+    padding-right     : 20px;
+    padding-top       : 10px;
+
+    background-color  : #ffffff;
+
+}
+
+#left-bar {
+    width             : 240px;
+    background-color  : #ffffff;
+    padding           : 10px;
+    float             : left;
+}
+#left-bar-menu a {
+    font-size         : 0.9em;
+}
+
+#article-div {
+    width             : 606px;    /* default size with 900px wide page */
+    display           : block;
+    float             : left;
+    background-color  : #ffffff;
+    border-x          : 1px solid black;
+}
+
+#side-ads {
+    padding-left: 10px; /* +10 from left-bar, so 20 in total */
+}
+
+#top-ads {
+    padding-left : 20px;
+}
+#bottom-ads {
+    padding-left : 36px;
+}
+
+
+.book-link {
+    height            : 100px;
+    background-repeat : no-repeat;
+    border            : 1px solid #eeeeee;
+    margin-top        : 30px;
+    padding-left      : 102px;
+    color             : #333333;
+    font-weight       : normal;
+    cursor            : pointer;
+}
+.book-link p{
+    margin-top        : 0px;
+    padding-top       : 5px;
+    padding-right     : 20px;
+    font-size         : 0.8em;
+}
+.book-link-title {
+    margin-top        :  5px;
+    margin-bottom     :  5px;
+    font-size         : 0.9em;
+    font-weight       : bold;
+}
+
+
+.signupframe {
+    border: 1px solid #cccccc;
+    background: #ffffff;
+    color: #002d62;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.articleTopMiniHeader {
+    Font-size: 13px; Font-weight: bold;
+}
+.articleTopMiniHeaderCell {
+    border-bottomx: 1px solid #cccccc;
+}
+</style>
+
+</head>
+
+<body>
+
+<div id="page-div">
+
+    <div id="header">
+        <div id="header-div">
+            <div id="link-bar" style="float: left;">
+
+                <a href="http://tutorials.jenkov.com">TUTORIALS</a> &nbsp;&nbsp;|&nbsp;&nbsp;
+                <a href="http://jenkov.com/books/index.html">BOOKS</a> &nbsp;&nbsp;|&nbsp;&nbsp;
+                <a href="http://butterfly.jenkov.com">BUTTERFLY COMPONENTS</a> &nbsp;|&nbsp;&nbsp;
+                <a href="http://jenkov.com/about/index.html">ABOUT</a> &nbsp;&nbsp;|&nbsp;&nbsp;
+                <a href="http://feeds2.feedburner.com/jenkov-com">RSS</a>
+            </div>
+            <div id="logo-bar">
+                <br/><br/><br/>
+                &nbsp;&nbsp;&nbsp;A Voice in the Buzz on Software
+            </div>
+            &nbsp;
+        </div>
+        <div id="header-divider"></div>
+    </div>
+
+    <div id="body-div">
+
+        <div id="top-ads">
+            <script type="text/javascript"><!--
+            google_ad_client = "ca-pub-5569543489255665";
+            /* Tutorials - Top Banner */
+            google_ad_slot = "7630855405";
+            google_ad_width = 728;
+            google_ad_height = 90;
+            //-->
+            </script>
+            <script type="text/javascript"
+                    src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+            </script>
+        </div>
+
+        <div id="left-bar" >
+            <div id="left-bar-menu"><table cellspacing="2" border="0" width="100%" style="padding-right: 10px;" bgcolor="#ffffff" style="border-bottom: 1px solid #dddddd">
+    <tr>
+        <!--<td colspan="2"><img src="/images/toc.png" alt="Table of Contents"/></td>-->
+        <td colspan="3" style="padding-top:10px;"><span class="trailhead">&nbsp;&nbsp;Java Collections</span></td>
+    </tr>
+    <tr><td height="5"></td></tr>
+    <tr>
+        <td width="10"></td>
+        <td style="padding-right: 4px;" valign="top"><img src="/images/arrow-right-light-medium.png" alt=""></td>
+        <td style="padding-top: 2px;"><a href="index.html">Java Collections Introduction</a></td>
+    </tr>
+    <tr>
+        <td width="10"></td>
+        <td style="padding-right: 4px;" valign="top"><img src="/images/arrow-right-light-medium.png" alt=""></td>
+        <td style="padding-top: 2px;"><a href="overview.html">Overview of Interfaces</a></td>
+    </tr>
+    <tr>
+        <td width="10"></td>
+        <td style="padding-right: 4px;" valign="top"><img src="/images/arrow-right-light-medium.png" alt=""></td>
+        <td style="padding-top: 2px;"><a href="iterable.html">Iterable</a></td>
+    </tr>
+    <tr>
+        <td width="10"></td>
+        <td style="padding-right: 4px;" valign="top"><img src="/images/arrow-right-light-medium.png" alt=""></td>
+        <td style="padding-top: 2px;"><a href="collection.html">Collection</a></td>
+    </tr>
+    <tr>
+        <td width="10"></td>
+        <td style="padding-right: 4px;" valign="top"><img src="/images/arrow-right-light-medium.png" alt=""></td>
+        <td style="padding-top: 2px;"><a href="generic-collections.html">Generic Collections</a></td>
+    </tr>
+    <tr>
+        <td width="10"></td>
+        <td style="padding-right: 4px;" valign="top"><img src="/images/arrow-right-light-medium.png" alt=""></td>
+        <td style="padding-top: 2px;"><a href="list.html">List</a></td>
+    </tr>
+    <tr>
+        <td width="10"></td>
+        <td style="padding-right: 4px;" valign="top"><img src="/images/arrow-right-light-medium.png" alt=""></td>
+        <td style="padding-top: 2px;"><a href="set.html">Set</a></td>
+    </tr>
+    <tr>
+        <td width="10"></td>
+        <td style="padding-right: 4px;" valign="top"><img src="/images/arrow-right-light-medium.png" alt=""></td>
+        <td style="padding-top: 2px;"><a href="sortedset.html">SortedSet</a></td>
+    </tr>
+    <tr>
+        <td width="10"></td>
+        <td style="padding-right: 4px;" valign="top"><img src="/images/arrow-right-light-medium.png" alt=""></td>
+        <td style="padding-top: 2px;"><a href="navigableset.html">NavigableSet</a></td>
+    </tr>
+    <tr>
+        <td width="10"></td>
+        <td style="padding-right: 4px;" valign="top"><img src="/images/arrow-right-light-medium.png" alt=""></td>
+        <td style="padding-top: 2px;"><a href="map.html">Map</a></td>
+    </tr>
+    <tr>
+        <td width="10"></td>
+        <td style="padding-right: 4px;" valign="top"><img src="/images/arrow-right-light-medium.png" alt=""></td>
+        <td style="padding-top: 2px;"><a href="sortedmap.html">SortedMap</a></td>
+    </tr>
+    <tr>
+        <td width="10"></td>
+        <td style="padding-right: 4px;" valign="top"><img src="/images/arrow-right-light-medium.png" alt=""></td>
+        <td style="padding-top: 2px;"><a href="navigablemap.html">NavigableMap</a></td>
+    </tr>
+    <tr>
+        <td width="10"></td>
+        <td style="padding-right: 4px;" valign="top"><img src="/images/arrow-right-light-medium.png" alt=""></td>
+        <td style="padding-top: 2px;"><a href="queue.html">Queue</a></td>
+    </tr>
+    <tr>
+        <td width="10"></td>
+        <td style="padding-right: 4px;" valign="top"><img src="/images/arrow-right-light-medium.png" alt=""></td>
+        <td style="padding-top: 2px;"><a href="deque.html">Deque</a></td>
+    </tr>
+    <tr>
+        <td width="10"></td>
+        <td style="padding-right: 4px;" valign="top"><img src="/images/arrow-right-light-medium.png" alt=""></td>
+        <td style="padding-top: 2px;"><a href="stack.html">Stack</a></td>
+    </tr>
+    <tr>
+        <td width="10"></td>
+        <td style="padding-right: 4px;" valign="top"><img src="/images/arrow-right-light-medium.png" alt=""></td>
+        <td style="padding-top: 2px;"><a href="hashcode-equals.html">hashCode() and equals()</a></td>
+    </tr>
+    <tr>
+        <td width="10"></td>
+        <td style="padding-right: 4px;" valign="top"><img src="/images/arrow-right-light-medium.png" alt=""></td>
+        <td style="padding-top: 2px;"><a href="sorting.html">Sorting</a></td>
+    </tr>
+
+    <tr><td>&nbsp;</td></tr>
+    
+</table>
+</div>
+            <br/><br/>
+
+            
+
+<div id="SignUp">
+    <form action="http://jenkov.us4.list-manage.com/subscribe/post?u=39844b57926863757a8be6553&amp;id=74bcc45775" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+        <table width="100%" class="signupframe" border="0" cellspacing="0" cellpadding="5">
+            <tr><td colspan="2"><font color="red"><b>Jakob Jenkov's Free Tips & Tutorials!</b></font></td></tr>
+            <tr><td colspan="2" valign="top"><img src="/images/layout/small-portrait_mini.jpg" align="right" width="111" height="127">
+                Sign up for my news letter or <a href="http://feeds2.feedburner.com/jenkov-com" target="_blank">RSS feed</a>, and
+                never miss any of my tips about Java and web development.
+
+            </td></tr>
+            <tr>
+                <td valign=top align=right>
+                    <font size="1" face="Arial,Helvetica, sans-serif">*</font> <font size="2">First Name</font>
+                </td>
+                <td align=left>
+                    <input type="text" value="" name="FNAME" class="" id="mce-FNAME">
+                </td>
+            </tr>
+            <tr>
+                <td valign=top align=right>
+                    <font size="1" face="Arial,Helvetica, sans-serif">*</font> <font size="2">Last Name</font>
+                </td>
+                <td align=left>
+                    <input type="text" value="" name="LNAME" class="" id="mce-LNAME">
+                </td>
+            </tr>
+            <tr>
+                <td valign=top align=right>
+                    <font size="1" face="Arial,Helvetica, sans-serif">*</font> <font size="2">Email</font>
+                </td>
+                <td align=left>
+                    <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+                </td>
+            </tr>
+            <input type=hidden name="listid" value="9579">
+            <input type=hidden name="specialid:9579" value="SW15">
+
+            <input type=hidden name=clientid value="435086">
+            <input type=hidden name=formid value="587">
+            <input type=hidden name=reallistid value="1">
+            <input type=hidden name=doubleopt value="1">
+            <tr>
+                <td> </td>
+                <td><input type="submit" value="Yes, give me tips!" name="subscribe" id="mc-embedded-subscribe" class="button"></td>
+            </tr>
+            <tr><td colspan="2" align="center"><a href="http://feeds2.feedburner.com/jenkov-com"><img src="http://feeds2.feedburner.com/~fc/jenkov-com?bg=FF9900&amp;fg=000000&amp;anim=0" height="26" width="88" style="border:0" alt="" /></a></td></tr>
+            <tr><td colspan="2" align="center"><a href='http://www.twitter.com/jjenkov' style="font-size: 0.8em;"><img src="/images/social-site-icons/twitter_32.png" border="0" width="32" alt="Follow me on Twitter"> Follow me on Twitter</a></td></tr>
+        </table>
+    </form>
+</div>
+<br/>
+
+            <div id="side-ads">
+                <script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <ins class="adsbygoogle"
+                     style="display:inline-block;width:160px;height:600px"
+                     data-ad-client="ca-pub-5569543489255665"
+                     data-ad-slot="3389666608"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+            <br/><br/>
+        </div>
+
+        <div id="article-div">
+            
+
+<h1>Java's Deque Interface</h1>
+
+
+
+
+
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%" >
+
+    <tr>
+        <td>
+            
+            <img src="/images/layout/small-portrait_mini.jpg"  width="111" height="127"><br/>
+            <span class="author">By <a target="jakob-jenkov" href="http://jakob.jenkov.com">Jakob Jenkov</a></span>
+        </td>
+        <td align="left" valign="top">
+
+            <table width="100%">
+                
+                
+                <tr><td align="left" valign="top">
+                        
+                        <div style="float: left;">
+                        <script type="text/javascript" src="https://apis.google.com/js/plusone.js" async></script>
+                        <g:plusone></g:plusone>
+                        </div>
+
+                        
+                        <div style="float: left;">
+                        <script type="text/javascript">var dzone_style = '2';</script>
+                        <script language="javascript" src="http://widgets.dzone.com/links/widgets/zoneit.js"></script>
+                        </div>
+
+                         
+                         <div style="float:left;">
+                         
+                         <a href="javascript:window.location = 'http://www.facebook.com/sharer.php?u=' + encodeURIComponent (location.href)+'&t='+encodeURIComponent( document.title);" target="_blank">Share on Facebook</a>
+                     </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="10"></td>
+                </tr>
+
+                
+                <tr>
+                    <td colspan="3">
+                        <table width="100%">
+                            <tr><td class="articleTopMiniHeaderCell" colspan="2"><span class="articleTopMiniHeader">Connect with me:&nbsp;&nbsp;</span></td></tr>
+                            <tr>
+                                <td align="left" valign="top">
+                                    <a href="https://plus.google.com/108227213807945109821?rel=author" style="text-decoration:none;" title="Connect on Google+" target="_blank" rel="author"><img src="https://ssl.gstatic.com/images/icons/gplus-32.png" alt="" style="border:0;width:32px;height:32px;"/></a>
+                                    &nbsp;
+                                    <a href="https://twitter.com/#!/jjenkov" title="Follow on Twitter" target="_blank"><img src="/images/social-site-icons/twitter_32.png" border="0" width="32"></a>
+                                </td>
+                                <td  valign="top" align="right">
+                                    
+                                    <a href="http://feeds2.feedburner.com/~r/jenkov-com/~6/5"><img src="http://feeds2.feedburner.com/jenkov-com.5.gif" alt="Jenkov.com - News" style="border:0"></a>
+                                </td>
+                            </tr>
+                        </table>
+
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+        </td>
+    </tr>
+
+</table>
+
+
+<p>
+    The <code>java.util.Deque</code> interface is a subtype of the
+    <a href="queue.html"><code>java.util.Queue</code></a> interface. It represents
+    a queue where you can insert and remove elements from both ends of the queue.
+    Thus, "Deque" is short for "Double Ended Queue" and is pronounced "deck", like
+    a deck of cards.
+</p>
+
+
+
+<p>
+    Here is a list of the topics covered in this text:
+</p>
+
+<ol>
+    <li><a href="#implementations">Deque Implementations</a></li>
+    <li><a href="#add">Adding and Accessing Elements</a></li>
+    <li><a href="#remove">Removing Elements</a></li>
+    <li><a href="#generics">Generic Deques</a></li>
+    <li><a href="#javadoc">More Details in the JavaDoc</a></li>
+</ol>
+
+<a name="implementations"></a>
+<br/>
+<h2>Deque Implementations</h2>
+<p>
+    Being a <code>Queue</code> subtype all methods in the <code>Queue</code> and <code>Collection</code> interfaces
+    are also available in the <code>Deque</code> interface.
+</p>
+
+<p>
+    Since <code>Deque</code> is an interface you need to instantiate a concrete implementation
+    of the interface in order to use it. You can choose between the following <code>Deque</code>
+    implementations in the Java Collections API:
+</p>
+
+<ul>
+    <li>java.util.ArrayDeque</li>
+    <li>java.util.LinkedList</li>
+</ul>
+
+<p>
+    <code>LinkedList</code> is a pretty standard deque / queue implementation.
+</p>
+
+<p>
+    <code>ArrayDeque</code> stores its elements internally in an array. If the number of elements
+    exceeds the space in the array, a new array is allocated, and all elements moved over. In other
+    words, the <code>ArrayDeque</code> grows as needed, even if it stores its elements in an array.
+
+</p>
+
+<p>
+    There are also <code>Queue</code> implementations in the <code>java.util.concurrent</code> package,
+    but I will leave the concurrency utilities out of this tutorial.
+</p>
+
+<p>
+    Here are a few examples of how to create a <code>Deque</code> instance:
+</p>
+
+<pre class="codeBox">
+Deque dequeA = new LinkedList();
+Deque dequeB = new ArrayDeque();
+</pre>
+
+
+<a name="add"></a>
+<br/>
+<h2>Adding and Accessing Elements</h2>
+<p>
+    To add elements to the tail of a <code>Deque</code> you call its <code>add()</code> method.
+    You can also use the <code>addFirst()</code> and <code>addLast()</code> methods, which add
+    elements to the head and tail of the deque.
+</p>
+
+<pre class="codeBox">
+Deque dequeA = new LinkedList();
+
+dequeA.add     ("element 1"); //add element at tail
+dequeA.addFirst("element 2"); //add element at head
+dequeA.addLast ("element 3"); //add element at tail
+</pre>
+
+
+<p>
+    The order in which the elements added to the <code>Deque</code> are stored internally,
+    depends on the implementation. The two implementations mentioned earlier both store
+    the elements in the order (first or last) in which they are inserted.
+</p>
+
+<p>
+    You can peek at the element at the head of the queue without taking the element out of
+    the queue. This is done via the <code>element()</code> method. You can also use the
+    <code>getFirst</code> and <code>getLast()</code> methods, which return the first and
+    last element in the <code>Deque</code>. Here is how that looks:
+</p>
+
+<pre class="codeBox">
+Object firstElement = dequeA.element();
+Object firstElement = dequeA.getFirst();
+Object lastElement  = dequeA.getLast();
+</pre>
+
+<p>
+    Taking elements from the deque is covered later.
+</p>
+
+<p>
+    You can also iterate all elements of a deque, instead of just processing one at a time.
+    Here is how that looks:
+</p>
+
+<pre class="codeBox">
+Deque dequeA = new LinkedList();
+
+dequeA.add("element 0");
+dequeA.add("element 1");
+dequeA.add("element 2");
+
+//access via Iterator
+Iterator iterator = dequeA.iterator();
+while(iterator.hasNext(){
+  String element = (String) iterator.next();
+}
+
+//access via new for-loop
+for(Object object : dequeA) {
+    String element = (String) object;
+}
+</pre>
+
+<p>
+    When iterating the deque via its <code>Iterator</code> or via the for-loop (which also uses the Iterator
+    behind the scene, the sequence in which the elements are iterated depends on the deque implementation.
+</p>
+
+
+<a name="remove"></a>
+<br/>
+<h2>Removing Elements</h2>
+<p>
+    To remove elements from a deque, you call the <code>remove()</code>, <code>removeFirst()</code>
+    and <code>removeLast</code> methods. Here are a few examples:
+</p>
+
+<pre class="codeBox">
+Object firstElement = dequeA.remove();
+Object firstElement = dequeA.removeFirst();
+Object lastElement  = dequeA.removeLast();
+</pre>
+
+
+<a name="generics"></a>
+<br/>
+<h2>Generic Deque</h2>
+<p>
+    By default you can put any <code>Object</code> into a <code>Deque</code>, but from Java 5, Java Generics
+    makes it possible to limit the types of object you can insert into a <code>Deque</code>. Here is an example:
+</p>
+
+<pre class="codeBox">
+Deque&lt;MyObject&gt; deque = new LinkedList&lt;MyObject&gt;();
+</pre>
+
+<p>
+    This <code>Deque</code> can now only have <code>MyObject</code> instances inserted into it.
+    You can then access and iterate its elements without casting them. Here is how it looks:
+</p>
+
+<pre class="codeBox">
+MyObject myObject = deque.remove();
+
+for(MyObject anObject : deque){
+   //do someting to anObject...   
+}
+</pre>
+
+<p>
+    For more information about Java Generics, see the <a href="/java-generics/index.html">Java Generics Tutorial</a>.
+</p>
+
+
+<a name="javadoc"></a>
+<br/>
+<h2>More Details in the JavaDoc</h2>
+
+<p>
+    There is a lot more you can do with a <code>Deque</code>, but you will have to check out the JavaDoc
+    for more details. This text focused on the two most common operations: Adding / removing elements,
+    and iterating the elements.
+</p>
+
+
+            <br/>
+        </div>
+
+
+    </div>
+
+
+<div id="bottom-ads">
+<script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-5569543489255665"
+     data-ad-slot="7776167002"></ins>
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<br/><br/><br/>
+</div>
+
+    <div id="footer-divider"></div>
+    <div id="footer"></div>
+
+</div>
+
+
+<script>
+    $(document).ready(function() {
+
+        //alert($("body").width());
+
+        $(window).resize(function(event) {
+            doResize(false);
+        });
+
+        // resize window depending on browser size.
+        doResize(false);
+
+        // activate book link, if any present.
+        $(".book-link").click(function() {
+            window.open( $(this).attr("book-link-url"));
+        });
+
+        
+    });
+
+</script>
+
+
+<script type="text/javascript">
+
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-4036229-3']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+
+</script>
+
+
+
+
+
+</body>
+
+
+</html>

@@ -1,0 +1,150 @@
+<html>
+ <head> 
+  <title>Data Forms</title> 
+  <link rel="stylesheet" type="text/css" href="style.css" /> 
+ </head> 
+ <body> 
+  <div class="subsection"> 
+   <div class="header">
+     Data Forms 
+   </div> 
+   <p> Allows to exchange structured data between users and applications for common tasks such as registration and searching using Forms. </p> 
+   <ul> 
+    <li><a href="#gather">Create a Form to fill out</a></li> 
+    <li><a href="#fillout">Answer a Form</a></li> 
+   </ul> 
+   <b>JEP related:</b> 
+   <a href="http://www.jabber.org/jeps/jep-0004.html">JEP-4</a> 
+   <hr /> 
+  </div> 
+  <div class="subsection"> 
+   <div class="subheader"> 
+    <a name="gather">Create a Form to fill out</a> 
+   </div> 
+   <p> <b>Description</b></p> 
+   <p> An XMPP entity may need to gather data from another XMPP entity. Therefore, the data-gathering entity will need to create a new Form, specify the fields that will conform the Form and finally send the Form to the data-providing entity.</p> 
+   <b>Usage</b> 
+   <p> In order to create a Form to fill out use the <i><b> 
+      <clt fqn="org.jivesoftware.smackx.Form" api="Form" kind="class">
+        Form 
+      </clt></b></i>'s constructor passing the constant <b> 
+     <clt fqn="org.jivesoftware.smackx.Form" api="Form" kind="class">
+       Form.TYPE_FORM 
+     </clt></b> as the parameter. The next step is to create the form fields and add them to the form. In order to create and customize a <i><b> 
+      <clt fqn="org.jivesoftware.smackx.FormField" api="FormField" kind="class">
+        FormField 
+      </clt></b></i> use the <i><b> 
+      <clt fqn="org.jivesoftware.smackx.FormField" api="FormField" kind="class">
+        FormField 
+      </clt></b></i>'s constructor specifying the variable name of the field as the parameter. Then use <b> 
+     <clt fqn="org.jivesoftware.smackx.FormField.setType" api="setType" kind="method">
+       setType(String type) 
+     </clt></b> to set the field's type (e.g. FormField.TYPE_HIDDEN, FormField.TYPE_TEXT_SINGLE). Once we have the <i><b> 
+      <clt fqn="org.jivesoftware.smackx.Form" api="Form" kind="class">
+        Form 
+      </clt></b></i> instance and the <i><b>FormFields</b></i> the last step is to send <b> 
+     <clt fqn="org.jivesoftware.smackx.Form.addField" api="addField" kind="method">
+       addField(FormField field) 
+     </clt></b> for each field that we want to add to the form.</p> 
+   <p> Once the form to fill out is finished we will want to send it in a message. Send <b> 
+     <clt fqn="org.jivesoftware.smackx.Form.getDataFormToSend" api="getDataFormToSend" kind="method">
+       getDataFormToSend() 
+     </clt></b> to the form and add the answer as an extension to the message to send.</p> 
+   <b>Examples</b> 
+   <p> In this example we can see how to create and send a form to fill out: <br /> </p> 
+   <blockquote> 
+    <pre>      <font color="#3f7f5f">// Create a new form to gather data</font>
+Form formToSend = new Form(Form.TYPE_FORM);
+formToSend.setInstructions(
+&quot;Fill out this form to report your case.\nThe case will be created automatically.&quot;);
+formToSend.setTitle(&quot;Case configurations&quot;);
+<font color="#3f7f5f">// Add a hidden variable to the form</font>
+FormField field = new FormField(&quot;hidden_var&quot;);
+field.setType(FormField.TYPE_HIDDEN);
+field.addValue(&quot;Some value for the hidden variable&quot;);
+formToSend.addField(field);
+<font color="#3f7f5f">// Add a fixed variable to the form</font>
+field = new FormField();
+field.addValue(&quot;Section 1: Case description&quot;);
+formToSend.addField(field);
+<font color="#3f7f5f">// Add a text-single variable to the form</font>
+field = new FormField(&quot;name&quot;);
+field.setLabel(&quot;Enter a name for the case&quot;);
+field.setType(FormField.TYPE_TEXT_SINGLE);
+formToSend.addField(field);
+<font color="#3f7f5f">// Add a text-multi variable to the form</font>
+field = new FormField(&quot;description&quot;);
+field.setLabel(&quot;Enter a description&quot;);
+field.setType(FormField.TYPE_TEXT_MULTI);
+formToSend.addField(field);
+<font color="#3f7f5f">// Create a chat with &quot;user2@host.com&quot;</font>
+Chat chat = conn1.createChat(&quot;user2@host.com&quot; );
+Message msg = chat.createMessage();
+msg.setBody(&quot;To enter a case please fill out this form and send it back to me&quot;);
+<font color="#3f7f5f">// Add the form to fill out to the message to send</font>
+msg.addExtension(formToSend.getDataFormToSend());
+<font color="#3f7f5f">// Send the message with the form to fill out</font>
+chat.sendMessage(msg);
+</pre> 
+   </blockquote> 
+   <hr /> 
+  </div> 
+  <div class="subsection"> 
+   <div class="subheader"> 
+    <a name="fillout">Answer a Form</a> 
+   </div> 
+   <p> <b>Description</b></p> 
+   <p> Under many situations an XMPP entity could receive a form to fill out. For example, some hosts may require to fill out a form in order to register new users. Smack lets the data-providing entity to complete the form in an easy way and send it back to the data-gathering entity.</p> 
+   <b>Usage</b> 
+   <p> The form to fill out contains useful information that could be used for rendering the form. But it cannot be used to actually complete it. Instead it's necessary to create a new form based on the original form whose purpose is to hold all the answers.</p> 
+   <p> In order to create a new <i><b> 
+      <clt fqn="org.jivesoftware.smackx.Form" api="Form" kind="class">
+        Form 
+      </clt></b></i> to complete based on the original <i><b> 
+      <clt fqn="org.jivesoftware.smackx.Form" api="Form" kind="class">
+        Form 
+      </clt></b></i> just send <b> 
+     <clt fqn="org.jivesoftware.smackx.Form.createAnswerForm" api="createAnswerForm" kind="method">
+       createAnswerForm() 
+     </clt></b> to the original <i><b> 
+      <clt fqn="org.jivesoftware.smackx.Form" api="Form" kind="class">
+        Form 
+      </clt></b></i>. Once you have a valid form that could be actually completed all you have to do is send <b>
+     <clt fqn="org.jivesoftware.smackx.Form.setAnswer" api="setAnswer" kind="method">
+      setAnswer(String variable, String value)
+     </clt></b> to the form where variable is the variable of the <i><b> 
+      <clt fqn="org.jivesoftware.smackx.FormField" api="FormField" kind="class">
+        FormField 
+      </clt></b></i> that you want to answer and value is the String representation of the answer. If the answer consist of several values you could then use <b> 
+     <clt fqn="org.jivesoftware.smackx.Form.setAnswer" api="setAnswer" kind="method">
+       setAnswer(String variable, List values) 
+     </clt></b> where values is a List of Strings.</p> 
+   <p> Once the form has been completed we will want to send it back in a message. Send <b> 
+     <clt fqn="org.jivesoftware.smackx.Form.getDataFormToSend" api="getDataFormToSend" kind="method">
+       getDataFormToSend() 
+     </clt></b> to the form and add the answer as an extension to the message to send back.</p> 
+   <b>Examples</b> 
+   <p> In this example we can see how to retrieve a form to fill out, complete the form and send it back: <br /> </p> 
+   <blockquote> 
+    <pre>      <font color="#3f7f5f">// Get the message with the form to fill out</font>
+Message msg2 = chat2.nextMessage();
+<font color="#3f7f5f">// Retrieve the form to fill out from the message</font>
+Form formToRespond = Form.getFormFrom(msg2);
+<font color="#3f7f5f">// Obtain the form to send with the replies</font>
+Form completedForm = formToRespond.createAnswerForm();
+<font color="#3f7f5f">// Add the answers to the form</font>
+completedForm.setAnswer(&quot;name&quot;, &quot;Credit card number invalid&quot;);
+completedForm.setAnswer(
+&quot;description&quot;,
+&quot;The ATM says that my credit card number is invalid. What's going on?&quot;);
+msg2 = chat2.createMessage();
+msg2.setBody(&quot;To enter a case please fill out this form and send it back to me&quot;);
+<font color="#3f7f5f">// Add the completed form to the message to send back</font>
+msg2.addExtension(completedForm.getDataFormToSend());
+<font color="#3f7f5f">// Send the message with the completed form</font>
+chat2.sendMessage(msg2);
+</pre> 
+   </blockquote> 
+  </div>  
+ </body>
+</html>

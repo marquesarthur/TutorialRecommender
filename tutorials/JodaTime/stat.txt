@@ -1,0 +1,77 @@
+"number of Section-APIElement pairs is 68"		
+"number of relevant pairs is 30"		
+"number of unique API Elements is 36"		
+"number of unique relevant API Elements is 21"		
+"-------------------------------------------"		
+"number of API Elements per Section in relevant/total"		
+"-------------------------------------------"		
+"Section6-Periods"	2	4
+"SubSection3.2-Properties "	1	4
+"Section4-Intervals"	1	3
+"Section17.3-Security"	1	1
+"Section9-Interface usage"	0	3
+"SubSection16.5-Direct access"	0	1
+"Subsection3.1-Fields"	0	2
+"SubSection16.3-Custom Formatters"	2	2
+"SubSection13.3-Using a MutableDateTime"	1	1
+"SubSection13.2-DateTime methods"	0	1
+"SubSection12.1-Accessing fields"	0	1
+"Section1-Intorduction"	0	4
+"Section17.2-Converters"	0	1
+"SubSection11.2-JDK Interoperability"	1	1
+"SubSection13.1-Modifying fields"	3	3
+"Section3-Instants"	4	6
+"SubSection16.2-Standard Formatters"	1	1
+"Section5-Durations "	1	2
+"SubSection16.1-Formatters"	0	1
+"Section14-Changing TimeZone"	2	2
+"SubSection16.4-Freaky Formatters"	2	2
+"SubSection17.1-Change the Current Time"	1	1
+"Section13-Manipulating DateTimes"	1	1
+"Section15-Changing Chronology"	2	3
+"Section12-Querying DateTimes"	0	4
+"Section7-Chronology"	2	7
+"SubSection12.3-Time fields"	1	1
+"SubSection12.2-Date fields"	0	4
+"SubSection11.1-Construction"	1	1
+	1.03	2.34
+"-------------------------------------------"		
+"number of unique API Elements per Section in relevant"	"total"	
+"-------------------------------------------"		
+"Period"	1	3
+"AbstractReadableInstantFieldProperty"	0	1
+"DateTimeField"	0	2
+"Interval"	1	3
+"appendTwoDigitYear"	1	1
+"DateTime.Property"	1	3
+"DateTimeUtils"	1	1
+"withLocale"	1	1
+"year()"	0	1
+"PeriodType"	1	1
+"DateTimeConstants"	0	1
+"DateTimeFormat"	1	1
+"MutablePeriod"	0	1
+"ReadableInstant"	0	2
+"ISODateTimeFormat"	1	1
+"DateTimeZone.getAvailableIDs()"	1	1
+"DateTime"	8	18
+"Duration"	1	2
+"monthOfYear()"	0	1
+"Chronology"	2	3
+"BuddhistChronology.getInstance()"	1	1
+"MutableDateTime"	2	2
+"ReadableDuration"	0	1
+"ReadableInterval"	0	2
+"Instant"	1	1
+"DateMidnight"	0	1
+"DurationField"	0	1
+"addToCopy"	1	1
+"getDayOfYear()"	0	2
+"MutableInterval"	0	1
+"ISOChronology"	1	1
+"setCopy"	1	1
+"JodaTimePermission"	1	1
+"dayOfYear()"	0	1
+"ReadablePeriod"	0	2
+"toFormatter"	1	1
+	0.83	1.89
