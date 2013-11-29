@@ -1,0 +1,15 @@
+*.class
+
+# Package Files #
+*.jar
+*.war
+*.ear
+*.csv
+
+# Directories #
+bin
+jars
+lib
+dumps
+javadocs
+stat
